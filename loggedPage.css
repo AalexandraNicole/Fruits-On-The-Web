@@ -30,6 +30,15 @@ body {
     background-image: url("images/menuOpen.png");
 }
 
+.dropdown-container {
+    background-color: azure;
+    width: 13vw;
+    height: 50vw;
+    position: absolute;
+    color: white;
+    top: 5vw;
+}
+
 .logo {
     position: absolute;
     width: 5vw;
