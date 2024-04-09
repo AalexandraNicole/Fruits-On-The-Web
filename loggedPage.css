@@ -5,16 +5,16 @@ body {
 }
 
 .nameHeader {
-    background-color: rgb(61, 28, 94);
+    background-color: rgba(33, 34, 51, 0.9);
     border-bottom: 1px solid black;
-    height: 4vw;
+    height: 5vw;
     width: 100%;
     position: absolute;
 }
 
 .openMen {
     left: 1vw;
-    bottom: 0.9vw;
+    bottom: 1.3vw;
     position: absolute;
     width: 2.2vw;
     height: 2.2vw;
@@ -35,7 +35,7 @@ body {
     width: 5vw;
     height: 5vw;
     left: 4%;
-    bottom: -0.8vw;
+    bottom: -0.3vw;
 }
 
 .title {
@@ -43,14 +43,14 @@ body {
     color: white;
     left: 8.5%;
     font-size: 2vw;
-    top: -0.4vw;
+    font-family: Copperplate;
 }
 
 .icons {
     margin: 0;
     position: absolute;
     right: 2vw;
-    bottom: 0.4vw;
+    bottom: 0.8vw;
 }
 
 .profileButton {
