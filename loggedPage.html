@@ -6,28 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FOT</title>
     <link rel="stylesheet" href="loggedPage.css">
-    <link rel="shortcut icon" type="image/x-icon" href="images/logo.gif"/>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.gif" />
 </head>
 
 <body>
     <div class="nameHeader">
-        <button class="openMen"></button>
-        <div class="dropdown-container">
-            <ul id="regionList">
-              <li>US</li>
-              <li>Japan</li>
-              <li>Europe</li>
-            </ul>
-          </div>
+        <button class="openMen" onclick="showMenu()"></button>
         <img class="logo" src="images/logo.gif">
         <h2 class="title">FruitsOnTheWeb</h2>
         <div class="icons">
-            <button class="ranks"></button>
+            <button class="ranks" onmouseenter="showRanks()" onmouseleave="hideRanks()"></button>
             <button class="fav"></button>
             <button class="profileButton"></button>
             <button class="logout"></button>
         </div>
     </div>
+    <div class="menuBar" onmouseenter="showMenuButtons()" onmouseleave="hideMenuButtons()">
+        <ul id="menuList">
+            <img class="menuIcons" src="images/home.png">
+            <li><button class="menuButtons">Games
+                </button>
+            </li>
+            <img class="menuIcons" src="images/recipe.png">
+            <li><button class="menuButtons">Recipes
+                </button>
+            </li>
+            <img class="menuIcons" src="images/information.png">
+            <li><button class="menuButtons">Info
+                </button>
+            </li>
+            <img class="menuIcons" src="images/logout.png">
+            <li><button class="menuButtons">LogOut
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div class="ranksBox">
+        <ul>
+            <li>Player 1</li>
+            <li>Player 2</li>
+            <li>Player 3</li>
+            <li>Player 4</li>
+        </ul>
+    </div>
+    <button class="doctorButton" onmouseenter="showDoctorBox()" onmouseleave="hideDoctorBox()"></button>
+    <div class="doctorBox">
+        Fruits are an excellent source of essential vitamins and minerals, and they are high in fiber. 
+    </div>
+
+    <script src="loggedPage.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,8 @@
+:root {
+    --mainColor: rgba(33, 34, 51, 0.9);
+    --menuColor: rgba(29, 31, 60, 0.9);
+}
+
 html,
 body {
     margin: 0;
@@ -5,7 +10,7 @@ body {
 }
 
 .nameHeader {
-    background-color: rgba(33, 34, 51, 0.9);
+    background-color: var(--mainColor);
     border-bottom: 1px solid black;
     height: 5vw;
     width: 100%;
@@ -27,16 +32,6 @@ body {
 
 .openMen:hover {
     background-color: rgb(193, 175, 175);
-    background-image: url("images/menuOpen.png");
-}
-
-.dropdown-container {
-    background-color: azure;
-    width: 13vw;
-    height: 50vw;
-    position: absolute;
-    color: white;
-    top: 5vw;
 }
 
 .logo {
@@ -100,7 +95,8 @@ body {
 }
 
 .fav:hover {
-    background-color: rgb(156, 132, 220);;
+    background-color: rgb(156, 132, 220);
+    ;
 }
 
 .ranks {
@@ -114,5 +110,97 @@ body {
 }
 
 .ranks:hover {
-    background-color: rgb(194, 192, 244);;
+    background-color: rgb(194, 192, 244);
+    ;
+}
+
+.menuBar {
+    position: absolute;
+    background-color: var(--menuColor);
+    width: 5vw;
+    height: 50vw;
+    color: rgb(255, 255, 255);
+    top: 5vw;
+    transition: width 0.3s, height 0.3s;
+    border-right: 0.01vw solid rgb(124, 130, 196);
+}
+
+.menuBar:hover {
+    width: 14vw;
+}
+
+.menuIcons {
+    position: absolute;
+    width: 1.6vw;
+    height: 1.6vw;
+    left: 1.9vw;
+}
+
+#menuList {
+    list-style: none;
+}
+
+.menuButtons {
+    visibility: hidden;
+    background-color: var(--menuColor);
+    color: white;
+    border: 0;
+    font-size: 1vw;
+    font-family: fantasy;
+    letter-spacing: 0.05vw;
+    text-align: left;
+    margin-left: 2.5vw;
+    margin-bottom: 2vw;
+    height: 2vw;
+    width: 5vw;
+    transition: margin-left 0.3s;
+}
+
+.menuButtons:hover {
+    margin-left: 2.8vw;
+}
+
+.ranksBox {
+    visibility: hidden;
+    position: absolute;
+    background-image: url("images/ranksBg.jpg");
+    background-size: cover;
+    border-radius: 10%;
+    width: 20vw;
+    height: 30vw;
+    top: 5vw;
+    right: 4vw;
+}
+
+.doctorButton {
+    position: absolute;
+    width: 6vw;
+    height: 6vw;
+    bottom: 2vw;
+    right: 2vw;
+    border-radius: 70%;
+    border: 0;
+    background-color: black;
+    background-image: url("images/med.gif");
+    background-size: contain;
+}
+
+.doctorBox {
+    visibility: hidden;
+    position: absolute;
+    border-radius: 10%;
+    background-image: url("images/doctorBg.jpg");
+    background-size: cover;
+    width: 20vw;
+    height: 15vw;
+    bottom: 7.5vw;
+    right: 6vw;
+    color: white;
+    font-family: cursive;
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
