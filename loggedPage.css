@@ -9,12 +9,12 @@ body {
     background-color: black;
 }
 
-Header {
+header {
     background-color: var(--mainColor);
     border-bottom: 1px solid black;
     height: 5vw;
     width: 100%;
-    position: absolute;
+    position: fixed;
 }
 
 .openMen {
@@ -115,7 +115,7 @@ Header {
 }
 
 .menuBar {
-    position: absolute;
+    position: fixed;
     background-color: var(--menuColor);
     width: 5vw;
     height: 50vw;
