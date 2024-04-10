@@ -1,6 +1,8 @@
 :root {
     --mainColor: rgba(33, 34, 51, 0.9);
     --menuColor: rgba(29, 31, 60, 0.9);
+    --bg: #1a1b36;
+    --graysh : #666A7F;
 }
 
 html,
@@ -126,7 +128,7 @@ header {
 }
 
 .menuBar:hover {
-    width: 14vw;
+    width: 13vw;
 }
 
 .menuIcons {
@@ -142,7 +144,7 @@ header {
 
 .menuButtons {
     visibility: hidden;
-    background-color: var(--menuColor);
+    background-color: var(--bg);
     color: white;
     border: 0;
     font-size: 1vw;
@@ -160,6 +162,146 @@ header {
     margin-left: 2.8vw;
 }
 
+.lineCurrent {
+    position: absolute;
+    background-color: #A48EFF;
+    width: 0.5vw;
+    height: 2.5vw;
+    top: 0.6vw;
+}
+
+.lineMenu {
+    position: absolute;
+    width: 3vw;
+    height: 0.1vw;
+    background-color: rgb(217, 181, 235);
+    top: 17vw;
+    left: 1vw;
+    transition: width 0.3s;
+}
+
+.contact {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 1vw;
+    top: 20vw;
+    width: 11vw;
+    height: 2vw;
+    border-radius: 20%;
+    border: 0;
+    font-size: 1.2vw;
+    padding-left: 1.5vw;
+    background-color: #8144fe;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.01vw;
+}
+
+.contact:hover {
+    background-color: #A48EFF;
+}
+
+.contactImg {
+    width: 1.5vw;
+    height: 1.5vw;
+    padding-right: 1vw;
+}
+
+.about {
+    visibility: hidden;
+    position: absolute;
+    background-color: var(--bg);
+    color: white;
+    top: 26vw;
+    left: 1vw;
+    font-size: 1vw;
+    font-family: 'Courier New', Courier, monospace;
+    border: 0;
+}
+
+.about:hover {
+    color: var(--graysh);
+}
+
+.infoP {
+    visibility: hidden;
+    position: absolute;
+    background-color: var(--bg);
+    color: white;
+    top: 29vw;
+    left: 0.4vw;
+    font-size: 1vw;
+    font-family: 'Courier New', Courier, monospace;
+    border: 0;
+    width: 11vw;
+}
+
+.infoP:hover {
+    color: var(--graysh);
+}
+
+.terms {
+    visibility: hidden;
+    position: absolute;
+    background-color: var(--bg);
+    color: white;
+    top: 32vw;
+    left: 0.5vw;
+    font-size: 1vw;
+    font-family: 'Courier New', Courier, monospace;
+    border: 0;
+    width: 12vw;
+}
+
+.terms:hover {
+    color: var(--graysh);
+}
+
+.privacy {
+    visibility: hidden;
+    position: absolute;
+    background-color: var(--bg);
+    color: white;
+    top: 35vw;
+    left: 0.9vw;
+    font-size: 1vw;
+    font-family: 'Courier New', Courier, monospace;
+    border: 0;
+}
+
+.privacy:hover {
+    color: var(--graysh);
+}
+
+.admin {
+    visibility: hidden;
+    position: absolute;
+    background-color: var(--bg);
+    color: white;
+    top: 38vw;
+    left: 1vw;
+    font-size: 1vw;
+    font-family: 'Courier New', Courier, monospace;
+    border: 0;
+}
+
+.admin:hover {
+    color: var(--graysh);
+}
+
+.nameYear {
+    visibility: hidden;
+    position: absolute;
+    bottom: 1.8vw;
+    left: 2vw;
+    color: var(--graysh);
+    font-size: 1vw;
+    width: 7vw;
+    height: 2vw;
+}
+
 .ranksBox {
     visibility: hidden;
     position: absolute;
@@ -170,10 +312,13 @@ header {
     height: 30vw;
     top: 5vw;
     right: 4vw;
+    font-size: 2vw;
+    display: flex;
+    justify-content: space-around;
 }
 
 .doctorButton {
-    position: absolute;
+    position: fixed;
     width: 6vw;
     height: 6vw;
     bottom: 2vw;
@@ -204,3 +349,62 @@ header {
     padding-left: 1vw;
     padding-right: 1vw;
 }
+
+.gamesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2.5vw;
+    width: 70vw;
+    height: 40vw;
+    padding-left: 14vw;
+    padding-top: 10vw;
+}
+
+.name1 {
+    border-radius: 10%;
+}
+
+.name1:hover {
+
+}
+
+.name2 {
+    border-radius: 10%;
+}
+
+.name2:hover {
+    
+}
+
+.name3 {
+    border-radius: 10%;
+}
+
+.name3:hover {
+    
+}
+
+.name4 {
+    border-radius: 10%;
+}
+
+.name4:hover {
+    
+}
+
+.name5 {
+    border-radius: 10%;
+}
+
+.name5:hover {
+    
+}
+
+.name6 {
+    border-radius: 10%;
+}
+
+.name6:hover {
+    
+}
+
