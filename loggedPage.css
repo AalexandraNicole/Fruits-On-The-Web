@@ -9,7 +9,7 @@ body {
     background-color: black;
 }
 
-.nameHeader {
+Header {
     background-color: var(--mainColor);
     border-bottom: 1px solid black;
     height: 5vw;
