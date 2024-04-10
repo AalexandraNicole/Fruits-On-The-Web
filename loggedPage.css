@@ -9,7 +9,11 @@ body {
     background-color: black;
 }
 
+<<<<<<< Updated upstream
 header {
+=======
+.nameHeader {
+>>>>>>> Stashed changes
     background-color: var(--mainColor);
     border-bottom: 1px solid black;
     height: 5vw;
