@@ -16,11 +16,11 @@ let trigger = 1;
 
 function showMenu() {
     if (trigger === 1) {
-        menuButton.style.backgroundImage = "url('images/menuOpen.png')";
+        menuButton.style.backgroundImage = "url('/Fruits-On-The-Web/images/menuOpen.png')";
         menuBar.style.visibility = "hidden";
         trigger = 0;
     } else {
-        menuButton.style.backgroundImage = "url('images/menuClose.webp')";
+        menuButton.style.backgroundImage = "url('/Fruits-On-The-Web/images/menuClose.webp')";
         menuBar.style.visibility = "visible";
         trigger = 1;
     }
@@ -63,11 +63,11 @@ function hideRanks() {
 }
 
 function showDoctorBox() {
-    doctorButton.style.backgroundImage = "url('images/meds.gif')";
+    doctorButton.style.backgroundImage = "url('/Fruits-On-The-Web/images/meds.gif')";
     doctorBox.style.visibility = "visible";
 }
 
 function hideDoctorBox() {
-    doctorButton.style.backgroundImage = "url('images/med.gif')";
+    doctorButton.style.backgroundImage = "url('/Fruits-On-The-Web/images/med.gif')";
     doctorBox.style.visibility = "hidden";
 }
