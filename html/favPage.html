@@ -64,19 +64,18 @@
         </ul>
     </div>
 
-    <button class="doctorButton" onmouseenter="showDoctorBox()" onmouseleave="hideDoctorBox()"></button>
-    <div class="doctorBox">
-        Fruits are an excellent source of essential vitamins and minerals, and they are high in fiber. 
-    </div>
-
-    <div class="gamesGrid">
-        <button class="name" id="name1"></button>
-        <button class="name" id="name2"></button>
-        <button class="name" id="name3"></button>
-        <button class="name" id="name4"></button>
-        <button class="name" id="name5"></button>
-        <button class="name" id="name6"></button>
-    </div>
+    <div class="flexDiv">
+        <div class="gamesGrid">
+            <button class="name" id="name1"></button>
+            <button class="name" id="name2"></button>
+            <button class="name" id="name3"></button>
+        </div>
+        <div class="heartsGrid">
+            <button class="hearts" onclick="changeHeart1()" id="firstHeart"></button>
+            <button class="hearts" onclick="changeHeart2()" id="secondHeart"></button>
+            <button class="hearts" onclick="changeHeart3()" id="thirdHeart"></button>
+        </div>
+    </div>      
 
     <script src="/Fruits-On-The-Web/js/favPage.js"></script>
 </body>
