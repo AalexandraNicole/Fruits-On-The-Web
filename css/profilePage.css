@@ -331,42 +331,43 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 18vh;
+        padding-top: 9vw;
         padding-left: 3vw;
+        padding-bottom: 3vw;
     }
 
     .profileBox {
         background-color: white;
         border-radius: 20px;
         width: 70vw;
-        height: 75vh;
+        height: 40vw;
     }
 
     #profPic {
         padding-left: 5vw;
         padding-right: 1vw;
-        width: 2vw;
-        height: 4vh;
+        width: 2.5vw;
+        height: 2.5vw;
     }
 
     #textProf {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        padding-top: 3vh;
+        padding-top: 1.5vw;
         font-family: cursive;
         font-size: 1.5vw;
     }
 
     #lineProfile {
-        height: 0.1vh;
+        height: 0.05vw;
         width: 70vw;
         background-color: #1a1b36;
     }
 
     .roundProfile {
         display: flex;
-        padding-top: 7vh;
+        padding-top: 4vw;
         padding-left: 13vw;
     }
 
@@ -375,16 +376,16 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 2vh;
+        gap: 2vw;
         border: 1px solid rgb(220, 219, 219);
         border-radius: 10px;
         width: 15vw;
-        height: 32vh;
+        height: 20vw;
     }
 
     #avatar {
         width: 8vw;
-        height: 15vh;
+        height: 8vw;
         background-color: rgb(238, 213, 247);
         border-radius: 50%;
         border: 2px solid rgb(220, 219, 219);
@@ -408,11 +409,11 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        row-gap: 1vw;
+        row-gap: 0.5vw;
         padding-left: 1vw;
         padding-right: 1vw;
         width: 30vw;
-        height: 45vh;
+        height: 26vw;
         background-color: rgb(249, 243, 251);
         border: 1px solid rgb(238, 216, 245);
         border-radius: 10px;
@@ -423,7 +424,7 @@ a {
         justify-content: start;
         align-items: center;
         padding-left: 0.5vw;
-        height: 5vh;
+        height: 3.5vw;
         background-color: #3b089b;
         border-radius: 5px;
         color: white;
@@ -437,7 +438,7 @@ a {
         justify-content: start;
         align-items: center;
         padding-left: 0.5vw;
-        height: 5vh;
+        height: 3.5vw;
         background-color: #3b089b;
         border-radius: 5px;
         color: white;
@@ -450,7 +451,7 @@ a {
         justify-content: start;
         align-items: center;
         padding-left: 0.5vw;
-        height: 5vh;
+        height: 3.5vw;
         background-color: #3b089b;
         border-radius: 5px;
         color: white;
@@ -465,7 +466,7 @@ a {
 
     #editProf {
         width: 2vw;
-        height: 3.5vh;
+        height: 2vw;
         padding-right: 0.5vw;
     }
 
@@ -478,7 +479,7 @@ a {
 
     #resetPassw {
         width: 2vw;
-        height: 3.5vh;
+        height: 2vw;
         padding-right: 0.5vw;
     }
 
@@ -496,13 +497,13 @@ a {
     .editPBox {
         visibility: hidden;
         position: absolute;
-        top: 35vh;
+        top: 20vw;
         left: 33vw;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 35vw;
-        height: 40vh;
+        height: 23vw;
         background-color: #1a1b36;
         color: white;
         border-radius: 10px;
@@ -527,13 +528,13 @@ a {
     .editPasBox {
         visibility: hidden;
         position: absolute;
-        top: 35vh;
+        top: 20vw;
         left: 33vw;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 35vw;
-        height: 40vh;
+        height: 23vw;
         background-color: #1a1b36;
         color: white;
         border-radius: 10px;
@@ -869,43 +870,44 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 12vh;
+        padding-top: 15vw;
         padding-left: 3.5vw;
+        padding-bottom: 4vw;
     }
 
     .profileBox {
         background-color: white;
         border-radius: 20px;
         width: 70vw;
-        height: 80vh;
+        height: 110vw;
     }
 
     #profPic {
         padding-left: 8vw;
         padding-right: 3vw;
         width: 7vw;
-        height: 4vh;
+        height: 7vw;
     }
 
     #textProf {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        padding-top: 3vh;
+        padding-top: 3vw;
         font-family: cursive;
         font-size: 3.5vw;
     }
 
     #lineProfile {
-        height: 0.1vh;
+        height: 0.05vw;
         width: 70vw;
         background-color: #1a1b36;
     }
 
     .roundProfile {
         display: flex;
-        padding-top: 8vh;
-        padding-left: 2vw;
+        padding-top: 8vw;
+        padding-left: 1vw;
     }
 
     .boxProfile {
@@ -913,16 +915,16 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 3vh;
+        gap: 3vw;
         border: 1px solid rgb(220, 219, 219);
         border-radius: 10px;
         width: 27vw;
-        height: 30vh;
+        height: 40vw;
     }
 
     #avatar {
-        width: 20vw;
-        height: 12vh;
+        width: 16vw;
+        height: 16vw;
         background-color: rgb(238, 213, 247);
         border-radius: 50%;
         border: 2px solid rgb(220, 219, 219);
@@ -946,12 +948,12 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        row-gap: 4vw;
+        row-gap: 3vw;
         padding-top: 6vw;
         padding-left: 1vw;
         padding-right: 1vw;
         width: 37vw;
-        height: 52vh;
+        height: 73vw;
         background-color: rgb(249, 243, 251);
         border: 1px solid rgb(238, 216, 245);
         border-radius: 10px;
@@ -962,7 +964,7 @@ a {
         justify-content: start;
         align-items: center;
         padding-left: 0.5vw;
-        height: 5vh;
+        height: 6vw;
         background-color: #3b089b;
         border-radius: 5px;
         color: white;
@@ -976,7 +978,7 @@ a {
         justify-content: start;
         align-items: center;
         padding-left: 0.5vw;
-        height: 5vh;
+        height: 6vw;
         background-color: #3b089b;
         border-radius: 5px;
         color: white;
@@ -989,7 +991,7 @@ a {
         justify-content: start;
         align-items: center;
         padding-left: 0.5vw;
-        height: 5vh;
+        height: 6vw;
         background-color: #3b089b;
         border-radius: 5px;
         color: white;
@@ -1004,7 +1006,7 @@ a {
 
     #editProf {
         width: 5vw;
-        height: 3vh;
+        height: 5vw;
         padding-right: 1vw;
     }
 
@@ -1017,7 +1019,7 @@ a {
 
     #resetPassw {
         width: 5vw;
-        height: 3vh;
+        height: 5vw;
         padding-right: 1vw;
     }
 
@@ -1035,13 +1037,13 @@ a {
     .editPBox {
         visibility: hidden;
         position: absolute;
-        top: 35vh;
+        top: 45vw;
         left: 20vw;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 60vw;
-        height: 40vh;
+        height: 60vw;
         background-color: #1a1b36;
         color: white;
         border-radius: 10px;
@@ -1066,13 +1068,13 @@ a {
     .editPasBox {
         visibility: hidden;
         position: absolute;
-        top: 35vh;
+        top: 45vw;
         left: 20vw;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 60vw;
-        height: 40vh;
+        height: 60vw;
         background-color: #1a1b36;
         color: white;
         border-radius: 10px;
@@ -1346,7 +1348,7 @@ a {
         font-size: 3.5vw;
         font-family: 'Courier New', Courier, monospace;
         border: 0;
-        width: 40vw;
+        width: 42vw;
         display: flex;
         justify-content: start;
     }
@@ -1409,43 +1411,44 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 10vh;
-        padding-left: 7vw;
+        padding-top: 18vw;
+        padding-left: 8vw;
+        padding-bottom: 5vw;
     }
 
     .profileBox {
         background-color: white;
         border-radius: 20px;
         width: 70vw;
-        height: 87vh;
+        height: 180vw;
     }
 
     #profPic {
         padding-left: 4vw;
         padding-right: 2vw;
-        width: 14vw;
-        height: 6vh;
+        width: 12vw;
+        height: 12vw;
     }
 
     #textProf {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        padding-top: 3vh;
+        padding-top: 3vw;
         font-family: cursive;
         font-size: 6.5vw;
     }
 
     #lineProfile {
-        height: 0.1vh;
+        height: 0.05vw;
         width: 70vw;
         background-color: #1a1b36;
     }
 
     .roundProfile {
         display: block;
-        padding-top: 2vh;
-        padding-left: 10vw;
+        padding-top: 9vw;
+        padding-left: 8vw;
     }
 
     .boxProfile {
@@ -1453,16 +1456,16 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 1vh;
+        gap: 1vw;
         border: 1px solid rgb(220, 219, 219);
         border-radius: 10px;
-        width: 50vw;
-        height: 18vh;
+        width: 55vw;
+        height: 40vw;
     }
 
     #avatar {
-        width: 24vw;
-        height: 9vh;
+        width: 22vw;
+        height: 22vw;
         background-color: rgb(238, 213, 247);
         border-radius: 50%;
         border: 2px solid rgb(220, 219, 219);
@@ -1489,8 +1492,8 @@ a {
         row-gap: 1vw;
         padding-left: 1vw;
         padding-right: 1vw;
-        width: 48vw;
-        height: 42vh;
+        width: 53vw;
+        height: 90vw;
         background-color: rgb(249, 243, 251);
         border: 1px solid rgb(238, 216, 245);
         border-radius: 10px;
@@ -1501,7 +1504,7 @@ a {
         justify-content: start;
         align-items: center;
         padding-left: 1vw;
-        height: 5vh;
+        height: 10vw;
         background-color: #3b089b;
         border-radius: 5px;
         color: white;
@@ -1515,7 +1518,7 @@ a {
         justify-content: start;
         align-items: center;
         padding-left: 1vw;
-        height: 5vh;
+        height: 10vw;
         background-color: #3b089b;
         border-radius: 5px;
         color: white;
@@ -1528,7 +1531,7 @@ a {
         justify-content: start;
         align-items: center;
         padding-left: 1vw;
-        height: 5vh;
+        height: 10vw;
         background-color: #3b089b;
         border-radius: 5px;
         color: white;
@@ -1542,8 +1545,8 @@ a {
     }
 
     #editProf {
-        width: 8vw;
-        height: 3.5vh;
+        width: 7vw;
+        height: 7vw;
         padding-right: 1vw;
     }
 
@@ -1555,8 +1558,8 @@ a {
     }
 
     #resetPassw {
-        width: 8vw;
-        height: 3.5vh;
+        width: 7vw;
+        height: 7vw;
         padding-right: 1vw;
     }
 
@@ -1574,13 +1577,13 @@ a {
     .editPBox {
         visibility: hidden;
         position: absolute;
-        top: 30vh;
+        top: 70vw;
         left: 15vw;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 78vw;
-        height: 40vh;
+        height: 90vw;
         background-color: #1a1b36;
         color: white;
         border-radius: 10px;
@@ -1605,13 +1608,13 @@ a {
     .editPasBox {
         visibility: hidden;
         position: absolute;
-        top: 30vh;
+        top: 70vw;
         left: 15vw;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 78vw;
-        height: 40vh;
+        height: 90vw;
         background-color: #1a1b36;
         color: white;
         border-radius: 10px;
