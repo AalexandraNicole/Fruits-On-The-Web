@@ -4,7 +4,6 @@ let menuButtons = document.querySelectorAll(".menuButtons");
 let rankBox = document.querySelector(".ranksBox");
 let doctorBox = document.querySelector(".doctorBox");
 let doctorButton = document.querySelector(".doctorButton");
-let menuLine = document.querySelector(".lineMenu");
 let nameYear = document.querySelector(".nameYear");
 let contact = document.querySelector(".contact");
 let about = document.querySelector(".about");
@@ -30,7 +29,7 @@ function showMenuButtons() {
     menuButtons.forEach(function (button) {
         button.style.visibility = "visible";
     })
-    menuLine.style.width = "11vw";
+
     nameYear.style.visibility = "visible";
     contact.style.visibility = "visible";
     about.style.visibility = "visible";
@@ -38,13 +37,15 @@ function showMenuButtons() {
     infoP.style.visibility = "visible";
     privacy.style.visibility = "visible";
     terms.style.visibility = "visible";
+
+    menuBar.scroll = 0;
 };
 
 function hideMenuButtons() {
     menuButtons.forEach(function (button) {
         button.style.visibility = "hidden";
     })
-    menuLine.style.width = "3vw";
+
     nameYear.style.visibility = "hidden";
     contact.style.visibility = "hidden";
     about.style.visibility = "hidden";

@@ -5,6 +5,11 @@
     --graysh : #666A7F;
 }
 
+@font-face {
+    font-family: 'titleFont';
+    src: url('/Fruits-On-The-Web/fonts/OPTICopperplate.otf');
+  }
+
 html,
 body {
     margin: 0;
@@ -51,7 +56,7 @@ body {
         color: white;
         left: 8.5%;
         font-size: 2vw;
-        font-family: Copperplate;
+        font-family: 'titleFont';
     }
 
     .icons {
@@ -122,15 +127,20 @@ body {
         position: fixed;
         background-color: var(--menuColor);
         width: 5vw;
-        height: 50vw;
+        height: 100%;
         color: rgb(255, 255, 255);
         top: 5vw;
         transition: width 0.3s, height 0.3s;
         border-right: 0.01vw solid rgb(124, 130, 196);
+        overflow: scroll;
     }
 
     .menuBar:hover {
         width: 13vw;
+    }
+
+    .menuBar:hover .lineMenu{
+        width: 11vw;
     }
 
     .menuIcons {
@@ -296,8 +306,8 @@ body {
     .nameYear {
         visibility: hidden;
         position: absolute;
-        bottom: 1.8vw;
-        left: 2vw;
+        bottom: 10%;
+        left: 10%;
         color: var(--graysh);
         font-size: 1vw;
         width: 7vw;
@@ -306,7 +316,7 @@ body {
 
     .ranksBox {
         visibility: hidden;
-        position: absolute;
+        position: fixed;
         background-image: url("/Fruits-On-The-Web/images/ranksBg.jpg");
         background-size: cover;
         border-radius: 10%;
@@ -334,7 +344,7 @@ body {
 
     .doctorBox {
         visibility: hidden;
-        position: absolute;
+        position: fixed;
         border-radius: 10%;
         background-image: url("/Fruits-On-The-Web/images/doctorBg.jpg");
         background-size: cover;
@@ -416,17 +426,17 @@ body {
     header {
         background-color: var(--mainColor);
         border-bottom: 1px solid black;
-        height: 5vw;
+        height: 7vw;
         width: 100%;
         position: fixed;
     }
     
     .openMen {
-        left: 1vw;
-        bottom: 1.3vw;
+        left: 2vw;
+        bottom: 1.8vw;
         position: absolute;
-        width: 2.2vw;
-        height: 2.2vw;
+        width: 3.2vw;
+        height: 3.2vw;
         border-radius: 20%;
         border-color: rgb(197, 156, 234);
         background-color: white;
@@ -440,30 +450,31 @@ body {
     
     .logo {
         position: absolute;
-        width: 5vw;
-        height: 5vw;
-        left: 4%;
+        width: 7vw;
+        height: 7vw;
+        left: 6%;
         bottom: -0.3vw;
     }
     
     .title {
         position: absolute;
         color: white;
-        left: 8.5%;
-        font-size: 2vw;
-        font-family: Copperplate;
+        left: 12.5%;
+        font-size: 4vw;
+        bottom: -2vw;
+        font-family: 'titleFont';
     }
     
     .icons {
         margin: 0;
         position: absolute;
-        right: 2vw;
-        bottom: 0.8vw;
+        right: 3vw;
+        bottom: 1vw;
     }
     
     .profileButton {
-        width: 3vw;
-        height: 3vw;
+        width: 4.5vw;
+        height: 4.5vw;
         border-radius: 20%;
         border-color: rgb(197, 156, 234);
         background-color: white;
@@ -476,8 +487,8 @@ body {
     }
     
     .logout {
-        width: 3.3vw;
-        height: 3.3vw;
+        width: 4.5vw;
+        height: 4.5vw;
         border-radius: 60%;
         border-color: rgb(140, 158, 229);
         background-color: white;
@@ -490,8 +501,8 @@ body {
     }
     
     .fav {
-        width: 3.2vw;
-        height: 3.2vw;
+        width: 4.5vw;
+        height: 4.5vw;
         border-radius: 50%;
         border-color: rgb(156, 132, 220);
         background-image: url("/Fruits-On-The-Web/images/favourite.png");
@@ -504,8 +515,8 @@ body {
     }
     
     .ranks {
-        width: 3.3vw;
-        height: 3.3vw;
+        width: 4.5vw;
+        height: 4.5vw;
         border-radius: 60%;
         border-color: rgb(118, 125, 207);
         background-color: white;
@@ -521,22 +532,27 @@ body {
     .menuBar {
         position: fixed;
         background-color: var(--menuColor);
-        width: 5vw;
-        height: 50vw;
+        width: 7vw;
+        height: 100%;
         color: rgb(255, 255, 255);
-        top: 5vw;
+        top: 7vw;
         transition: width 0.3s, height 0.3s;
         border-right: 0.01vw solid rgb(124, 130, 196);
+        overflow: scroll;
     }
     
     .menuBar:hover {
-        width: 13vw;
+        width: 24vw;
+    }
+
+    .menuBar:hover .lineMenu{
+        width: 22vw;
     }
     
     .menuIcons {
         position: absolute;
-        width: 1.6vw;
-        height: 1.6vw;
+        width: 3.6vw;
+        height: 3.6vw;
         left: 1.9vw;
     }
     
@@ -549,12 +565,12 @@ body {
         background-color: var(--bg);
         color: white;
         border: 0;
-        font-size: 1vw;
+        font-size: 2vw;
         font-family: fantasy;
         letter-spacing: 0.05vw;
         text-align: left;
         margin-left: 2.5vw;
-        margin-bottom: 2vw;
+        margin-bottom: 6vw;
         height: 2vw;
         width: 5vw;
         transition: margin-left 0.3s;
@@ -567,17 +583,17 @@ body {
     .lineCurrent {
         position: absolute;
         background-color: #A48EFF;
-        width: 0.5vw;
-        height: 2.5vw;
-        top: 0.6vw;
+        width: 0.6vw;
+        height: 3.4vw;
+        top: 2vw;
     }
     
     .lineMenu {
         position: absolute;
-        width: 3vw;
-        height: 0.1vw;
+        width: 5vw;
+        height: 0.2vw;
         background-color: rgb(217, 181, 235);
-        top: 17vw;
+        top: 35vw;
         left: 1vw;
         transition: width 0.3s;
     }
@@ -588,17 +604,17 @@ body {
         display: flex;
         align-items: center;
         left: 1vw;
-        top: 20vw;
-        width: 11vw;
-        height: 2vw;
+        top: 42vw;
+        width: 22vw;
+        height: 3.5vw;
         border-radius: 20%;
         border: 0;
-        font-size: 1.2vw;
-        padding-left: 1.5vw;
+        font-size: 2.5vw;
+        padding-left: 2.5vw;
         background-color: #8144fe;
         color: white;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        letter-spacing: 0.01vw;
+        letter-spacing: 0.02vw;
     }
     
     .contact:hover {
@@ -606,8 +622,8 @@ body {
     }
     
     .contactImg {
-        width: 1.5vw;
-        height: 1.5vw;
+        width: 3vw;
+        height: 3vw;
         padding-right: 1vw;
     }
     
@@ -616,9 +632,9 @@ body {
         position: absolute;
         background-color: var(--bg);
         color: white;
-        top: 26vw;
+        top: 52vw;
         left: 1vw;
-        font-size: 1vw;
+        font-size: 2vw;
         font-family: 'Courier New', Courier, monospace;
         border: 0;
     }
@@ -632,12 +648,12 @@ body {
         position: absolute;
         background-color: var(--bg);
         color: white;
-        top: 29vw;
+        top: 60vw;
         left: 0.4vw;
-        font-size: 1vw;
+        font-size: 2vw;
         font-family: 'Courier New', Courier, monospace;
         border: 0;
-        width: 11vw;
+        width: 21vw;
     }
     
     .infoP:hover {
@@ -649,12 +665,12 @@ body {
         position: absolute;
         background-color: var(--bg);
         color: white;
-        top: 32vw;
+        top: 68vw;
         left: 0.5vw;
-        font-size: 1vw;
+        font-size: 2vw;
         font-family: 'Courier New', Courier, monospace;
         border: 0;
-        width: 12vw;
+        width: 24vw;
     }
     
     .terms:hover {
@@ -666,9 +682,9 @@ body {
         position: absolute;
         background-color: var(--bg);
         color: white;
-        top: 35vw;
+        top: 76vw;
         left: 0.9vw;
-        font-size: 1vw;
+        font-size: 2vw;
         font-family: 'Courier New', Courier, monospace;
         border: 0;
     }
@@ -682,9 +698,9 @@ body {
         position: absolute;
         background-color: var(--bg);
         color: white;
-        top: 38vw;
+        top: 84vw;
         left: 1vw;
-        font-size: 1vw;
+        font-size: 2vw;
         font-family: 'Courier New', Courier, monospace;
         border: 0;
     }
@@ -696,35 +712,35 @@ body {
     .nameYear {
         visibility: hidden;
         position: absolute;
-        bottom: 1.8vw;
-        left: 2vw;
+        bottom: 10%;
+        left: 10%;
         color: var(--graysh);
-        font-size: 1vw;
-        width: 7vw;
+        font-size: 2vw;
+        width: 14vw;
         height: 2vw;
     }
     
     .ranksBox {
         visibility: hidden;
-        position: absolute;
+        position: fixed;
         background-image: url("/Fruits-On-The-Web/images/ranksBg.jpg");
         background-size: cover;
         border-radius: 10%;
-        width: 20vw;
-        height: 30vw;
-        top: 5vw;
-        right: 4vw;
-        font-size: 2vw;
+        width: 28vw;
+        height: 40vw;
+        top: 7vw;
+        right: 6vw;
+        font-size: 3vw;
         display: flex;
         justify-content: space-around;
     }
     
     .doctorButton {
         position: fixed;
-        width: 6vw;
-        height: 6vw;
-        bottom: 2vw;
-        right: 2vw;
+        width: 10vw;
+        height: 10vw;
+        bottom: 4vw;
+        right: 4vw;
         border-radius: 70%;
         border: 0;
         background-color: black;
@@ -734,17 +750,17 @@ body {
     
     .doctorBox {
         visibility: hidden;
-        position: absolute;
+        position: fixed;
         border-radius: 10%;
         background-image: url("/Fruits-On-The-Web/images/doctorBg.jpg");
         background-size: cover;
-        width: 20vw;
-        height: 15vw;
-        bottom: 7.5vw;
-        right: 6vw;
+        width: 35vw;
+        height: 22vw;
+        bottom: 12.5vw;
+        right: 10vw;
         color: white;
         font-family: cursive;
-        font-size: 1.5vw;
+        font-size: 2.5vw;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -754,12 +770,13 @@ body {
     
     .gamesGrid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 2.5vw;
-        width: 70vw;
-        height: 40vw;
-        padding-left: 14vw;
-        padding-top: 10vw;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10vw;
+        width: 75vw;
+        height: 100vw;
+        padding-left: 16vw;
+        padding-top: 15vw;
+        padding-bottom: 10vw;
     }
     
     .name1 {
@@ -816,17 +833,17 @@ body {
     header {
         background-color: var(--mainColor);
         border-bottom: 1px solid black;
-        height: 5vw;
+        height: 10vw;
         width: 100%;
         position: fixed;
     }
     
     .openMen {
-        left: 1vw;
-        bottom: 1.3vw;
+        left: 2vw;
+        bottom: 2.3vw;
         position: absolute;
-        width: 2.2vw;
-        height: 2.2vw;
+        width: 5.2vw;
+        height: 5.2vw;
         border-radius: 20%;
         border-color: rgb(197, 156, 234);
         background-color: white;
@@ -840,30 +857,31 @@ body {
     
     .logo {
         position: absolute;
-        width: 5vw;
-        height: 5vw;
-        left: 4%;
-        bottom: -0.3vw;
+        width: 10vw;
+        height: 10vw;
+        left: 8%;
+        bottom: -0.2vw;
     }
     
     .title {
         position: absolute;
         color: white;
-        left: 8.5%;
-        font-size: 2vw;
-        font-family: Copperplate;
+        left: 16.5%;
+        font-size: 4vw;
+        bottom: -2vw;
+        font-family: 'titleFont';
     }
     
     .icons {
         margin: 0;
         position: absolute;
         right: 2vw;
-        bottom: 0.8vw;
+        bottom: 1vw;
     }
     
     .profileButton {
-        width: 3vw;
-        height: 3vw;
+        width: 6vw;
+        height: 6vw;
         border-radius: 20%;
         border-color: rgb(197, 156, 234);
         background-color: white;
@@ -876,8 +894,8 @@ body {
     }
     
     .logout {
-        width: 3.3vw;
-        height: 3.3vw;
+        width: 6.3vw;
+        height: 6.3vw;
         border-radius: 60%;
         border-color: rgb(140, 158, 229);
         background-color: white;
@@ -890,8 +908,8 @@ body {
     }
     
     .fav {
-        width: 3.2vw;
-        height: 3.2vw;
+        width: 6.2vw;
+        height: 6.2vw;
         border-radius: 50%;
         border-color: rgb(156, 132, 220);
         background-image: url("/Fruits-On-The-Web/images/favourite.png");
@@ -904,8 +922,8 @@ body {
     }
     
     .ranks {
-        width: 3.3vw;
-        height: 3.3vw;
+        width: 6.3vw;
+        height: 6.3vw;
         border-radius: 60%;
         border-color: rgb(118, 125, 207);
         background-color: white;
@@ -921,22 +939,27 @@ body {
     .menuBar {
         position: fixed;
         background-color: var(--menuColor);
-        width: 5vw;
-        height: 50vw;
+        width: 10vw;
+        height: 100%;
         color: rgb(255, 255, 255);
-        top: 5vw;
+        top: 10vw;
         transition: width 0.3s, height 0.3s;
         border-right: 0.01vw solid rgb(124, 130, 196);
+        overflow: scroll;
     }
     
     .menuBar:hover {
-        width: 13vw;
+        width: 42vw;
+    }
+
+    .menuBar:hover .lineMenu{
+        width: 40vw;
     }
     
     .menuIcons {
         position: absolute;
-        width: 1.6vw;
-        height: 1.6vw;
+        width: 5vw;
+        height: 5vw;
         left: 1.9vw;
     }
     
@@ -949,12 +972,12 @@ body {
         background-color: var(--bg);
         color: white;
         border: 0;
-        font-size: 1vw;
+        font-size: 4vw;
         font-family: fantasy;
         letter-spacing: 0.05vw;
         text-align: left;
         margin-left: 2.5vw;
-        margin-bottom: 2vw;
+        margin-bottom: 10vw;
         height: 2vw;
         width: 5vw;
         transition: margin-left 0.3s;
@@ -967,17 +990,17 @@ body {
     .lineCurrent {
         position: absolute;
         background-color: #A48EFF;
-        width: 0.5vw;
-        height: 2.5vw;
-        top: 0.6vw;
+        width: 0.6vw;
+        height: 5.5vw;
+        top: 3.6vw;
     }
     
     .lineMenu {
         position: absolute;
-        width: 3vw;
+        width: 8vw;
         height: 0.1vw;
         background-color: rgb(217, 181, 235);
-        top: 17vw;
+        top: 54vw;
         left: 1vw;
         transition: width 0.3s;
     }
@@ -987,14 +1010,14 @@ body {
         position: absolute;
         display: flex;
         align-items: center;
-        left: 1vw;
-        top: 20vw;
-        width: 11vw;
-        height: 2vw;
+        left: 2vw;
+        top: 69vw;
+        width: 38vw;
+        height: 6vw;
         border-radius: 20%;
         border: 0;
-        font-size: 1.2vw;
-        padding-left: 1.5vw;
+        font-size: 4.5vw;
+        padding-left: 4.5vw;
         background-color: #8144fe;
         color: white;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -1006,9 +1029,9 @@ body {
     }
     
     .contactImg {
-        width: 1.5vw;
-        height: 1.5vw;
-        padding-right: 1vw;
+        width: 5vw;
+        height: 5vw;
+        padding-right: 3vw;
     }
     
     .about {
@@ -1016,9 +1039,9 @@ body {
         position: absolute;
         background-color: var(--bg);
         color: white;
-        top: 26vw;
+        top: 90vw;
         left: 1vw;
-        font-size: 1vw;
+        font-size: 3.5vw;
         font-family: 'Courier New', Courier, monospace;
         border: 0;
     }
@@ -1032,12 +1055,12 @@ body {
         position: absolute;
         background-color: var(--bg);
         color: white;
-        top: 29vw;
+        top: 104vw;
         left: 0.4vw;
-        font-size: 1vw;
+        font-size: 3.5vw;
         font-family: 'Courier New', Courier, monospace;
         border: 0;
-        width: 11vw;
+        width: 36vw;
     }
     
     .infoP:hover {
@@ -1049,12 +1072,12 @@ body {
         position: absolute;
         background-color: var(--bg);
         color: white;
-        top: 32vw;
+        top: 118vw;
         left: 0.5vw;
-        font-size: 1vw;
+        font-size: 3.5vw;
         font-family: 'Courier New', Courier, monospace;
         border: 0;
-        width: 12vw;
+        width: 40vw;
     }
     
     .terms:hover {
@@ -1066,9 +1089,9 @@ body {
         position: absolute;
         background-color: var(--bg);
         color: white;
-        top: 35vw;
+        top: 132vw;
         left: 0.9vw;
-        font-size: 1vw;
+        font-size: 3.5vw;
         font-family: 'Courier New', Courier, monospace;
         border: 0;
     }
@@ -1082,9 +1105,9 @@ body {
         position: absolute;
         background-color: var(--bg);
         color: white;
-        top: 38vw;
+        top: 146vw;
         left: 1vw;
-        font-size: 1vw;
+        font-size: 3.5vw;
         font-family: 'Courier New', Courier, monospace;
         border: 0;
     }
@@ -1096,35 +1119,35 @@ body {
     .nameYear {
         visibility: hidden;
         position: absolute;
-        bottom: 1.8vw;
-        left: 2vw;
+        bottom: 10%;
+        left: 10%;
         color: var(--graysh);
-        font-size: 1vw;
-        width: 7vw;
+        font-size: 3vw;
+        width: 20vw;
         height: 2vw;
     }
     
     .ranksBox {
         visibility: hidden;
-        position: absolute;
+        position: fixed;
         background-image: url("/Fruits-On-The-Web/images/ranksBg.jpg");
         background-size: cover;
         border-radius: 10%;
-        width: 20vw;
-        height: 30vw;
-        top: 5vw;
-        right: 4vw;
-        font-size: 2vw;
+        width: 40vw;
+        height: 55vw;
+        top: 10vw;
+        right: 8vw;
+        font-size: 5vw;
         display: flex;
         justify-content: space-around;
     }
     
     .doctorButton {
         position: fixed;
-        width: 6vw;
-        height: 6vw;
-        bottom: 2vw;
-        right: 2vw;
+        width: 15vw;
+        height: 15vw;
+        bottom: 3vw;
+        right: 3vw;
         border-radius: 70%;
         border: 0;
         background-color: black;
@@ -1134,17 +1157,17 @@ body {
     
     .doctorBox {
         visibility: hidden;
-        position: absolute;
+        position: fixed;
         border-radius: 10%;
         background-image: url("/Fruits-On-The-Web/images/doctorBg.jpg");
         background-size: cover;
-        width: 20vw;
-        height: 15vw;
-        bottom: 7.5vw;
-        right: 6vw;
+        width: 60vw;
+        height: 35vw;
+        bottom: 15.5vw;
+        right: 12vw;
         color: white;
         font-family: cursive;
-        font-size: 1.5vw;
+        font-size: 4.5vw;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1154,12 +1177,13 @@ body {
     
     .gamesGrid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 2.5vw;
-        width: 70vw;
-        height: 40vw;
-        padding-left: 14vw;
-        padding-top: 10vw;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 4.5vw;
+        width: 55vw;
+        height: 260vw;
+        padding-left: 24vw;
+        padding-top: 16vw;
+        padding-bottom: 10vw;
     }
     
     .name1 {
