@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FrOW</title>
-    <link rel="stylesheet" href="/Fruits-On-The-Web/css/loggedPage.css">
+    <link rel="stylesheet" href="/Fruits-On-The-Web/css/profilePage.css">
     <link rel="shortcut icon" type="image/x-icon" href="/Fruits-On-The-Web/images/logo.gif" />
 </head>
 
@@ -64,21 +64,61 @@
         </ul>
     </div>
 
-    <button class="doctorButton" onmouseenter="showDoctorBox()" onmouseleave="hideDoctorBox()"></button>
-    <div class="doctorBox">
-        Fruits are an excellent source of essential vitamins and minerals, and they are high in fiber. 
+    <div class="profileDiv">
+        <div class="profileBox">
+            <p id="textProf"><img id="profPic" src="/Fruits-On-The-Web/images/profilePic.png"> My profile</p>
+            <div id="lineProfile"></div>
+            <div class="roundProfile">
+                <div class="boxProfile">
+                    <img id="avatar" src="/Fruits-On-The-Web/images/avatar.png">
+                    <div id="nameProfile">TatiCory</div>
+                    <div id="emailProfile">taticory@gmail.com</div>
+                </div>
+                <div class="area">
+                    <div class="detailsProfile">
+                        <p id="name">TatiCory</p>
+                        <p id="password">taticory123</p>
+                        <p id="email">taticory@gmail.com</p>
+                        <button class="editProfile" onclick="showEditProfile()"><img id="editProf" src="/Fruits-On-The-Web/images/editProfile.png">Edit Profile</button>
+                        <button class="resetPass" onclick="showEditPass()"><img id="resetPassw" src="/Fruits-On-The-Web/images/password.png">Reset Password</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="gamesGrid">
-        <button class="name" id="name1"></button>
-        <button class="name" id="name2"></button>
-        <button class="name" id="name3"></button>
-        <button class="name" id="name4"></button>
-        <button class="name" id="name5"></button>
-        <button class="name" id="name6"></button>
+    <div class="editPBox"> 
+        <form id="editFormProfile">
+        
+            <div class="inputGroup">
+                <label for="newName">New Username:</label>
+                <input type="text" id="newName" name="newName">
+            </div>
+            <div class="inputGroup">
+                <label for="newEmail">New Email:</label>
+                <input type="email" id="newEmail" name="newEmail">
+            </div>
+
+            <a href="profilePage.html"><button id="subm" type="submit">Submit</button></a>
+        </form>
     </div>
 
-    <script src="/Fruits-On-The-Web/js/loggedPage.js"></script>
+    <div class="editPasBox">
+        <form id="editFormPassword">
+            <div class="inputGroupPass">
+                <label for="newPass">New Password:</label>
+                <input type="password" id="newPass" name="newPass">
+            </div>
+            <div class="inputGroupPass">
+                <label for="confirmPass">Confirm Password:</label>
+                <input type="password" id="confirmPass" name="confirmPass">
+            </div>
+
+            <a href="profilePage.html"><button id="submi" type="submit">Submit</button></a>
+        </form>
+    </div>
+
+    <script src="/Fruits-On-The-Web/js/profilePage.js"></script>
 </body>
 
 </html>

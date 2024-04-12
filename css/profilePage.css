@@ -327,99 +327,232 @@ a {
         justify-content: space-around;
     }
 
-    .doctorButton {
-        position: fixed;
-        width: 6vw;
-        height: 6vw;
-        bottom: 2vw;
-        right: 2vw;
-        border-radius: 70%;
-        border: 0;
-        background-color: black;
-        background-image: url("/Fruits-On-The-Web/images/med.gif");
-        background-size: contain;
-    }
-
-    .doctorBox {
-        visibility: hidden;
-        position: fixed;
-        border-radius: 10%;
-        background-image: url("/Fruits-On-The-Web/images/doctorBg.jpg");
-        background-size: cover;
-        width: 20vw;
-        height: 15vw;
-        bottom: 7.5vw;
-        right: 6vw;
-        color: white;
-        font-family: cursive;
-        font-size: 1.5vw;
+    .profileDiv {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-top: 18vh;
+        padding-left: 3vw;
+    }
+
+    .profileBox {
+        background-color: white;
+        border-radius: 20px;
+        width: 70vw;
+        height: 75vh;
+    }
+
+    #profPic {
+        padding-left: 5vw;
+        padding-right: 1vw;
+        width: 2vw;
+        height: 4vh;
+    }
+
+    #textProf {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 3vh;
+        font-family: cursive;
+        font-size: 1.5vw;
+    }
+
+    #lineProfile {
+        height: 0.1vh;
+        width: 70vw;
+        background-color: #1a1b36;
+    }
+
+    .roundProfile {
+        display: flex;
+        padding-top: 7vh;
+        padding-left: 13vw;
+    }
+
+    .boxProfile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2vh;
+        border: 1px solid rgb(220, 219, 219);
+        border-radius: 10px;
+        width: 15vw;
+        height: 32vh;
+    }
+
+    #avatar {
+        width: 8vw;
+        height: 15vh;
+        background-color: rgb(238, 213, 247);
+        border-radius: 50%;
+        border: 2px solid rgb(220, 219, 219);
+    }
+
+    #nameProfile {
+        font-size: 2vw;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    #emailProfile {
+        font-size: 1vw;
+        color: var(--graysh);
+    }
+
+    .area {
+        padding-left: 2vw;
+    }
+
+    .detailsProfile {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        row-gap: 1vw;
         padding-left: 1vw;
         padding-right: 1vw;
+        width: 30vw;
+        height: 45vh;
+        background-color: rgb(249, 243, 251);
+        border: 1px solid rgb(238, 216, 245);
+        border-radius: 10px;
     }
 
-    .gamesGrid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 2.5vw;
-        width: 70vw;
-        height: 40vw;
-        padding-left: 14vw;
-        padding-top: 10vw;
+    #name {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 0.5vw;
+        height: 5vh;
+        background-color: #3b089b;
+        border-radius: 5px;
+        color: white;
+        font-size: 1.5vw;
     }
 
-    .name {
-        border-radius: 10%;
+    #password {
+        font-size: 1.2vw;
+        font-family: cursive;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 0.5vw;
+        height: 5vh;
+        background-color: #3b089b;
+        border-radius: 5px;
+        color: white;
     }
 
-    #name1 {
-        
+    #email {
+        font-size: 1.4vw;
+        font-family: fantasy;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 0.5vw;
+        height: 5vh;
+        background-color: #3b089b;
+        border-radius: 5px;
+        color: white;
     }
 
-    #name1:hover {
-
+    .editProfile {
+        height: 3vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    #name2 {
-        
+    #editProf {
+        width: 2vw;
+        height: 3.5vh;
+        padding-right: 0.5vw;
     }
 
-    #name2:hover {
-        
+    .resetPass {
+        height: 3vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    #name3 {
-        
+    #resetPassw {
+        width: 2vw;
+        height: 3.5vh;
+        padding-right: 0.5vw;
     }
 
-    #name3:hover {
-        
+    label {
+        display: block;
+        padding-bottom: 1vw;
     }
 
-    #name4 {
-       
+    input {
+        padding-bottom: 1vw;
+        padding-right: 5vw;
+        padding-left: 0.5vw;
     }
 
-    #name4:hover {
-        
+    .editPBox {
+        visibility: hidden;
+        position: absolute;
+        top: 35vh;
+        left: 33vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35vw;
+        height: 40vh;
+        background-color: #1a1b36;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.2vw;
     }
 
-    #name5 {
-       
+    .inputGroup {
+        padding-bottom: 2vw;
     }
 
-    #name5:hover {
-        
+    #subm {
+        font-size: 1vw;
+        margin-top: 0.5vw;
+        padding: 1vw 2vw;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
     }
 
-    #name6 {
-        
+    .editPasBox {
+        visibility: hidden;
+        position: absolute;
+        top: 35vh;
+        left: 33vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35vw;
+        height: 40vh;
+        background-color: #1a1b36;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.2vw;
     }
 
-    #name6:hover {
-        
+    .inputGroupPass {
+        padding-bottom: 2vw;
+    }
+
+    #submi {
+        font-size: 1vw;
+        margin-top: 0.5vw;
+        padding: 1vw 2vw;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
     }
 }
 
@@ -731,102 +864,236 @@ a {
         display: flex;
         justify-content: space-around;
     }
-    
-    .doctorButton {
-        position: fixed;
-        width: 10vw;
-        height: 10vw;
-        bottom: 4vw;
-        right: 4vw;
-        border-radius: 70%;
-        border: 0;
-        background-color: black;
-        background-image: url("/Fruits-On-The-Web/images/med.gif");
-        background-size: contain;
-    }
-    
-    .doctorBox {
-        visibility: hidden;
-        position: fixed;
-        border-radius: 10%;
-        background-image: url("/Fruits-On-The-Web/images/doctorBg.jpg");
-        background-size: cover;
-        width: 35vw;
-        height: 22vw;
-        bottom: 12.5vw;
-        right: 10vw;
-        color: white;
-        font-family: cursive;
-        font-size: 2.5vw;
+
+    .profileDiv {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-left: 1vw;
-        padding-right: 1vw;
-    }
-    
-    .gamesGrid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 10vw;
-        width: 75vw;
-        height: 100vw;
-        padding-left: 16vw;
-        padding-top: 15vw;
-        padding-bottom: 10vw;
+        padding-top: 12vh;
+        padding-left: 3.5vw;
     }
 
-    .name {
-        border-radius: 10%;
+    .profileBox {
+        background-color: white;
+        border-radius: 20px;
+        width: 70vw;
+        height: 80vh;
+    }
+
+    #profPic {
+        padding-left: 8vw;
+        padding-right: 3vw;
+        width: 7vw;
+        height: 4vh;
+    }
+
+    #textProf {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 3vh;
+        font-family: cursive;
+        font-size: 3.5vw;
+    }
+
+    #lineProfile {
+        height: 0.1vh;
+        width: 70vw;
+        background-color: #1a1b36;
+    }
+
+    .roundProfile {
+        display: flex;
+        padding-top: 8vh;
+        padding-left: 2vw;
+    }
+
+    .boxProfile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3vh;
+        border: 1px solid rgb(220, 219, 219);
+        border-radius: 10px;
+        width: 27vw;
+        height: 30vh;
+    }
+
+    #avatar {
+        width: 20vw;
+        height: 12vh;
+        background-color: rgb(238, 213, 247);
+        border-radius: 50%;
+        border: 2px solid rgb(220, 219, 219);
+    }
+
+    #nameProfile {
+        font-size: 4vw;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    #emailProfile {
+        font-size: 2vw;
+        color: var(--graysh);
+    }
+
+    .area {
+        padding-left: 1vw;
+    }
+
+    .detailsProfile {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        row-gap: 4vw;
+        padding-top: 6vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        width: 37vw;
+        height: 52vh;
+        background-color: rgb(249, 243, 251);
+        border: 1px solid rgb(238, 216, 245);
+        border-radius: 10px;
+    }
+
+    #name {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 0.5vw;
+        height: 5vh;
+        background-color: #3b089b;
+        border-radius: 5px;
+        color: white;
+        font-size: 3.5vw;
+    }
+
+    #password {
+        font-size: 2.2vw;
+        font-family: cursive;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 0.5vw;
+        height: 5vh;
+        background-color: #3b089b;
+        border-radius: 5px;
+        color: white;
+    }
+
+    #email {
+        font-size: 3vw;
+        font-family: fantasy;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 0.5vw;
+        height: 5vh;
+        background-color: #3b089b;
+        border-radius: 5px;
+        color: white;
+    }
+
+    .editProfile {
+        height: 8vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #editProf {
+        width: 5vw;
+        height: 3vh;
+        padding-right: 1vw;
+    }
+
+    .resetPass {
+        height: 8vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #resetPassw {
+        width: 5vw;
+        height: 3vh;
+        padding-right: 1vw;
+    }
+
+    label {
+        display: block;
+        padding-bottom: 1vw;
+    }
+
+    input {
+        padding-bottom: 3vw;
+        padding-right: 25vw;
+        padding-left: 0.5vw;
+    }
+
+    .editPBox {
+        visibility: hidden;
+        position: absolute;
+        top: 35vh;
+        left: 20vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60vw;
+        height: 40vh;
+        background-color: #1a1b36;
+        color: white;
+        border-radius: 10px;
+        font-size: 3.5vw;
+    }
+
+    .inputGroup {
+        padding-bottom: 7vw;
+    }
+
+    #subm {
+        font-size: 3vw;
+        margin-top: 0.5vw;
+        padding: 1.5vw 2.5vw;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .editPasBox {
+        visibility: hidden;
+        position: absolute;
+        top: 35vh;
+        left: 20vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60vw;
+        height: 40vh;
+        background-color: #1a1b36;
+        color: white;
+        border-radius: 10px;
+        font-size: 3.5vw;
+    }
+
+    .inputGroupPass {
+        padding-bottom: 7vw;
+    }
+
+    #submi {
+        font-size: 3vw;
+        margin-top: 0.5vw;
+        padding: 1.5vw 2.5vw;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
     }
     
-    #name1 {
-       
-    }
-    
-    #name1:hover {
-    
-    }
-    
-    #name2 {
-        
-    }
-    
-    #name2:hover {
-        
-    }
-    
-    #name3 {
-        
-    }
-    
-    #name3:hover {
-        
-    }
-    
-    #name4 {
-        
-    }
-    
-    #name4:hover {
-        
-    }
-    
-    #name5 {
-       
-    }
-    
-    #name5:hover {
-        
-    }
-    
-    #name6 {
-       
-    }
-    
-    #name6:hover {
-        
-    }
 }
 
 /* Smartphones */
@@ -1137,100 +1404,233 @@ a {
         display: flex;
         justify-content: space-around;
     }
-    
-    .doctorButton {
-        position: fixed;
-        width: 15vw;
-        height: 15vw;
-        bottom: 3vw;
-        right: 3vw;
-        border-radius: 70%;
-        border: 0;
-        background-color: black;
-        background-image: url("/Fruits-On-The-Web/images/med.gif");
-        background-size: contain;
-    }
-    
-    .doctorBox {
-        visibility: hidden;
-        position: fixed;
-        border-radius: 10%;
-        background-image: url("/Fruits-On-The-Web/images/doctorBg.jpg");
-        background-size: cover;
-        width: 60vw;
-        height: 35vw;
-        bottom: 15.5vw;
-        right: 12vw;
-        color: white;
-        font-family: cursive;
-        font-size: 4.5vw;
+
+    .profileDiv {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-left: 1vw;
-        padding-right: 1vw;
-    }
-    
-    .gamesGrid {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 4.5vw;
-        width: 55vw;
-        height: 260vw;
-        padding-left: 24vw;
-        padding-top: 16vw;
-        padding-bottom: 10vw;
+        padding-top: 10vh;
+        padding-left: 7vw;
     }
 
-    .name {
-        border-radius: 10%;
+    .profileBox {
+        background-color: white;
+        border-radius: 20px;
+        width: 70vw;
+        height: 87vh;
+    }
+
+    #profPic {
+        padding-left: 4vw;
+        padding-right: 2vw;
+        width: 14vw;
+        height: 6vh;
+    }
+
+    #textProf {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 3vh;
+        font-family: cursive;
+        font-size: 6.5vw;
+    }
+
+    #lineProfile {
+        height: 0.1vh;
+        width: 70vw;
+        background-color: #1a1b36;
+    }
+
+    .roundProfile {
+        display: block;
+        padding-top: 2vh;
+        padding-left: 10vw;
+    }
+
+    .boxProfile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1vh;
+        border: 1px solid rgb(220, 219, 219);
+        border-radius: 10px;
+        width: 50vw;
+        height: 18vh;
+    }
+
+    #avatar {
+        width: 24vw;
+        height: 9vh;
+        background-color: rgb(238, 213, 247);
+        border-radius: 50%;
+        border: 2px solid rgb(220, 219, 219);
+    }
+
+    #nameProfile {
+        font-size: 5vw;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    #emailProfile {
+        font-size: 3vw;
+        color: var(--graysh);
+    }
+
+    .area {
+        padding-top: 2vw;
+    }
+
+    .detailsProfile {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        row-gap: 1vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        width: 48vw;
+        height: 42vh;
+        background-color: rgb(249, 243, 251);
+        border: 1px solid rgb(238, 216, 245);
+        border-radius: 10px;
+    }
+
+    #name {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 1vw;
+        height: 5vh;
+        background-color: #3b089b;
+        border-radius: 5px;
+        color: white;
+        font-size: 4.5vw;
+    }
+
+    #password {
+        font-size: 3vw;
+        font-family: cursive;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 1vw;
+        height: 5vh;
+        background-color: #3b089b;
+        border-radius: 5px;
+        color: white;
+    }
+
+    #email {
+        font-size: 3.4vw;
+        font-family: fantasy;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding-left: 1vw;
+        height: 5vh;
+        background-color: #3b089b;
+        border-radius: 5px;
+        color: white;
+    }
+
+    .editProfile {
+        height: 10vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #editProf {
+        width: 8vw;
+        height: 3.5vh;
+        padding-right: 1vw;
+    }
+
+    .resetPass {
+        height: 10vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #resetPassw {
+        width: 8vw;
+        height: 3.5vh;
+        padding-right: 1vw;
+    }
+
+    label {
+        display: block;
+        padding-bottom: 3vw;
+    }
+
+    input {
+        padding-bottom: 3vw;
+        padding-right: 12vw;
+        padding-left: 0.5vw;
+    }
+
+    .editPBox {
+        visibility: hidden;
+        position: absolute;
+        top: 30vh;
+        left: 15vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 78vw;
+        height: 40vh;
+        background-color: #1a1b36;
+        color: white;
+        border-radius: 10px;
+        font-size: 6.2vw;
+    }
+
+    .inputGroup {
+        padding-bottom: 8vw;
+    }
+
+    #subm {
+        font-size: 6vw;
+        margin-top: 0.5vw;
+        padding: 2.5vw 3.5vw;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .editPasBox {
+        visibility: hidden;
+        position: absolute;
+        top: 30vh;
+        left: 15vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 78vw;
+        height: 40vh;
+        background-color: #1a1b36;
+        color: white;
+        border-radius: 10px;
+        font-size: 6.2vw;
+    }
+
+    .inputGroupPass {
+        padding-bottom: 8vw;
+    }
+
+    #submi {
+        font-size: 6vw;
+        margin-top: 0.5vw;
+        padding: 2.5vw 3.5vw;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
     }
     
-    #name1 {
-        
-    }
-    
-    #name1:hover {
-    
-    }
-    
-    #name2 {
-        
-    }
-    
-    #name2:hover {
-        
-    }
-    
-    #name3 {
-        
-    }
-    
-    #name3:hover {
-        
-    }
-    
-    #name4 {
-       
-    }
-    
-    #name4:hover {
-        
-    }
-    
-    #name5 {
-        
-    }
-    
-    #name5:hover {
-        
-    }
-    
-    #name6 {
-       
-    }
-    
-    #name6:hover {
-        
-    }
 }
