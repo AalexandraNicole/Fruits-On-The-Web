@@ -18,7 +18,7 @@
 
 body {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     min-height: 100vh;
     background-color: black;
@@ -69,7 +69,7 @@ header {
 .navigation .btnLogin-popup {
     width: 130px;
     height: 50px;
-    background: transparent;
+    background:  #873b87;
     border: 2px solid #fff;
     outline: none;
     border-radius: 6px;
@@ -79,12 +79,13 @@ header {
     font-weight: 500;
     margin-left: 40px;
     margin-right: 10px;
-    transition: .5s;
+    transition: .3s;
 }
 
     .navigation .btnLogin-popup:hover {
-        background: #873b87;
-        color: var(--mainColor);
+        background: var(--mainColor);
+        color: #873b87;
+        border: 2px solid #873b87;
     }
 
     .logo {
@@ -105,7 +106,7 @@ header {
 
 .wrapper {
     align-self: center;
-    position: relative;
+    position: absolute;
     width: 450px;
     height: 440px;
     background: transparent;
@@ -170,7 +171,7 @@ header {
         right: 0;
         width: 45px;
         height: 45px;
-        background: var(--mainColor);
+        background: #873b87;
         font-size: 1.7em;
         display: flex;
         justify-content: center;
@@ -236,7 +237,7 @@ header {
 .btn {
     width: 100%;
     height: 45px;
-    background: var(--mainColor);
+    background: #a13ea1;
     border: none;
     outline: none;
     border-radius: 50px;
@@ -248,8 +249,8 @@ header {
 }
 
     .btn:hover {
-        background: #a13ea1;
-        color: var(--mainColor);
+        background: var(--mainColor);
+        color: #fff;
     }
 
     .register-link {
@@ -285,8 +286,168 @@ header {
         text-decoration: underline;
     }
 
+/* Section one starts here */
+
+.section-1{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.767),rgba(0, 0, 0, 0.712)),
+    url(../images/LoginPage.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+.section-1-wrapper{
+    width: 70%;
+    margin: auto;
+}
+.section-1 h1{
+    width: 500px;
+    color: #a13ea1;
+    font-size: 1.5rem;
+    position: relative;
+    font-weight: 400;
+}
+.section-1-img{
+    display: flex;
+}
+.section-1-img .img{
+    width: 100px;
+    height: 130px;
+    background: url(../images/apple.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.section-1-img .img-2{
+    background: url(../images/banana.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.section-1-img  .img-3{
+    background: url(../images/cherry.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.section-1-img  .img-4{
+    background: url(../images/lemon.avif);
+    background-size: cover;
+    background-position: center;
+}
+.section-1-img  .img-5{
+    background: url(../images/strawberries.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.section-1-img  .img-6{
+    background: url(../images/orange.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img:hover{
+    transform: translateY(-10px);
+}
+
+/* Section 2 starts here */
+.game-categories{
+    width: 70%;
+    margin: 50px auto;
+    position: relative;
+}
+.game-categories h1{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #a13ea1;
+}
+.game-wrapper{
+    display: flex;
+}
+.gw{
+    width: 120px;
+    height: 120px;
+    background: url(../images/asphalt8.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 20px 15px 0 0;
+    border-radius: 10px;
+}
+.gw:hover{
+    transform: translateY(-10px);
+}
+.left{
+    position: relative;
+    right: -140px;
+}
+
+.gw-1{
+    background: url(../images/pes22.webp);
+    background-size: cover;
+    background-position: center;
+}
+.gw-2{
+    background: url(../images/carrace.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gw-3{
+    background: url(../images/Anpar.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gw-4{
+    background: url(../images/warxone.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gw-5{
+    background: url(../images/wras.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gw-6{
+    background: url(../images/battle.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gw-7{
+    background: url(../images/download.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gw-8{
+    background: url(../images/battlefield.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.gw-9{
+    background: url(../images/craft.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.section-2{
+    width: 100%;
+    height: 50vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.767),rgba(0, 0, 0, 0.712)),
+    url(../images/flame.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.section-2 h1{
+    font-size: 2rem;
+    color: #fff;
+    margin: 20px 0;
+}
+    
 /* FOoter section */
 footer{
+    position: absolute;
+    align-self: flex-end;
     width: 100%;
     height: 55vh;
     background: #282828;
@@ -295,7 +456,7 @@ footer{
     
 }
 .footer-body{
-    width: 90%;
+    width: 100%;
     margin: auto;
     display: flex;
     justify-content: space-around;
