@@ -1,9 +1,6 @@
 let menuButton = document.querySelector(".openMen");
 let menuBar = document.querySelector(".menuBar");
 let menuButtons = document.querySelectorAll(".menuButtons");
-let rankBox = document.querySelector(".ranksBox");
-let doctorBox = document.querySelector(".doctorBox");
-let doctorButton = document.querySelector(".doctorButton");
 let nameYear = document.querySelector(".nameYear");
 let contact = document.querySelector(".contact");
 let about = document.querySelector(".about");
@@ -54,21 +51,3 @@ function hideMenuButtons() {
     privacy.style.visibility = "hidden";
     terms.style.visibility = "hidden";
 };
-
-function showRanks() {
-    rankBox.style.visibility = "visible";
-}
-
-function hideRanks() {
-    rankBox.style.visibility = "hidden";
-}
-
-function showDoctorBox() {
-    doctorButton.style.backgroundImage = "url('/Fruits-On-The-Web/images/meds.gif')";
-    doctorBox.style.visibility = "visible";
-}
-
-function hideDoctorBox() {
-    doctorButton.style.backgroundImage = "url('/Fruits-On-The-Web/images/med.gif')";
-    doctorBox.style.visibility = "hidden";
-}

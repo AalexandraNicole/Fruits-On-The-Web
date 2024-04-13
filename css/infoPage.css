@@ -1,7 +1,7 @@
 :root {
     --mainColor: rgba(33, 34, 51, 0.9);
     --menuColor: rgba(29, 31, 60, 0.9);
-    --bg: #1a1b36;
+    --bg: ##1b1c3a;
     --graysh : #666A7F;
 }
 
@@ -13,7 +13,7 @@
 html,
 body {
     margin: 0;
-    background-color: black;
+    background-image: url('/Fruits-On-The-Web/images/aboutBg.jpg');
 }
 
 a {
@@ -312,114 +312,23 @@ a {
         padding-top: 3vw;
     }
 
-    .ranksBox {
-        visibility: hidden;
-        position: fixed;
-        background-image: url("/Fruits-On-The-Web/images/ranksBg.jpg");
-        background-size: cover;
-        border-radius: 10%;
-        width: 20vw;
-        height: 30vw;
-        top: 5vw;
-        right: 4vw;
-        font-size: 2vw;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .doctorButton {
-        position: fixed;
-        width: 6vw;
-        height: 6vw;
-        bottom: 2vw;
-        right: 2vw;
-        border-radius: 70%;
-        border: 0;
-        background-color: black;
-        background-image: url("/Fruits-On-The-Web/images/med.gif");
-        background-size: contain;
-    }
-
-    .doctorBox {
-        visibility: hidden;
-        position: fixed;
-        border-radius: 10%;
-        background-image: url("/Fruits-On-The-Web/images/doctorBg.jpg");
-        background-size: cover;
-        width: 20vw;
-        height: 15vw;
-        bottom: 7.5vw;
-        right: 6vw;
+    .infoDiv {
+        margin: 0;
+        padding-top: 14vw;
+        padding-left: 10vw;
+        padding-right: 5vw;
+        padding-bottom: 5vw;
         color: white;
-        font-family: cursive;
+    }
+
+    #rest {
         font-size: 1.5vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 1vw;
-        padding-right: 1vw;
+        line-height: 1.8vw;
     }
 
-    .gamesGrid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 2.5vw;
-        width: 70vw;
-        height: 40vw;
-        padding-left: 14vw;
-        padding-top: 10vw;
-    }
-
-    .name {
-        border-radius: 10%;
-    }
-
-    #name1 {
-        
-    }
-
-    #name1:hover {
-
-    }
-
-    #name2 {
-        
-    }
-
-    #name2:hover {
-        
-    }
-
-    #name3 {
-        
-    }
-
-    #name3:hover {
-        
-    }
-
-    #name4 {
-       
-    }
-
-    #name4:hover {
-        
-    }
-
-    #name5 {
-       
-    }
-
-    #name5:hover {
-        
-    }
-
-    #name6 {
-        
-    }
-
-    #name6:hover {
-        
+    #regards {
+        padding-top: 2vw;
+        font-size: 1.4vw;
     }
 }
 
@@ -716,116 +625,29 @@ a {
         width: 14vw;
         padding-top: 30vw;
     }
-    
-    .ranksBox {
-        visibility: hidden;
-        position: fixed;
-        background-image: url("/Fruits-On-The-Web/images/ranksBg.jpg");
-        background-size: cover;
-        border-radius: 10%;
-        width: 28vw;
-        height: 40vw;
-        top: 7vw;
-        right: 6vw;
-        font-size: 3vw;
-        display: flex;
-        justify-content: space-around;
-    }
-    
-    .doctorButton {
-        position: fixed;
-        width: 10vw;
-        height: 10vw;
-        bottom: 4vw;
-        right: 4vw;
-        border-radius: 70%;
-        border: 0;
-        background-color: black;
-        background-image: url("/Fruits-On-The-Web/images/med.gif");
-        background-size: contain;
-    }
-    
-    .doctorBox {
-        visibility: hidden;
-        position: fixed;
-        border-radius: 10%;
-        background-image: url("/Fruits-On-The-Web/images/doctorBg.jpg");
-        background-size: cover;
-        width: 35vw;
-        height: 22vw;
-        bottom: 12.5vw;
-        right: 10vw;
-        color: white;
-        font-family: cursive;
-        font-size: 2.5vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 1vw;
-        padding-right: 1vw;
-    }
-    
-    .gamesGrid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 10vw;
-        width: 75vw;
-        height: 100vw;
-        padding-left: 16vw;
+
+    .infoDiv {
+        margin: 0;
         padding-top: 15vw;
-        padding-bottom: 10vw;
+        padding-left: 15vw;
+        padding-right: 5vw;
+        padding-bottom: 5vw;
+        color: white;
     }
 
-    .name {
-        border-radius: 10%;
+    #welcome {
+        font-size: 5vw;
     }
-    
-    #name1 {
-       
+
+    #rest {
+        padding-top: 2vw;
+        font-size: 2.5vw;
+        line-height: 3vw;
     }
-    
-    #name1:hover {
-    
-    }
-    
-    #name2 {
-        
-    }
-    
-    #name2:hover {
-        
-    }
-    
-    #name3 {
-        
-    }
-    
-    #name3:hover {
-        
-    }
-    
-    #name4 {
-        
-    }
-    
-    #name4:hover {
-        
-    }
-    
-    #name5 {
-       
-    }
-    
-    #name5:hover {
-        
-    }
-    
-    #name6 {
-       
-    }
-    
-    #name6:hover {
-        
+
+    #regards {
+        padding-top: 1vw;
+        font-size: 2.4vw;
     }
 }
 
@@ -1122,115 +944,28 @@ a {
         height: 2vw;
         padding-top: 7vw;
     }
-    
-    .ranksBox {
-        visibility: hidden;
-        position: fixed;
-        background-image: url("/Fruits-On-The-Web/images/ranksBg.jpg");
-        background-size: cover;
-        border-radius: 10%;
-        width: 40vw;
-        height: 55vw;
-        top: 10vw;
-        right: 8vw;
-        font-size: 5vw;
-        display: flex;
-        justify-content: space-around;
-    }
-    
-    .doctorButton {
-        position: fixed;
-        width: 15vw;
-        height: 15vw;
-        bottom: 3vw;
-        right: 3vw;
-        border-radius: 70%;
-        border: 0;
-        background-color: black;
-        background-image: url("/Fruits-On-The-Web/images/med.gif");
-        background-size: contain;
-    }
-    
-    .doctorBox {
-        visibility: hidden;
-        position: fixed;
-        border-radius: 10%;
-        background-image: url("/Fruits-On-The-Web/images/doctorBg.jpg");
-        background-size: cover;
-        width: 60vw;
-        height: 35vw;
-        bottom: 15.5vw;
-        right: 12vw;
+
+    .infoDiv {
+        margin: 0;
+        padding-top: 18vw;
+        padding-left: 20vw;
+        padding-right: 8vw;
+        padding-bottom: 5vw;
         color: white;
-        font-family: cursive;
-        font-size: 4.5vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 1vw;
-        padding-right: 1vw;
-    }
-    
-    .gamesGrid {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 4.5vw;
-        width: 55vw;
-        height: 260vw;
-        padding-left: 24vw;
-        padding-top: 16vw;
-        padding-bottom: 10vw;
     }
 
-    .name {
-        border-radius: 10%;
+    #welcome {
+        font-size: 6vw;
     }
-    
-    #name1 {
-        
+
+    #rest {
+        padding-top: 2vw;
+        font-size: 3.5vw;
+        line-height: 3.5vw;
     }
-    
-    #name1:hover {
-    
-    }
-    
-    #name2 {
-        
-    }
-    
-    #name2:hover {
-        
-    }
-    
-    #name3 {
-        
-    }
-    
-    #name3:hover {
-        
-    }
-    
-    #name4 {
-       
-    }
-    
-    #name4:hover {
-        
-    }
-    
-    #name5 {
-        
-    }
-    
-    #name5:hover {
-        
-    }
-    
-    #name6 {
-       
-    }
-    
-    #name6:hover {
-        
+
+    #regards {
+        padding-top: 1vw;
+        font-size: 2.8vw;
     }
 }
