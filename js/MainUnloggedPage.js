@@ -1,22 +1,28 @@
-const wrapper = document.querySelector('.wrapper');
-const loginLink = document.querySelector('.login-link');
-const registerLink = document.querySelector('.register-link');
-const btnPopup = document.querySelector('.btnLogin-popup');
-const iconClose = document.querySelector('.icon-close');
+// document.getElementById("btnlogin").onclick = function () {
+//     location.href = "loginPage.html";
+// };
 
+// Get all category headers
+const categoryHeaders = document.querySelectorAll('.category-header');
 
-registerLink.addEventListener('click', () => {
-    wrapper.classList.add('active');
-})
+// Get all category elements
+const categories = document.querySelectorAll('.category');
 
-loginLink.addEventListener('click', () => {
-    wrapper.classList.remove('active');
-})
+// Function to handle category header click
+function handleCategoryHeaderClick(event) {
+    // Get the ID of the clicked category header
+    const categoryId = event.target.id.replace('-header', '');
+    
+    // Hide all categories
+    categories.forEach(category => {
+        category.classList.remove('active');
+    });
 
-btnPopup.addEventListener('click', () => {
-    wrapper.classList.add('active-popup');
-})
+    // Show the clicked category
+    document.getElementById(categoryId).classList.add('active');
+}
 
-iconClose.addEventListener('click', () => {
-    wrapper.classList.remove('active-popup');
-})
+// Add event listener to category headers
+categoryHeaders.forEach(header => {
+    header.addEventListener('click', handleCategoryHeaderClick);
+});

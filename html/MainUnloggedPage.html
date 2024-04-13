@@ -22,136 +22,118 @@
 </head>
 <body>
 
-    <header>
-        <img class="logo" src="../images/logo.gif">
-        <h2 class="title"> FruitsOnTheWeb </h2>
-        <nav class="navigation">
-            <a href="#">Home</a>
-            <a href="#">Games</a>
-            <a href="#">About</a>
-            <button class="btnLogin-popup">Login</button>
-        </nav>
-    </header>
+    <div class="container">
+        <header>
+            <img class="logo" src="../images/logo.gif">
+            <h2 class="title"> FruitsOnTheWeb </h2>
+            <nav class="navigation">
+                <a href="MainUnloggedPage.html">Home</a>
+                <a href="#">Games</a>
+                <a href="AboutUnloogedPage.html">About</a>
+                <button onclick="window.location='loginPage.html';" id="btnLogin" class="btnLogin">Login</button>
+            </nav>
+        </header>    
 
-    <footer>
-        <div class="footer-body">
-            <ul>
-                <h3>Our Games</h3>
-                <li><a href="#">Anpar</a></li>
-                <li><a href="#">BattleField</a></li>
-                <li><a href="#">The Ghost</a></li>
-                <li><a href="#">Fortnite</a></li>
-                <li><a href="#">Cold War</a></li>
-            </ul>
-            <ul>
-                <h3>Get In Touch</h3>
-                <li><a href="#"><i class='bx bxl-facebook-circle'></i>Facebook</a></li>
-                <li><a href="#"><i class='bx bxl-instagram'></i>Instagram</a></li>
-                <li><a href="#"><i class="bx bxl-twitter"></i>Twitter</a></li>
-                <li><a href="#"><i class="bx bxl-linkedin"></i>Linkedin</a></li>
-            </ul>
+        <div class="content-wrapper">
+            <div class="content-desc">
+                <h1>Fruits-On-The-Web</h1>
+                <p>Explore the colorful world of fruits through a 
+                    variety of <span>fun and engaging</span> games!</p>
+                <p>Designed for curious kids who want to 
+                    learn while having a blast, our educational 
+                    games cover everything from identifying fruit colors to
+                     understanding their unique characteristics.</p>
+
+                <button onclick="window.location='loginPage.html';" id="btn2">Play Now</button>
+            </div>
+
+            <div class="game"></div>
         </div>
-    </footer>
+    </div>
+
+    <div class="logo-section">
+        <i class="fas fa-gamepad"></i>
+        <h1>FruitsOnTheWeb</h1>
+    </div>
 
     <section class="section-1">
         <div class="section-1-wrapper">  
             <h1>GAMES</h1>
             <br>
             <div class="section-1-img">
-                <a href="#"><div class="img img-1"></div></a>
-                <a href="#"><div class="img img-2"></div></a>
-                <a href="#"><div class="img img-3"></div></a>
-                <a href="#"><div class="img img-4"></div></a>
-                <a href="#"><div class="img img-5"></div></a>
-                <a href="#"><div class="img img-6"></div></a>
-                <a href="#"><div class="img img-2"></div></a>
-                <a href="#"><div class="img img-3"></div></a>
+                <a href="loginPage.html"><div class="img img-1"></div></a>
+                <a href="loginPage.html"><div class="img img-2"></div></a>
+                <a href="loginPage.html"><div class="img img-3"></div></a>
+                <a href="loginPage.html"><div class="img img-4"></div></a>
+                <a href="loginPage.html"><div class="img img-5"></div></a>
+                <a href="loginPage.html"><div class="img img-6"></div></a>
+                <a href="loginPage.html"><div class="img img-7"></div></a>
             </div>
         </div>
         
         <div class="game-categories">
             <h1>GAME CATEGORIES</h1>
-            <div class="game-wrapper">
-                <a href="#"><div class="gw gw-1"></div></a>
-                <a href="#"><div class="gw gw-2"></div></a>
-                <a href="#"><div class="gw gw-3"></div></a>
-                <a href="#"><div class="gw gw-4"></div></a>
-                <a href="#"><div class="gw gw-5"></div></a>
-            </div>
-    
-            <div class="game-wrapper left">
-                <a href="#"><div class="gw gw-6"></div></a>
-                <a href="#"><div class="gw gw-7"></div></a>
-                <a href="#"><div class="gw gw-8"></div></a>
-                <a href="#"><div class="gw gw-9"></div></a>
-                <a href="#"><div class="gw gw-10"></div></a>
-            </div>
+            <br>
+                <h2 class="category-header" id="math-header">Math</h2>
+                <div id="math" class="category">
+                    <div class="game-wrapper">
+                        <!-- Math games -->
+                        <a href="#"><div class="gw gw-1"></div></a>
+                    </div>
+                </div>
+        
+                <h2 class="category-header" id="memory-header">Memory</h2>
+                <div id="memory" class="category">
+                    <div class="game-wrapper">
+                        <!-- Memory games -->
+                        <a href="#"><div class="gw gw-2"></div></a>
+                        <a href="#"><div class="gw gw-3"></div></a>
+                    </div>
+                </div>
+        
+                <h2 class="category-header" id="guessing-header">Guessing</h2>
+                <div id="guessing" class="category">
+                    <div class="game-wrapper">
+                        <!-- Guessing games -->
+                        <a href="#"><div class="gw gw-4"></div></a>
+                        <a href="#"><div class="gw gw-5"></div></a>
+                    </div>
+                </div>
+        
+                <h2 class="category-header" id="coloring-header">Coloring</h2>
+                <div id="coloring" class="category">
+                    <div class="game-wrapper">
+                        <!-- Coloring games -->
+                        <a href="#"><div class="gw gw-6"></div></a>
+                    </div>
+                </div>
         </div>
     </section>
 
-    <div class="wrapper">
-        <span class="icon-close"><ion-icon name="close-outline" role="img" class="md hydrated"></ion-icon></span>
-        <div class="form-box login">
-            <form action="">
-                <h1>Login</h1>
-                <div class="input-box">
-                    <input type="email" placeholder="Email" required="">
-                    <i class="bx bxs-envelope"></i>
-                </div>
-                <div class="input-box">
-                    <input type="password" placeholder="Password" required="">
-                    <i class="bx bxs-lock"></i>
-                </div>
-
-                <div class="remember-forgot">
-                    <label>
-                        <input type="checkbox"> Remember me
-                    </label>
-                    <a href="#"> Forgot password? </a>
-                </div>
-
-                <button type="submit" class="btn"> Login </button>
-
-                <div class="register-link">
-                    <p> Don't have an account? <a href="#">Register</a></p>
-                </div>
-            </form>
+    <footer>
+        <div class="footer-body">
+            <ul>
+                <h3>Our Games</h3>
+                <li><a href="loginPage.html">Guess the Fruit</a></li>
+                <li><a href="loginPage.html">Match Fruit Colors</a></li>
+                <li><a href="loginPage.html">Fruit Math Challenge</a></li>
+                <li><a href="loginPage.html">Fruit Characteristics Quiz</a></li>
+                <li><a href="loginPage.html">Fruit Name Match</a></li>
+                <li><a href="loginPage.html">Fruit Coloring Game</a></li>
+                <li><a href="loginPage.html">Memory Fruit Cards</a></li>
+            </ul>
+            <ul>
+                <h3>Get In Touch</h3>
+                <li><a href="https://www.facebook.com/"><i class='bx bxl-facebook-circle'></i>Facebook</a></li>
+                <li><a href="https://www.instagram.com/"><i class='bx bxl-instagram'></i>Instagram</a></li>
+                <li><a href="https://twitter.com/?lang=en"><i class="bx bxl-twitter"></i>Twitter</a></li>
+                <li><a href="https://www.linkedin.com/"><i class="bx bxl-linkedin"></i>Linkedin</a></li>
+            </ul>
         </div>
-
-        <div class="form-box register">
-            <form action="">
-                <h1>Registration</h1>
-                <div class="input-box">
-                    <input type="text" placeholder="Username" required="">
-                    <i class="bx bxs-user"></i>
-                </div>
-                <div class="input-box">
-                    <input type="email" placeholder="Email" required="">
-                    <i class="bx bxs-envelope"></i>
-                </div>
-                <div class="input-box">
-                    <input type="password" placeholder="Password" required="">
-                    <i class="bx bxs-lock"></i>
-                </div>
-
-                <div class="remember-forgot">
-                    <label>
-                        <input type="checkbox"> I agree to the terms &amp; conditions
-                    </label>
-                </div>
-
-                <button type="submit" class="btn"> Register </button>
-
-                <div class="login-link">
-                    <p> Already have an account? <a href="#">Login</a></p>
-                </div>
-            </form>
+        <div class="footer-bottom">
+            <p>Copyright &copy; All Right Reserved | Designed <span>By Us</span> 2024</p>
         </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>Copyright &copy; All Right Reserved | Designed <span>By Us</span> 2024</p>
-    </div>
+    </footer>
 
     <script src="../js/MainUnloggedPage.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
