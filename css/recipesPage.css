@@ -368,58 +368,46 @@ a {
         height: 40vw;
         padding-left: 14vw;
         padding-top: 10vw;
+        padding-bottom: 5vw;
     }
 
-    .name {
+    .recipeBox {
         border-radius: 10%;
+        width: 20vw;
+        height: 20vw;
+        background-color: #a48eff;
+        display: flex;
+        flex-direction: column;
     }
 
-    #name1 {
-        
+    #titleRecipe {
+        font-size: 2vw;
+        font-weight: 500;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-self: center;
     }
 
-    #name1:hover {
-
+    #imageRecipe {
+        border-radius: 10px;
+        width: 11vw;
+        height: 11vw;
+        display: flex;
+        justify-content: center;
+        align-self: center;
     }
 
-    #name2 {
-        
+    #link {
+        padding-top: 1vw;
+        padding-bottom: 2vw;
+        display: flex;
+        justify-content: center;
+        align-self: center;
     }
 
-    #name2:hover {
-        
-    }
-
-    #name3 {
-        
-    }
-
-    #name3:hover {
-        
-    }
-
-    #name4 {
-       
-    }
-
-    #name4:hover {
-        
-    }
-
-    #name5 {
-       
-    }
-
-    #name5:hover {
-        
-    }
-
-    #name6 {
-        
-    }
-
-    #name6:hover {
-        
+    #link:hover {
+        color: #8144fe;
     }
 }
 
@@ -775,57 +763,44 @@ a {
         padding-top: 15vw;
         padding-bottom: 10vw;
     }
-
-    .name {
+    
+    .recipeBox {
         border-radius: 10%;
+        width: 32vw;
+        height: 32vw;
+        background-color: #a48eff;
+        display: flex;
+        flex-direction: column;
     }
-    
-    #name1 {
-       
+
+    #titleRecipe {
+        font-size: 3vw;
+        font-weight: 500;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-self: center;
     }
-    
-    #name1:hover {
-    
+
+    #imageRecipe {
+        border-radius: 10px;
+        width: 15vw;
+        height: 15vw;
+        display: flex;
+        justify-content: center;
+        align-self: center;
     }
-    
-    #name2 {
-        
+
+    #link {
+        padding-top: 1vw;
+        padding-bottom: 2vw;
+        display: flex;
+        justify-content: center;
+        align-self: center;
     }
-    
-    #name2:hover {
-        
-    }
-    
-    #name3 {
-        
-    }
-    
-    #name3:hover {
-        
-    }
-    
-    #name4 {
-        
-    }
-    
-    #name4:hover {
-        
-    }
-    
-    #name5 {
-       
-    }
-    
-    #name5:hover {
-        
-    }
-    
-    #name6 {
-       
-    }
-    
-    #name6:hover {
-        
+
+    #link:hover {
+        color: #8144fe;
     }
 }
 
@@ -1181,56 +1156,42 @@ a {
         padding-top: 16vw;
         padding-bottom: 10vw;
     }
-
-    .name {
+    .recipeBox {
         border-radius: 10%;
+        width: 60vw;
+        height: 60vw;
+        background-color: #a48eff;
+        display: flex;
+        flex-direction: column;
     }
-    
-    #name1 {
-        
+
+    #titleRecipe {
+        font-size: 5.5vw;
+        font-weight: 500;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-self: center;
     }
-    
-    #name1:hover {
-    
+
+    #imageRecipe {
+        border-radius: 10px;
+        width: 28vw;
+        height: 28vw;
+        display: flex;
+        justify-content: center;
+        align-self: center;
     }
-    
-    #name2 {
-        
+
+    #link {
+        padding-top: 1vw;
+        padding-bottom: 2vw;
+        display: flex;
+        justify-content: center;
+        align-self: center;
     }
-    
-    #name2:hover {
-        
-    }
-    
-    #name3 {
-        
-    }
-    
-    #name3:hover {
-        
-    }
-    
-    #name4 {
-       
-    }
-    
-    #name4:hover {
-        
-    }
-    
-    #name5 {
-        
-    }
-    
-    #name5:hover {
-        
-    }
-    
-    #name6 {
-       
-    }
-    
-    #name6:hover {
-        
+
+    #link:hover {
+        color: #8144fe;
     }
 }
