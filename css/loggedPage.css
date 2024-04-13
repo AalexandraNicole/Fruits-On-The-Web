@@ -20,6 +20,10 @@ a {
     text-decoration: none;
 }
 
+#aGrid {
+    display: grid;
+}
+
 /* Desktops */
 @media (min-width: 1025px) {
     header {
@@ -109,7 +113,6 @@ a {
 
     .fav:hover {
         background-color: rgb(156, 132, 220);
-        ;
     }
 
     .ranks {
@@ -124,7 +127,6 @@ a {
 
     .ranks:hover {
         background-color: rgb(194, 192, 244);
-        ;
     }
 
     .menuBar {

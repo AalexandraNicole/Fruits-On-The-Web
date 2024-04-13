@@ -1,0 +1,569 @@
+:root {
+    --mainColor: rgba(33, 34, 51, 0.9);
+    --menuColor: rgba(29, 31, 60, 0.9);
+    --bg: #1a1b36;
+    --graysh : #666A7F;
+    --gameBg : #bba5f9;
+}
+
+@font-face {
+    font-family: 'titleFont';
+    src: url('/Fruits-On-The-Web/fonts/OPTICopperplate.otf');
+  }
+
+html,
+body {
+    margin: 0;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Desktops */
+@media (min-width: 1025px) {
+    header {
+        background-color: var(--mainColor);
+        border-bottom: 1px solid black;
+        height: 5vw;
+        width: 100%;
+        position: fixed;
+    }
+
+    .backButton {
+        left: 1vw;
+        bottom: 1.3vw;
+        position: absolute;
+        width: 2.2vw;
+        height: 2.2vw;
+        border-radius: 50%;
+        border-color: rgb(197, 156, 234);
+        background-color: white;
+        background-image: url("/Fruits-On-The-Web/images/back.png");
+        background-size: cover;
+    }
+
+    .backButton:hover {
+        background-color: rgb(193, 175, 175);
+    }
+
+    .logo {
+        position: absolute;
+        width: 5vw;
+        height: 5vw;
+        left: 4%;
+        bottom: -0.3vw;
+    }
+
+    .title {
+        position: absolute;
+        color: white;
+        left: 8.5%;
+        font-size: 2vw;
+        font-family: 'titleFont';
+    }
+
+    .icons {
+        margin: 0;
+        position: absolute;
+        right: 2vw;
+        bottom: 0.8vw;
+    }
+
+    .profileButton {
+        width: 3vw;
+        height: 3vw;
+        border-radius: 20%;
+        border-color: rgb(197, 156, 234);
+        background-color: white;
+        background-image: url("/Fruits-On-The-Web/images/profile.png");
+        background-size: contain;
+    }
+
+    .profileButton:hover {
+        background-color: rgb(226, 196, 226);
+    }
+
+    .logout {
+        width: 3.3vw;
+        height: 3.3vw;
+        border-radius: 60%;
+        border-color: rgb(140, 158, 229);
+        background-color: white;
+        background-image: url("/Fruits-On-The-Web/images/logout.png");
+        background-size: contain;
+    }
+
+    .logout:hover {
+        background-color: rgb(4, 0, 4);
+    }
+
+    .fav {
+        width: 3.2vw;
+        height: 3.2vw;
+        border-radius: 50%;
+        border-color: rgb(156, 132, 220);
+        background-image: url("/Fruits-On-The-Web/images/favourite.png");
+        background-size: contain;
+    }
+
+    .fav:hover {
+        background-color: rgb(156, 132, 220);
+    }
+
+    .ranks {
+        width: 3.3vw;
+        height: 3.3vw;
+        border-radius: 60%;
+        border-color: rgb(118, 125, 207);
+        background-color: white;
+        background-image: url("/Fruits-On-The-Web/images/ranks.png");
+        background-size: contain;
+    }
+
+    .ranks:hover {
+        background-color: rgb(194, 192, 244);
+    }
+
+    .gamesGrid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 70vw;
+        height: 40vw;
+        padding-left: 14vw;
+        padding-top: 10vw;
+        padding-bottom: 5vw;
+    }
+
+    .gameArea {
+        background-color: var(--gameBg);
+        border-radius: 10px;
+        display: flex;
+        row-gap: 1vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 1vw;
+        padding-bottom: 2vw;
+    }
+
+    #gameImg {
+        width: 15vw;
+        height: 15vw;
+        margin: 0;
+        padding-bottom: 2vw;
+        align-self: center;
+    }
+
+    #back {
+        margin: 0;
+        width: 5vw;
+        height: 5vw;
+        background-image: url("/Fruits-On-The-Web/images/back.png");
+        background-size: cover;
+        border-radius: 50%;
+        border: 0;
+    }
+
+    .option {
+        align-self: center;
+        border-radius: 10px;
+        width: 30vw;
+        height: 2.5vw;
+        font-size: 1.5vw;
+        color: white;
+        background-color: #a13ea1;
+    }
+
+    .option:hover {
+        background-color: #bba5f9;
+    }
+/* 
+    .footer-bottom {
+        align-self: flex-end;
+        position: fixed;
+        z-index: 99;
+        width: 100%;
+        height: 7vh;
+        background: var(--mainColor);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.875rem;
+    }
+
+    .footer-bottom span {
+        color: #a13ea1;
+        font-weight: bold;
+    } */
+}
+
+/* Tablets */
+@media (min-width: 481px) and (max-width: 1024px) {
+    header {
+        background-color: var(--mainColor);
+        border-bottom: 1px solid black;
+        height: 7vw;
+        width: 100%;
+        position: fixed;
+    }
+    
+    .backButton {
+        left: 2vw;
+        bottom: 1.8vw;
+        position: absolute;
+        width: 3.2vw;
+        height: 3.2vw;
+        border-radius: 50%;
+        border-color: rgb(197, 156, 234);
+        background-color: white;
+        background-image: url("/Fruits-On-The-Web/images/back.png");
+        background-size: contain;
+    }
+    
+    .backButton:hover {
+        background-color: rgb(193, 175, 175);
+    }
+    
+    .logo {
+        position: absolute;
+        width: 7vw;
+        height: 7vw;
+        left: 6%;
+        bottom: -0.3vw;
+    }
+    
+    .title {
+        position: absolute;
+        color: white;
+        left: 12.5%;
+        font-size: 4vw;
+        bottom: -2vw;
+        font-family: 'titleFont';
+    }
+    
+    .icons {
+        margin: 0;
+        position: absolute;
+        right: 3vw;
+        bottom: 1vw;
+    }
+    
+    .profileButton {
+        width: 4.5vw;
+        height: 4.5vw;
+        border-radius: 20%;
+        border-color: rgb(197, 156, 234);
+        background-color: white;
+        background-image: url("/Fruits-On-The-Web/images/profile.png");
+        background-size: contain;
+    }
+    
+    .profileButton:hover {
+        background-color: rgb(226, 196, 226);
+    }
+    
+    .logout {
+        width: 4.5vw;
+        height: 4.5vw;
+        border-radius: 60%;
+        border-color: rgb(140, 158, 229);
+        background-color: white;
+        background-image: url("/Fruits-On-The-Web/images/logout.png");
+        background-size: contain;
+    }
+    
+    .logout:hover {
+        background-color: rgb(4, 0, 4);
+    }
+    
+    .fav {
+        width: 4.5vw;
+        height: 4.5vw;
+        border-radius: 50%;
+        border-color: rgb(156, 132, 220);
+        background-image: url("/Fruits-On-The-Web/images/favourite.png");
+        background-size: contain;
+    }
+    
+    .fav:hover {
+        background-color: rgb(156, 132, 220);
+    }
+    
+    .ranks {
+        width: 4.5vw;
+        height: 4.5vw;
+        border-radius: 60%;
+        border-color: rgb(118, 125, 207);
+        background-color: white;
+        background-image: url("/Fruits-On-The-Web/images/ranks.png");
+        background-size: contain;
+    }
+    
+    .ranks:hover {
+        background-color: rgb(194, 192, 244);
+    }
+    
+    .gamesGrid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 70vw;
+        height: 120vw;
+        padding-left: 14vw;
+        padding-top: 20vw;
+        padding-bottom: 5vw;
+    }
+
+    .gameArea {
+        background-color: var(--gameBg);
+        border-radius: 10px;
+        display: flex;
+        row-gap: 5vw;
+        flex-direction: column;
+        justify-content: last baseline;
+        align-items: start;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 10vw;
+        padding-bottom: 1vw;
+    }
+
+    #gameImg {
+        width: 40vw;
+        height: 40vw;
+        margin: 0;
+        align-self: center;
+        padding-bottom: 4vw;
+    }
+
+    #back {
+        margin: 0;
+        width: 10vw;
+        height: 10vw;
+        background-image: url("/Fruits-On-The-Web/images/back.png");
+        background-size: cover;
+        border-radius: 50%;
+        border: 0;
+    }
+
+    .option {
+        align-self: center;
+        border-radius: 10px;
+        width: 60vw;
+        height: 6.5vw;
+        font-size: 4vw;
+        color: white;
+        background-color: #a13ea1;
+    }
+
+    .option:hover {
+        background-color: #bba5f9;
+    }
+/* 
+    .footer-bottom {
+        align-self: flex-end;
+        position: fixed;
+        z-index: 99;
+        width: 100%;
+        height: 7vh;
+        background: var(--mainColor);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.875rem;
+    }
+
+    .footer-bottom span {
+        color: #a13ea1;
+        font-weight: bold;
+    } */
+}
+
+/* Smartphones */
+@media (min-width: 320px) and (max-width: 480px) {
+    header {
+        background-color: var(--mainColor);
+        border-bottom: 1px solid black;
+        height: 10vw;
+        width: 100%;
+        position: fixed;
+    }
+    
+    .backButton {
+        left: 2vw;
+        bottom: 2.3vw;
+        position: absolute;
+        width: 5.2vw;
+        height: 5.2vw;
+        border-radius: 50%;
+        border-color: rgb(197, 156, 234);
+        background-color: white;
+        background-image: url("/Fruits-On-The-Web/images/back.png");
+        background-size: contain;
+    }
+    
+    .backButton:hover {
+        background-color: rgb(193, 175, 175);
+    }
+    
+    .logo {
+        position: absolute;
+        width: 10vw;
+        height: 10vw;
+        left: 8%;
+        bottom: -0.2vw;
+    }
+    
+    .title {
+        position: absolute;
+        color: white;
+        left: 16.5%;
+        font-size: 4vw;
+        bottom: -2vw;
+        font-family: 'titleFont';
+    }
+    
+    .icons {
+        margin: 0;
+        position: absolute;
+        right: 2vw;
+        bottom: 1vw;
+    }
+    
+    .profileButton {
+        width: 6vw;
+        height: 6vw;
+        border-radius: 20%;
+        border-color: rgb(197, 156, 234);
+        background-color: white;
+        background-image: url("/Fruits-On-The-Web/images/profile.png");
+        background-size: contain;
+    }
+    
+    .profileButton:hover {
+        background-color: rgb(226, 196, 226);
+    }
+    
+    .logout {
+        width: 6.3vw;
+        height: 6.3vw;
+        border-radius: 60%;
+        border-color: rgb(140, 158, 229);
+        background-color: white;
+        background-image: url("/Fruits-On-The-Web/images/logout.png");
+        background-size: contain;
+    }
+    
+    .logout:hover {
+        background-color: rgb(4, 0, 4);
+    }
+    
+    .fav {
+        width: 6.2vw;
+        height: 6.2vw;
+        border-radius: 50%;
+        border-color: rgb(156, 132, 220);
+        background-image: url("/Fruits-On-The-Web/images/favourite.png");
+        background-size: contain;
+    }
+    
+    .fav:hover {
+        background-color: rgb(156, 132, 220);
+    }
+    
+    .ranks {
+        width: 6.3vw;
+        height: 6.3vw;
+        border-radius: 60%;
+        border-color: rgb(118, 125, 207);
+        background-color: white;
+        background-image: url("/Fruits-On-The-Web/images/ranks.png");
+        background-size: contain;
+    }
+    
+    .ranks:hover {
+        background-color: rgb(194, 192, 244);
+    }
+    
+    .gamesGrid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 70vw;
+        height: 165vw;
+        padding-left: 14vw;
+        padding-top: 30vw;
+        padding-bottom: 5vw;
+    }
+
+    .gameArea {
+        background-color: var(--gameBg);
+        border-radius: 10px;
+        display: flex;
+        row-gap: 7vw;
+        flex-direction: column;
+        justify-content: last baseline;
+        align-items: start;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 12vw;
+        padding-bottom: 1vw;
+    }
+
+    #gameImg {
+        width: 50vw;
+        height: 50vw;
+        margin: 0;
+        align-self: center;
+        padding-bottom: 5vw;
+        padding-top: 5vw;
+    }
+
+
+    #back {
+        margin: 0;
+        width: 10vw;
+        height: 10vw;
+        background-image: url("/Fruits-On-The-Web/images/back.png");
+        background-size: cover;
+        border-radius: 50%;
+        border: 0;
+    }
+
+    .option {
+        border-radius: 10px;
+        width: 60vw;
+        height: 8.5vw;
+        font-size: 5vw;
+        color: white;
+        background-color: #a13ea1;
+        align-self: center;
+    }
+
+    .option:hover {
+        background-color: #bba5f9;
+    }
+/* 
+    .footer-bottom {
+        align-self: flex-end;
+        position: fixed;
+        z-index: 99;
+        width: 100%;
+        height: 7vh;
+        background: var(--mainColor);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.875rem;
+    }
+
+    .footer-bottom span {
+        color: #a13ea1;
+        font-weight: bold;
+    } */
+}
