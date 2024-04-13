@@ -13,7 +13,7 @@
 
 @font-face {
     font-family: 'titleFont';
-    src: url('/Fruits-On-The-Web/fonts/OPTICopperplate.otf');
+    src: url('../fonts/OPTICopperplate.otf');
   }
 
 body {

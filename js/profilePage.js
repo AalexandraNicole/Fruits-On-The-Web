@@ -15,11 +15,11 @@ let trigger = 1;
 
 function showMenu() {
     if (trigger === 1) {
-        menuButton.style.backgroundImage = "url('/Fruits-On-The-Web/images/menuOpen.png')";
+        menuButton.style.backgroundImage = "url('../images/menuOpen.png')";
         menuBar.style.visibility = "hidden";
         trigger = 0;
     } else {
-        menuButton.style.backgroundImage = "url('/Fruits-On-The-Web/images/menuClose.webp')";
+        menuButton.style.backgroundImage = "url('../images/menuClose.webp')";
         menuBar.style.visibility = "visible";
         trigger = 1;
     }

@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: 'titleFont';
-    src: url('/Fruits-On-The-Web/fonts/OPTICopperplate.otf');
+    src: url('../fonts/OPTICopperplate.otf');
   }
 
 html,
@@ -39,7 +39,7 @@ a {
         border-radius: 20%;
         border-color: rgb(197, 156, 234);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/menuClose.webp");
+        background-image: url("../images/menuClose.webp");
         background-size: contain;
     }
 
@@ -76,7 +76,7 @@ a {
         border-radius: 20%;
         border-color: rgb(197, 156, 234);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/profile.png");
+        background-image: url("../images/profile.png");
         background-size: contain;
     }
 
@@ -90,7 +90,7 @@ a {
         border-radius: 60%;
         border-color: rgb(140, 158, 229);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/logout.png");
+        background-image: url("../images/logout.png");
         background-size: contain;
     }
 
@@ -103,13 +103,12 @@ a {
         height: 3.2vw;
         border-radius: 50%;
         border-color: rgb(156, 132, 220);
-        background-image: url("/Fruits-On-The-Web/images/favourite.png");
+        background-image: url("../images/favourite.png");
         background-size: contain;
     }
 
     .fav:hover {
         background-color: rgb(156, 132, 220);
-        ;
     }
 
     .ranks {
@@ -118,13 +117,12 @@ a {
         border-radius: 60%;
         border-color: rgb(118, 125, 207);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/ranks.png");
+        background-image: url("../images/ranks.png");
         background-size: contain;
     }
 
     .ranks:hover {
         background-color: rgb(194, 192, 244);
-        ;
     }
 
     .menuBar {
@@ -315,7 +313,7 @@ a {
     .ranksBox {
         visibility: hidden;
         position: fixed;
-        background-image: url("/Fruits-On-The-Web/images/ranksBg.jpg");
+        background-image: url("../images/ranksBg.jpg");
         background-size: cover;
         border-radius: 10%;
         width: 20vw;
@@ -336,7 +334,7 @@ a {
         border-radius: 70%;
         border: 0;
         background-color: black;
-        background-image: url("/Fruits-On-The-Web/images/med.gif");
+        background-image: url("../images/med.gif");
         background-size: contain;
     }
 
@@ -344,7 +342,7 @@ a {
         visibility: hidden;
         position: fixed;
         border-radius: 10%;
-        background-image: url("/Fruits-On-The-Web/images/doctorBg.jpg");
+        background-image: url("../images/doctorBg.jpg");
         background-size: cover;
         width: 20vw;
         height: 15vw;
@@ -419,7 +417,7 @@ a {
         border-radius: 20%;
         border-color: rgb(197, 156, 234);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/menuClose.webp");
+        background-image: url("../images/menuClose.webp");
         background-size: contain;
     }
     
@@ -457,7 +455,7 @@ a {
         border-radius: 20%;
         border-color: rgb(197, 156, 234);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/profile.png");
+        background-image: url("../images/profile.png");
         background-size: contain;
     }
     
@@ -471,7 +469,7 @@ a {
         border-radius: 60%;
         border-color: rgb(140, 158, 229);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/logout.png");
+        background-image: url("../images/logout.png");
         background-size: contain;
     }
     
@@ -484,13 +482,12 @@ a {
         height: 4.5vw;
         border-radius: 50%;
         border-color: rgb(156, 132, 220);
-        background-image: url("/Fruits-On-The-Web/images/favourite.png");
+        background-image: url("../images/favourite.png");
         background-size: contain;
     }
     
     .fav:hover {
         background-color: rgb(156, 132, 220);
-        ;
     }
     
     .ranks {
@@ -499,13 +496,12 @@ a {
         border-radius: 60%;
         border-color: rgb(118, 125, 207);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/ranks.png");
+        background-image: url("../images/ranks.png");
         background-size: contain;
     }
     
     .ranks:hover {
         background-color: rgb(194, 192, 244);
-        ;
     }
     
     .menuBar {
@@ -697,7 +693,7 @@ a {
     .ranksBox {
         visibility: hidden;
         position: fixed;
-        background-image: url("/Fruits-On-The-Web/images/ranksBg.jpg");
+        background-image: url("../images/ranksBg.jpg");
         background-size: cover;
         border-radius: 10%;
         width: 28vw;
@@ -718,7 +714,7 @@ a {
         border-radius: 70%;
         border: 0;
         background-color: black;
-        background-image: url("/Fruits-On-The-Web/images/med.gif");
+        background-image: url("../images/med.gif");
         background-size: contain;
     }
     
@@ -726,7 +722,7 @@ a {
         visibility: hidden;
         position: fixed;
         border-radius: 10%;
-        background-image: url("/Fruits-On-The-Web/images/doctorBg.jpg");
+        background-image: url("../images/doctorBg.jpg");
         background-size: cover;
         width: 35vw;
         height: 22vw;
@@ -801,7 +797,7 @@ a {
         border-radius: 20%;
         border-color: rgb(197, 156, 234);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/menuClose.webp");
+        background-image: url("../images/menuClose.webp");
         background-size: contain;
     }
     
@@ -839,7 +835,7 @@ a {
         border-radius: 20%;
         border-color: rgb(197, 156, 234);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/profile.png");
+        background-image: url("../images/profile.png");
         background-size: contain;
     }
     
@@ -853,7 +849,7 @@ a {
         border-radius: 60%;
         border-color: rgb(140, 158, 229);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/logout.png");
+        background-image: url("../images/logout.png");
         background-size: contain;
     }
     
@@ -866,13 +862,12 @@ a {
         height: 6.2vw;
         border-radius: 50%;
         border-color: rgb(156, 132, 220);
-        background-image: url("/Fruits-On-The-Web/images/favourite.png");
+        background-image: url("../images/favourite.png");
         background-size: contain;
     }
     
     .fav:hover {
         background-color: rgb(156, 132, 220);
-        ;
     }
     
     .ranks {
@@ -881,13 +876,12 @@ a {
         border-radius: 60%;
         border-color: rgb(118, 125, 207);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/ranks.png");
+        background-image: url("../images/ranks.png");
         background-size: contain;
     }
     
     .ranks:hover {
         background-color: rgb(194, 192, 244);
-        ;
     }
     
     .menuBar {
@@ -1079,7 +1073,7 @@ a {
     .ranksBox {
         visibility: hidden;
         position: fixed;
-        background-image: url("/Fruits-On-The-Web/images/ranksBg.jpg");
+        background-image: url("../images/ranksBg.jpg");
         background-size: cover;
         border-radius: 10%;
         width: 40vw;
@@ -1100,7 +1094,7 @@ a {
         border-radius: 70%;
         border: 0;
         background-color: black;
-        background-image: url("/Fruits-On-The-Web/images/med.gif");
+        background-image: url("../images/med.gif");
         background-size: contain;
     }
     
@@ -1108,7 +1102,7 @@ a {
         visibility: hidden;
         position: fixed;
         border-radius: 10%;
-        background-image: url("/Fruits-On-The-Web/images/doctorBg.jpg");
+        background-image: url("../images/doctorBg.jpg");
         background-size: cover;
         width: 60vw;
         height: 35vw;

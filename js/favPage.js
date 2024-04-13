@@ -20,11 +20,11 @@ let heartTrigger3 = 1;
 
 function showMenu() {
     if (trigger === 1) {
-        menuButton.style.backgroundImage = "url('/Fruits-On-The-Web/images/menuOpen.png')";
+        menuButton.style.backgroundImage = "url('../images/menuOpen.png')";
         menuBar.style.visibility = "hidden";
         trigger = 0;
     } else {
-        menuButton.style.backgroundImage = "url('/Fruits-On-The-Web/images/menuClose.webp')";
+        menuButton.style.backgroundImage = "url('../images/menuClose.webp')";
         menuBar.style.visibility = "visible";
         trigger = 1;
     }
@@ -70,30 +70,30 @@ function hideRanks() {
 
 function changeHeart1() {
     if (heartTrigger1 === 1) {
-        heart1.style.backgroundImage = "url('/Fruits-On-The-Web/images/emptyHeart.png')";
+        heart1.style.backgroundImage = "url('../images/emptyHeart.png')";
         heartTrigger1 = 0;
     } else {
-        heart1.style.backgroundImage = "url('/Fruits-On-The-Web/images/fullHeart.png')";
+        heart1.style.backgroundImage = "url('../images/fullHeart.png')";
         heartTrigger1 = 1;
     }
 };
 
 function changeHeart2() {
     if (heartTrigger2 === 1) {
-        heart2.style.backgroundImage = "url('/Fruits-On-The-Web/images/emptyHeart.png')";
+        heart2.style.backgroundImage = "url('../images/emptyHeart.png')";
         heartTrigger2 = 0;
     } else {
-        heart2.style.backgroundImage = "url('/Fruits-On-The-Web/images/fullHeart.png')";
+        heart2.style.backgroundImage = "url('../images/fullHeart.png')";
         heartTrigger2 = 1;
     }
 };
 
 function changeHeart3() {
     if (heartTrigger3 === 1) {
-        heart3.style.backgroundImage = "url('/Fruits-On-The-Web/images/emptyHeart.png')";
+        heart3.style.backgroundImage = "url('../images/emptyHeart.png')";
         heartTrigger3 = 0;
     } else {
-        heart3.style.backgroundImage = "url('/Fruits-On-The-Web/images/fullHeart.png')";
+        heart3.style.backgroundImage = "url('../images/fullHeart.png')";
         heartTrigger3 = 1;
     }
 };
