@@ -21,6 +21,10 @@ a {
     text-decoration: none;
 }
 
+#aGrid {
+    display: grid;
+}
+
 /* Desktops */
 @media (min-width: 1025px) {
     header {
@@ -382,27 +386,33 @@ a {
     }
 
     #name1 {
-        
+        background-image: url("../images/game1.png");
+        background-size: contain;
+        border: 2px solid white;
     }
 
     #name1:hover {
-
+        border: 2px solid black;
     }
 
     #name2 {
-        
+        background-image: url("../images/game2.png");
+        background-size: contain;
+        border: 2px solid white;
     }
 
     #name2:hover {
-        
+        border: 2px solid black;
     }
 
     #name3 {
-        
+        background-image: url("../images/game3.png");
+        background-size: contain;
+        border: 2px solid white;
     }
 
     #name3:hover {
-        
+        border: 2px solid black;
     }
 }
 
@@ -769,27 +779,33 @@ a {
     }
 
     #name1 {
-        
+        background-image: url("../images/game1.png");
+        background-size: contain;
+        border: 2px solid white;
     }
 
     #name1:hover {
-
+        border: 2px solid black;
     }
 
     #name2 {
-        
+        background-image: url("../images/game2.png");
+        background-size: contain;
+        border: 2px solid white;
     }
 
     #name2:hover {
-        
+        border: 2px solid black;
     }
 
     #name3 {
-        
+        background-image: url("../images/game3.png");
+        background-size: contain;
+        border: 2px solid white;
     }
 
     #name3:hover {
-        
+        border: 2px solid black;
     }
 }
 
@@ -1157,26 +1173,32 @@ a {
     }
 
     #name1 {
-        
+        background-image: url("../images/game1.png");
+        background-size: contain;
+        border: 2px solid white;
     }
 
     #name1:hover {
-
+        border: 2px solid black;
     }
 
     #name2 {
-        
+        background-image: url("../images/game2.png");
+        background-size: contain;
+        border: 2px solid white;
     }
 
     #name2:hover {
-        
+        border: 2px solid black;
     }
 
     #name3 {
-        
+        background-image: url("../images/game3.png");
+        background-size: contain;
+        border: 2px solid white;
     }
 
     #name3:hover {
-        
+        border: 2px solid black;
     }
 }

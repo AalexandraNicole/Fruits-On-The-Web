@@ -379,51 +379,99 @@ a {
     }
 
     #name1 {
-        
+        background-image: url("../images/game1.png");
+        background-size: contain;
+        border: 2px solid white;
     }
 
     #name1:hover {
-
+        border: 2px solid black;
     }
 
     #name2 {
-        
+        background-image: url("../images/game2.png");
+        background-size: contain;
+        border: 2px solid white;
     }
 
     #name2:hover {
-        
+        border: 2px solid black;
     }
 
     #name3 {
-        
+        background-image: url("../images/game3.png");
+        background-size: contain;
+        border: 2px solid white;
     }
 
-    #name3:hover {
-        
+    #name3::after {
+        visibility: hidden;
+        content: "Coming soon!";
+        background-color: white;
+        font-family: fantasy;
+        font-size: 1vw;
+    }
+
+    #name3:hover::after {
+        visibility: visible;
+        border: 2px solid black;
     }
 
     #name4 {
-       
+        background-image: url("../images/game4.png");
+        background-size: contain;
+        border: 2px solid white;
     }
 
-    #name4:hover {
-        
+    #name4::after {
+        visibility: hidden;
+        content: "Coming soon!";
+        background-color: white;
+        font-family: fantasy;
+        font-size: 1vw;
+    }
+
+    #name4:hover::after {
+        visibility: visible;
+        border: 2px solid black;
     }
 
     #name5 {
-       
+        background-image: url("../images/game5.png");
+        background-size: contain;
+        border: 2px solid white;
     }
 
-    #name5:hover {
-        
+    #name5::after {
+        visibility: hidden;
+        content: "Coming soon!";
+        background-color: white;
+        font-family: fantasy;
+        font-size: 1vw;
+    }
+
+    #name5:hover::after {
+        visibility: visible;
+        border: 2px solid black;
     }
 
     #name6 {
-        
+        background-image: url("../images/game6.png");
+        background-size: contain;
+        border: 2px solid white;
     }
 
-    #name6:hover {
-        
+    #name6::after {
+        visibility: hidden;
+        content: "Coming soon!";
+        background-color: white;
+        font-family: fantasy;
+        font-size: 1vw;
+    }
+
+    #name6:hover::after {
+        visibility: visible;
+        border: 2px solid black;
     }
 }
 
@@ -783,51 +831,99 @@ a {
     }
     
     #name1 {
-       
+        background-image: url("../images/game1.png");
+        background-size: contain;
+        border: 2px solid white;
     }
-    
+
     #name1:hover {
-    
+        border: 2px solid black;
     }
-    
+
     #name2 {
-        
+        background-image: url("../images/game2.png");
+        background-size: contain;
+        border: 2px solid white;
     }
-    
+
     #name2:hover {
-        
+        border: 2px solid black;
     }
-    
+
     #name3 {
-        
+        background-image: url("../images/game3.png");
+        background-size: contain;
+        border: 2px solid white;
     }
-    
-    #name3:hover {
-        
+
+    #name3::after {
+        visibility: hidden;
+        content: "Coming soon!";
+        background-color: white;
+        font-family: fantasy;
+        font-size: 2vw;
     }
-    
+
+    #name3:hover::after {
+        visibility: visible;
+        border: 2px solid black;
+    }
+
     #name4 {
-        
+        background-image: url("../images/game4.png");
+        background-size: contain;
+        border: 2px solid white;
     }
-    
-    #name4:hover {
-        
+
+    #name4::after {
+        visibility: hidden;
+        content: "Coming soon!";
+        background-color: white;
+        font-family: fantasy;
+        font-size: 2vw;
     }
-    
+
+    #name4:hover::after {
+        visibility: visible;
+        border: 2px solid black;
+    }
+
     #name5 {
-       
+        background-image: url("../images/game5.png");
+        background-size: contain;
+        border: 2px solid white;
     }
-    
-    #name5:hover {
-        
+
+    #name5::after {
+        visibility: hidden;
+        content: "Coming soon!";
+        background-color: white;
+        font-family: fantasy;
+        font-size: 2vw;
     }
-    
+
+    #name5:hover::after {
+        visibility: visible;
+        border: 2px solid black;
+    }
+
     #name6 {
-       
+        background-image: url("../images/game6.png");
+        background-size: contain;
+        border: 2px solid white;
     }
-    
-    #name6:hover {
-        
+
+    #name6::after {
+        visibility: hidden;
+        content: "Coming soon!";
+        background-color: white;
+        font-family: fantasy;
+        font-size: 2vw;
+    }
+
+    #name6:hover::after {
+        visibility: visible;
+        border: 2px solid black;
     }
 }
 
@@ -1187,50 +1283,98 @@ a {
     }
     
     #name1 {
-        
+        background-image: url("../images/game1.png");
+        background-size: contain;
+        border: 2px solid white;
     }
-    
+
     #name1:hover {
-    
+        border: 2px solid black;
     }
-    
+
     #name2 {
-        
+        background-image: url("../images/game2.png");
+        background-size: contain;
+        border: 2px solid white;
     }
-    
+
     #name2:hover {
-        
+        border: 2px solid black;
     }
-    
+
     #name3 {
-        
+        background-image: url("../images/game3.png");
+        background-size: contain;
+        border: 2px solid white;
     }
-    
-    #name3:hover {
-        
+
+    #name3::after {
+        visibility: hidden;
+        content: "Coming soon!";
+        background-color: white;
+        font-family: fantasy;
+        font-size: 3vw;
     }
-    
+
+    #name3:hover::after {
+        visibility: visible;
+        border: 2px solid black;
+    }
+
     #name4 {
-       
+        background-image: url("../images/game4.png");
+        background-size: contain;
+        border: 2px solid white;
     }
-    
-    #name4:hover {
-        
+
+    #name4::after {
+        visibility: hidden;
+        content: "Coming soon!";
+        background-color: white;
+        font-family: fantasy;
+        font-size: 3vw;
     }
-    
+
+    #name4:hover::after {
+        visibility: visible;
+        border: 2px solid black;
+    }
+
     #name5 {
-        
+        background-image: url("../images/game5.png");
+        background-size: contain;
+        border: 2px solid white;
     }
-    
-    #name5:hover {
-        
+
+    #name5::after {
+        visibility: hidden;
+        content: "Coming soon!";
+        background-color: white;
+        font-family: fantasy;
+        font-size: 3vw;
     }
-    
+
+    #name5:hover::after {
+        visibility: visible;
+        border: 2px solid black;
+    }
+
     #name6 {
-       
+        background-image: url("../images/game6.png");
+        background-size: contain;
+        border: 2px solid white;
     }
-    
-    #name6:hover {
-        
+
+    #name6::after {
+        visibility: hidden;
+        content: "Coming soon!";
+        background-color: white;
+        font-family: fantasy;
+        font-size: 3vw;
+    }
+
+    #name6:hover::after {
+        visibility: visible;
+        border: 2px solid black;
     }
 }
