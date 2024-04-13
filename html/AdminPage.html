@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrOW</title>
+    <link rel="stylesheet" href="../css/AdminPage.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/Fruits-On-The-Web/images/logo.gif" />
+</head>
+
+<body>
+    <header>
+        <button class="openMen" onclick="showMenu()"></button>
+        <img class="logo" src="/Fruits-On-The-Web/images/logo.gif">
+        <h2 class="title">FruitsOnTheWeb</h2>
+        <div class="icons">
+            <a href="ranksPage.html"><button class="ranks" onmouseenter="showRanks()" onmouseleave="hideRanks()"></button></a>
+            <a href="favPage.html"><button class="fav"></button></a>
+            <a href="profilePage.html"><button class="profileButton"></button></a>
+            <button class="logout"></button>
+        </div>
+    </header>
+    <div class="menuBar" onmouseenter="showMenuButtons()" onmouseleave="hideMenuButtons()">
+        <ul id="menuList">
+            <img class="menuIcons" src="/Fruits-On-The-Web/images/home.png">
+            <li><a href="loggedPage.html"><button class="menuButtons">Games
+                </button></a>
+            </li>
+            <img class="menuIcons" src="/Fruits-On-The-Web/images/recipe.png">
+            <li><a href="recipesPage.html"><button class="menuButtons">Recipes
+                </button></a>
+            </li>
+            <img class="menuIcons" src="/Fruits-On-The-Web/images/information.png">
+            <li><a href="tipsPage.html"><button class="menuButtons">Tips
+                </button></a>
+            </li>
+            <img class="menuIcons" src="/Fruits-On-The-Web/images/logout.png">
+            <li><button class="menuButtons">LogOut
+                </button>
+            </li>
+        </ul>
+
+        <div class="lineMenu"></div>
+        <div class="lineCurrent"></div>
+
+        <div class="flexMenuButtons">
+            <a href="contactPage.html"><button class="contact"><img class="contactImg" src="/Fruits-On-The-Web/images/contact.png">Contact us</button></a>
+            <a href="aboutPage.html"><button class="about">About</button></a>
+            <a href="infoPage.html"><button class="infoP">Info for parents</button></a>
+            <a href="termsPage.html"><button class="terms">Terms & conditions</button></a>
+            <a href="privacyPage.html"><button class="privacy">Privacy</button></a>
+            <button class="admin">Admin</button>
+            <div class="nameYear">© 2024 FrOW</div>
+        </div>
+    </div>
+
+    <div class="ranksBox">
+        <ul>
+            <li>Player 1</li>
+            <li>Player 2</li>
+            <li>Player 3</li>
+            <li>Player 4</li>
+        </ul>
+    </div>
+
+    <div class="profileDiv">
+        <div class="profileBox">
+            <p id="textProf"><img id="profPic" src="/Fruits-On-The-Web/images/profilePic.png"> My profile</p>
+            <div id="lineProfile"></div>
+            <div class="roundProfile">
+                <div class="boxProfile">
+                    <img id="avatar" src="/Fruits-On-The-Web/images/avatar.png">
+                    <div id="nameProfile">TatiCory</div>
+                    <div id="scoreProfile">Score Level</div>
+                </div>
+                <div class="area">
+                    <div class="detailsProfile">
+                        <p id="name">TatiCory</p>
+                        <p id="password">taticory123</p>
+                        <p id="email">taticory@gmail.com</p>
+                        <button class="editProfile" onclick="showEditProfile()"><img id="editProf" src="/Fruits-On-The-Web/images/editProfile.png">Edit Profile</button>
+                        <button class="resetPass" onclick="showEditPass()"><img id="resetPassw" src="/Fruits-On-The-Web/images/password.png">Reset Password</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="editPBox"> 
+        <form id="editFormProfile">
+        
+            <div class="inputGroup">
+                <label for="newName">New Username:</label>
+                <input type="text" id="newName" name="newName">
+            </div>
+            <div class="inputGroup">
+                <label for="newEmail">New Email:</label>
+                <input type="email" id="newEmail" name="newEmail">
+            </div>
+
+            <a href="profilePage.html"><button id="subm" type="submit">Submit</button></a>
+        </form>
+    </div>
+
+    <div class="editPasBox">
+        <form id="editFormPassword">
+            <div class="inputGroupPass">
+                <label for="newPass">New Password:</label>
+                <input type="password" id="newPass" name="newPass">
+            </div>
+            <div class="inputGroupPass">
+                <label for="confirmPass">Confirm Password:</label>
+                <input type="password" id="confirmPass" name="confirmPass">
+            </div>
+
+            <a href="profilePage.html"><button id="submi" type="submit">Submit</button></a>
+        </form>
+    </div>
+
+    <script src="/Fruits-On-The-Web/js/profilePage.js"></script>
+</body>
+
+</html>
