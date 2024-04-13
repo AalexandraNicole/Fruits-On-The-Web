@@ -83,6 +83,7 @@ body {
         width: 45px;
         height: 45px;
         background: #a13ea1;
+        color: #fff;
         font-size: 1.7em;
         display: flex;
         justify-content: center;
@@ -94,6 +95,7 @@ body {
 
         .wrapper .icon-back:hover {
             background: rgba(33, 34, 51, 0.9);
+            color: #a13ea1;
         }
 
 .input-box input {
