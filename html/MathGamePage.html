@@ -22,6 +22,65 @@
 </head>
 
 <body>
+    <header>
+        <button class="openMen" onclick="showMenu()"></button>
+        <img class="logo" src="../images/logo.gif">
+        <h2 class="title">FruitsOnTheWeb</h2>
+        <div class="icons">
+            <a href="ranksPage.html"><button class="ranks" onmouseenter="showRanks()" onmouseleave="hideRanks()"></button></a>
+            <a href="favPage.html"><button class="fav"></button></a>
+            <a href="profilePage.html"><button class="profileButton"></button></a>
+            <a href="MainUnloggedPage.html"><button class="logout"></button></a>
+        </div>
+    </header>
+    <div class="menuBar" onmouseenter="showMenuButtons()" onmouseleave="hideMenuButtons()">
+        <ul id="menuList">
+            <img class="menuIcons" src="../images/home.png">
+            <li><a href="loggedPage.html"><button class="menuButtons">Games
+                </button></a>
+            </li>
+            <img class="menuIcons" src="../images/recipe.png">
+            <li><a href="recipesPage.html"><button class="menuButtons">Recipes
+                </button></a>
+            </li>
+            <img class="menuIcons" src="../images/information.png">
+            <li><a href="tipsPage.html"><button class="menuButtons">Tips
+                </button></a>
+            </li>
+            <img class="menuIcons" src="../images/logout.png">
+            <li><a href="MainUnloggedPage.html"><button class="menuButtons">LogOut
+                </button></a>
+            </li>
+        </ul>
+
+        <div class="lineMenu"></div>
+        <div class="lineCurrent"></div>
+
+        <div class="flexMenuButtons">
+            <a href="contactPage.html"><button class="contact"><img class="contactImg" src="../images/contact.png">Contact us</button></a>
+            <a href="aboutPage.html"><button class="about">About</button></a>
+            <a href="infoPage.html"><button class="infoP">Info for parents</button></a>
+            <a href="termsPage.html"><button class="terms">Terms & conditions</button></a>
+            <a href="privacyPage.html"><button class="privacy">Privacy</button></a>
+            <a href="AdminPage.html"><button class="admin">Admin</button></a>
+            <div class="nameYear">© 2024 FrOW</div>
+        </div>
+    </div>
+
+    <div class="ranksBox">
+        <ul>
+            <li>Player 1</li>
+            <li>Player 2</li>
+            <li>Player 3</li>
+            <li>Player 4</li>
+        </ul>
+    </div>
+
+    <button class="doctorButton" onmouseenter="showDoctorBox()" onmouseleave="hideDoctorBox()"></button>
+    <div class="doctorBox">
+        Fruits are an excellent source of essential vitamins and minerals, and they are high in fiber. 
+    </div>
+    
     <div id="container">
         <div id="timeremaining">
             Time remaining: <span id="timeremainingvalue"> 60</span>

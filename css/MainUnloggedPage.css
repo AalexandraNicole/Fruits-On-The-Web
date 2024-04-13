@@ -42,6 +42,7 @@ header {
     width: 100%;
     position: fixed;
     z-index: 99;
+    scroll-behavior: smooth;
 }
 
 .navigation a {
@@ -185,7 +186,6 @@ header {
     color: #fff;
     margin-left: 10px;
 }
-
 /* Section one starts here */
 
 .section-1{
@@ -220,36 +220,36 @@ header {
     margin-top: 20px;
 }
 .section-1-img .img{
-    width: 100px;
-    height: 130px;
-    background: url(../images/KiwiKawaii.png);
+    width: 150px;
+    height: 150px;
+    background: url(../images/game1.png);
     background-size: cover;
     background-position: center;
     margin-right: 10px;
     border-radius: 10px;
 }
 .section-1-img .img-2{
-    background: url(../images/BananaKawaii.png);
+    background: url(../images/game2.png);
     background-size: cover;
     background-position: center;
 }
 .section-1-img  .img-3{
-    background: url(../images/StrawberryKawaii.png);
+    background: url(../images/game3.png);
     background-size: cover;
     background-position: center;
 }
 .section-1-img  .img-4{
-    background: url(../images/lemon.avif);
+    background: url(../images/game4.png);
     background-size: cover;
     background-position: center;
 }
 .section-1-img  .img-5{
-    background: url(../images/strawberries.jpg);
+    background: url(../images/game5.png);
     background-size: cover;
     background-position: center;
 }
 .section-1-img  .img-6{
-    background: url(../images/orange.jpg);
+    background: url(../images/game6.png);
     background-size: cover;
     background-position: center;
 }
@@ -306,50 +306,41 @@ header {
 }
 
 .gw-1{
-    background: url(../images/mango.avif);
+    background: url(../images/game2.png);
     background-size: cover;
     background-position: center;
 }
 .gw-2{
-    background: url(../images/strawberries.jpg);
+    background: url(../images/game1.png);
     background-size: cover;
     background-position: center;
 }
 .gw-3{
-    background: url(../images/AppleCharacter.avif);
+    background: url(../images/game3.png);
     background-size: cover;
     background-position: center;
 }
 .gw-4{
-    background: url(../images/AppleCharacter.avif);
+    background: url(../images/game4.png);
     background-size: cover;
     background-position: center;
 }
 .gw-5{
-    background: url(../images/AppleCharacter.avif);
+    background: url(../images/game5.png);
     background-size: cover;
     background-position: center;
 }
 .gw-6{
-    background: url(../images/AppleCharacter.avif);
+    background: url(../images/game6.png);
     background-size: cover;
     background-position: center;
 }
 .gw-7{
-    background: url(../images/AppleCharacter.avif);
+    background: url(../images/game4.png);
     background-size: cover;
     background-position: center;
 }
-.gw-8{
-    background: url(../images/AppleCharacter.avif);
-    background-size: cover;
-    background-position: center;
-}
-.gw-9{
-    background: url(../images/AppleCharacter.avif);
-    background-size: cover;
-    background-position: center;
-}
+
 
 /* FOoter section */
 footer{
