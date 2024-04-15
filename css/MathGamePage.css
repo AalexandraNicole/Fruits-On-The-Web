@@ -33,56 +33,54 @@ a {
 
 /* @media (min-width: 1025px) { */
   header {
-    top: 0;
     background-color: var(--mainColor);
     border-bottom: 1px solid black;
     height: 5vw;
     width: 100%;
     position: fixed;
-  }
+}
 
-  .openMen {
+.backButton {
     left: 1vw;
     bottom: 1.3vw;
     position: absolute;
     width: 2.2vw;
     height: 2.2vw;
-    border-radius: 20%;
+    border-radius: 50%;
     border-color: rgb(197, 156, 234);
     background-color: white;
-    background-image: url("../images/menuClose.webp");
-    background-size: contain;
-  }
+    background-image: url("../images/back.png");
+    background-size: cover;
+}
 
-  .openMen:hover {
+.backButton:hover {
     background-color: rgb(193, 175, 175);
-  }
+}
 
-  .logo {
+.logo {
     position: absolute;
     width: 5vw;
     height: 5vw;
     left: 4%;
     bottom: -0.3vw;
-  }
+}
 
-  .title {
+.title {
     position: absolute;
     color: white;
     left: 8.5%;
-    bottom: 1vh;
     font-size: 2vw;
     font-family: 'titleFont';
-  }
+}
 
-  .icons {
+.icons {
     margin: 0;
     position: absolute;
     right: 2vw;
     bottom: 0.8vw;
-  }
+}
 
-  .profileButton {
+.profileButton {
     width: 3vw;
     height: 3vw;
     border-radius: 20%;
@@ -90,13 +88,13 @@ a {
     background-color: white;
     background-image: url("../images/profile.png");
     background-size: contain;
-  }
+}
 
-  .profileButton:hover {
+.profileButton:hover {
     background-color: rgb(226, 196, 226);
-  }
+}
 
-  .logout {
+.logout {
     width: 3.3vw;
     height: 3.3vw;
     border-radius: 60%;
@@ -104,26 +102,26 @@ a {
     background-color: white;
     background-image: url("../images/logout.png");
     background-size: contain;
-  }
+}
 
-  .logout:hover {
+.logout:hover {
     background-color: rgb(4, 0, 4);
-  }
+}
 
-  .fav {
+.fav {
     width: 3.2vw;
     height: 3.2vw;
     border-radius: 50%;
     border-color: rgb(156, 132, 220);
     background-image: url("../images/favourite.png");
     background-size: contain;
-  }
+}
 
-  .fav:hover {
+.fav:hover {
     background-color: rgb(156, 132, 220);
-  }
+}
 
-  .ranks {
+.ranks {
     width: 3.3vw;
     height: 3.3vw;
     border-radius: 60%;
@@ -131,244 +129,11 @@ a {
     background-color: white;
     background-image: url("../images/ranks.png");
     background-size: contain;
-  }
+}
 
-  .ranks:hover {
+.ranks:hover {
     background-color: rgb(194, 192, 244);
-  }
-
-  .menuBar {
-    position: fixed;
-    background-color: var(--menuColor);
-    width: 5vw;
-    height: calc(100% - 5vw);
-    color: rgb(255, 255, 255);
-    top: 5vw;
-    transition: width 0.3s, height 0.3s;
-    border-right: 0.01vw solid rgb(124, 130, 196);
-    overflow: auto;
-  }
-
-  .menuBar:hover {
-    width: 13vw;
-  }
-
-  .menuBar:hover .lineMenu{
-    width: 11vw;
-  }
-
-  .menuIcons {
-    position: absolute;
-    width: 1.6vw;
-    height: 1.6vw;
-    left: 1.9vw;
-  }
-
-  #menuList {
-    list-style: none;
-  }
-
-  .menuButtons {
-    visibility: hidden;
-    background-color: var(--bg);
-    color: white;
-    border: 0;
-    font-size: 1vw;
-    font-family: fantasy;
-    letter-spacing: 0.05vw;
-    text-align: left;
-    margin-left: 2.5vw;
-    margin-bottom: 2vw;
-    height: 2vw;
-    width: 5vw;
-    transition: margin-left 0.3s;
-  }
-
-  .menuButtons:hover {
-    margin-left: 2.8vw;
-  }
-
-  .lineCurrent {
-    position: absolute;
-    background-color: #A48EFF;
-    width: 0.5vw;
-    height: 2.5vw;
-    top: 0.6vw;
-  }
-
-  .lineMenu {
-    position: absolute;
-    width: 3vw;
-    height: 0.1vw;
-    background-color: rgb(217, 181, 235);
-    top: 17vw;
-    left: 1vw;
-    transition: width 0.3s;
-  }
-
-  .flexMenuButtons {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5vw;
-    padding-top: 2vw;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
-  .contact {
-    visibility: hidden;
-    letter-spacing: 0.01vw;
-    border: 0;
-    border-radius: 10px;
-    background-color: #8144fe;
-    color: white;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1.2vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 11vw;
-    
-  }
-
-  .contact:hover {
-    background-color: #A48EFF;
-  }
-
-  .contactImg {
-    width: 1.5vw;
-    height: 1.5vw;
-    padding-right: 1vw;
-  }
-
-  .about {
-    visibility: hidden;
-    background-color: var(--bg);
-    color: white;
-    font-size: 1vw;
-    font-family: 'Courier New', Courier, monospace;
-    border: 0;
-  }
-
-  .about:hover {
-    color: var(--graysh);
-  }
-
-  .infoP {
-    visibility: hidden;
-    background-color: var(--bg);
-    color: white;
-    font-size: 1vw;
-    font-family: 'Courier New', Courier, monospace;
-    border: 0;
-    display: flex;
-    justify-content: start;
-    width: 11vw;
-  }
-
-  .infoP:hover {
-    color: var(--graysh);
-  }
-
-  .terms {
-    visibility: hidden;
-    background-color: var(--bg);
-    color: white;
-    font-size: 1vw;
-    font-family: 'Courier New', Courier, monospace;
-    border: 0;
-    width: 12vw; 
-    display: flex;
-    justify-content: start;
-  }
-
-  .terms:hover {
-    color: var(--graysh);
-  }
-
-  .privacy {
-    visibility: hidden;
-    background-color: var(--bg);
-    color: white;
-    font-size: 1vw;
-    font-family: 'Courier New', Courier, monospace;
-    border: 0;
-  }
-
-  .privacy:hover {
-    color: var(--graysh);
-  }
-
-  .admin {
-    visibility: hidden;
-    background-color: var(--bg);
-    color: white;
-    font-size: 1vw;
-    font-family: 'Courier New', Courier, monospace;
-    border: 0;
-  }
-
-  .admin:hover {
-    color: var(--graysh);
-  }
-
-  .nameYear {
-    visibility: hidden;
-    color: var(--graysh);
-    font-size: 1vw;
-    width: 7vw;
-    padding-top: 3vw;
-  }
-
-  .ranksBox {
-    visibility: hidden;
-    position: fixed;
-    background-image: url("../images/ranksBg.jpg");
-    background-size: cover;
-    border-radius: 10%;
-    width: 20vw;
-    height: 30vw;
-    top: 5vw;
-    right: 4vw;
-    font-size: 2vw;
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .doctorButton {
-    position: fixed;
-    width: 6vw;
-    height: 6vw;
-    bottom: 2vw;
-    right: 2vw;
-    border-radius: 70%;
-    border: 0;
-    background-color: black;
-    background-image: url("../images/med.gif");
-    background-size: contain;
-  }
-
-  .doctorBox {
-    visibility: hidden;
-    position: fixed;
-    border-radius: 10%;
-    background-image: url("../images/doctorBg.jpg");
-    background-size: cover;
-    width: 20vw;
-    height: 15vw;
-    bottom: 7.5vw;
-    right: 6vw;
-    color: white;
-    font-family: cursive;
-    font-size: 1.5vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 1vw;
-    padding-right: 1vw;
-  }
+}
 
   /* The Game */
 
@@ -525,6 +290,19 @@ a {
     width: 100%;
     position: fixed;
   }
+
+  .backButton {
+    left: 2vw;
+    bottom: 1.8vw;
+    position: absolute;
+    width: 3.2vw;
+    height: 3.2vw;
+    border-radius: 50%;
+    border-color: rgb(197, 156, 234);
+    background-color: white;
+    background-image: url("../images/back.png");
+    background-size: contain;
+  }
   
   .openMen {
       left: 2vw;
@@ -622,240 +400,6 @@ a {
       background-color: rgb(194, 192, 244);
   }
   
-  .menuBar {
-      position: fixed;
-      background-color: var(--menuColor);
-      width: 7vw;
-      height: calc(100% - 7vw);
-      color: rgb(255, 255, 255);
-      top: 7vw;
-      transition: width 0.3s, height 0.3s;
-      border-right: 0.01vw solid rgb(124, 130, 196);
-      overflow: auto;
-  }
-  
-  .menuBar:hover {
-      width: 24vw;
-  }
-
-  .menuBar:hover .lineMenu{
-      width: 22vw;
-  }
-  
-  .menuIcons {
-      position: absolute;
-      width: 3.6vw;
-      height: 3.6vw;
-      left: 1.9vw;
-  }
-  
-  #menuList {
-      list-style: none;
-  }
-  
-  .menuButtons {
-      visibility: hidden;
-      background-color: var(--bg);
-      color: white;
-      border: 0;
-      font-size: 2vw;
-      font-family: fantasy;
-      letter-spacing: 0.05vw;
-      text-align: left;
-      margin-left: 2.5vw;
-      margin-bottom: 6vw;
-      height: 2vw;
-      width: 5vw;
-      transition: margin-left 0.3s;
-  }
-  
-  .menuButtons:hover {
-      margin-left: 2.8vw;
-  }
-  
-  .lineCurrent {
-      position: absolute;
-      background-color: #A48EFF;
-      width: 0.6vw;
-      height: 3.4vw;
-      top: 2vw;
-  }
-  
-  .lineMenu {
-      position: absolute;
-      width: 5vw;
-      height: 0.2vw;
-      background-color: rgb(217, 181, 235);
-      top: 35vw;
-      left: 1vw;
-      transition: width 0.3s;
-  }
-
-  .flexMenuButtons {
-      display: flex;
-      flex-direction: column;
-      gap: 7vw;
-      padding-top: 12vw;
-      padding-left: 1vw;
-      padding-right: 1vw;
-      justify-content: flex-start;
-      align-items: flex-start;
-  }
-
-  .contact {
-      visibility: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 2.5vw;
-      background-color: #8144fe;
-      color: white;
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      letter-spacing: 0.02vw;
-      border-radius: 10px;
-      border: 0;
-      width: 22vw;
-      height: 3.5vw;
-  }
-  
-  .contact:hover {
-      background-color: #A48EFF;
-  }
-  
-  .contactImg {
-      width: 3vw;
-      height: 3vw;
-      padding-right: 1vw;
-  }
-  
-  .about {
-      visibility: hidden;
-      background-color: var(--bg);
-      color: white;
-      font-size: 2vw;
-      font-family: 'Courier New', Courier, monospace;
-      border: 0;
-      padding-top: 6vw;
-  }
-  
-  .about:hover {
-      color: var(--graysh);
-  }
-  
-  .infoP {
-      visibility: hidden;
-      background-color: var(--bg);
-      color: white;
-      font-size: 2vw;
-      font-family: 'Courier New', Courier, monospace;
-      border: 0;
-      width: 21vw;
-      display: flex;
-      justify-content: start;
-  }
-  
-  .infoP:hover {
-      color: var(--graysh);
-  }
-  
-  .terms {
-      visibility: hidden;
-      background-color: var(--bg);
-      color: white;
-      font-size: 2vw;
-      font-family: 'Courier New', Courier, monospace;
-      border: 0;
-      width: 24vw;
-      display: flex;
-      justify-content: start;
-  }
-  
-  .terms:hover {
-      color: var(--graysh);
-  }
-  
-  .privacy {
-      visibility: hidden;
-      background-color: var(--bg);
-      color: white;
-      font-size: 2vw;
-      font-family: 'Courier New', Courier, monospace;
-      border: 0;
-  }
-  
-  .privacy:hover {
-      color: var(--graysh);
-  }
-  
-  .admin {
-      visibility: hidden;
-      background-color: var(--bg);
-      color: white;
-      font-size: 2vw;
-      font-family: 'Courier New', Courier, monospace;
-      border: 0;
-  }
-  
-  .admin:hover {
-      color: var(--graysh);
-  }
-  
-  .nameYear {
-      visibility: hidden;
-      color: var(--graysh);
-      font-size: 2vw;
-      width: 14vw;
-      padding-top: 30vw;
-  }
-  
-  .ranksBox {
-      visibility: hidden;
-      position: fixed;
-      background-image: url("../images/ranksBg.jpg");
-      background-size: cover;
-      border-radius: 10%;
-      width: 28vw;
-      height: 40vw;
-      top: 7vw;
-      right: 6vw;
-      font-size: 3vw;
-      display: flex;
-      justify-content: space-around;
-  }
-  
-  .doctorButton {
-      position: fixed;
-      width: 10vw;
-      height: 10vw;
-      bottom: 4vw;
-      right: 4vw;
-      border-radius: 70%;
-      border: 0;
-      background-color: black;
-      background-image: url("../images/med.gif");
-      background-size: contain;
-  }
-  
-  .doctorBox {
-      visibility: hidden;
-      position: fixed;
-      border-radius: 10%;
-      background-image: url("../images/doctorBg.jpg");
-      background-size: cover;
-      width: 35vw;
-      height: 22vw;
-      bottom: 12.5vw;
-      right: 10vw;
-      color: white;
-      font-family: cursive;
-      font-size: 2.5vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-left: 1vw;
-      padding-right: 1vw;
-  }
-
   /*
   Game
   */
@@ -865,6 +409,7 @@ a {
     height: 420px;
     padding: 15px;
     border-radius: 20px;
+    transform: translate(-50%);
   }
   #question {
     width: 300px;
@@ -900,6 +445,19 @@ a {
       height: 10vw;
       width: 100%;
       position: fixed;
+  }
+
+  .backButton {
+    left: 2vw;
+    bottom: 2.3vw;
+    position: absolute;
+    width: 5.2vw;
+    height: 5.2vw;
+    border-radius: 50%;
+    border-color: rgb(197, 156, 234);
+    background-color: white;
+    background-image: url("../images/back.png");
+    background-size: contain;
   }
   
   .openMen {
@@ -997,240 +555,7 @@ a {
   .ranks:hover {
       background-color: rgb(194, 192, 244);
   }
-  
-  .menuBar {
-      position: fixed;
-      background-color: var(--menuColor);
-      width: 10vw;
-      height: calc(100% - 10vw);
-      color: rgb(255, 255, 255);
-      top: 10vw;
-      transition: width 0.3s, height 0.3s;
-      border-right: 0.01vw solid rgb(124, 130, 196);
-      overflow: auto;
-  }
-  
-  .menuBar:hover {
-      width: 42vw;
-  }
 
-  .menuBar:hover .lineMenu{
-      width: 40vw;
-  }
-  
-  .menuIcons {
-      position: absolute;
-      width: 5vw;
-      height: 5vw;
-      left: 1.9vw;
-  }
-  
-  #menuList {
-      list-style: none;
-  }
-  
-  .menuButtons {
-      visibility: hidden;
-      background-color: var(--bg);
-      color: white;
-      border: 0;
-      font-size: 4vw;
-      font-family: fantasy;
-      letter-spacing: 0.05vw;
-      text-align: left;
-      margin-left: 2.5vw;
-      margin-bottom: 10vw;
-      height: 2vw;
-      width: 5vw;
-      transition: margin-left 0.3s;
-  }
-  
-  .menuButtons:hover {
-      margin-left: 2.8vw;
-  }
-  
-  .lineCurrent {
-      position: absolute;
-      background-color: #A48EFF;
-      width: 0.6vw;
-      height: 5.5vw;
-      top: 3.6vw;
-  }
-  
-  .lineMenu {
-      position: absolute;
-      width: 8vw;
-      height: 0.1vw;
-      background-color: rgb(217, 181, 235);
-      top: 54vw;
-      left: 1vw;
-      transition: width 0.3s;
-  }
-
-  .flexMenuButtons {
-      display: flex;
-      flex-direction: column;
-      gap: 10vw;
-      padding-top: 14vw;
-      padding-left: 1vw;
-      padding-right: 1vw;
-      justify-content: flex-start;
-      align-items: flex-start;
-  }
-  
-  .contact {
-      visibility: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 38vw;
-      height: 6vw;
-      border-radius: 10px;
-      border: 0;
-      font-size: 4.5vw;
-      background-color: #8144fe;
-      color: white;
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      letter-spacing: 0.01vw;
-  }
-  
-  .contact:hover {
-      background-color: #A48EFF;
-  }
-  
-  .contactImg {
-      width: 5vw;
-      height: 5vw;
-      padding-right: 3vw;
-  }
-  
-  .about {
-      visibility: hidden;
-      background-color: var(--bg);
-      color: white;
-      font-size: 3.5vw;
-      font-family: 'Courier New', Courier, monospace;
-      border: 0;
-  }
-  
-  .about:hover {
-      color: var(--graysh);
-  }
-  
-  .infoP {
-      visibility: hidden;
-      background-color: var(--bg);
-      color: white;
-      font-size: 3.5vw;
-      font-family: 'Courier New', Courier, monospace;
-      border: 0;
-      width: 36vw;
-      display: flex;
-      justify-content: start;
-  }
-  
-  .infoP:hover {
-      color: var(--graysh);
-  }
-  
-  .terms {
-      visibility: hidden;
-      background-color: var(--bg);
-      color: white;
-      font-size: 3.5vw;
-      font-family: 'Courier New', Courier, monospace;
-      border: 0;
-      width: 42vw;
-      display: flex;
-      justify-content: start;
-  }
-  
-  .terms:hover {
-      color: var(--graysh);
-  }
-  
-  .privacy {
-      visibility: hidden;
-      background-color: var(--bg);
-      color: white;
-      font-size: 3.5vw;
-      font-family: 'Courier New', Courier, monospace;
-      border: 0;
-  }
-  
-  .privacy:hover {
-      color: var(--graysh);
-  }
-  
-  .admin {
-      visibility: hidden;
-      background-color: var(--bg);
-      color: white;
-      font-size: 3.5vw;
-      font-family: 'Courier New', Courier, monospace;
-      border: 0;
-  }
-  
-  .admin:hover {
-      color: var(--graysh);
-  }
-  
-  .nameYear {
-      visibility: hidden;
-      color: var(--graysh);
-      font-size: 3vw;
-      width: 20vw;
-      height: 2vw;
-      padding-top: 7vw;
-  }
-  
-  .ranksBox {
-      visibility: hidden;
-      position: fixed;
-      background-image: url("../images/ranksBg.jpg");
-      background-size: cover;
-      border-radius: 10%;
-      width: 40vw;
-      height: 55vw;
-      top: 10vw;
-      right: 8vw;
-      font-size: 5vw;
-      display: flex;
-      justify-content: space-around;
-  }
-  
-  .doctorButton {
-      position: fixed;
-      width: 15vw;
-      height: 15vw;
-      bottom: 3vw;
-      right: 3vw;
-      border-radius: 70%;
-      border: 0;
-      background-color: black;
-      background-image: url("../images/med.gif");
-      background-size: contain;
-  }
-  
-  .doctorBox {
-      visibility: hidden;
-      position: fixed;
-      border-radius: 10%;
-      background-image: url("../images/doctorBg.jpg");
-      background-size: cover;
-      width: 60vw;
-      height: 35vw;
-      bottom: 15.5vw;
-      right: 12vw;
-      color: white;
-      font-family: cursive;
-      font-size: 4.5vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-left: 1vw;
-      padding-right: 1vw;
-  }
 
   /*
       GAME
@@ -1241,6 +566,7 @@ a {
     height: 300px;
     padding: 10px;
     border-radius: 15px;
+    transform: translate(-85%);
   }
   #question {
     width: 200px;

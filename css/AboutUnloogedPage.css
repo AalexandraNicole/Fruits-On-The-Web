@@ -214,3 +214,147 @@ ul li a:hover{
     color: #a13ea1;
     font-weight: bold;
 }
+
+@media(min-width: 481px) and (max-width: 1024px){
+    .title {
+        font-size: 1rem;
+    }
+
+    .navigation a {
+        font-size: 0.9em;
+        margin-left: 20px;
+    }
+
+    .navigation .btnLogin {
+        height: 25px;
+        width: 110px;
+        font-size: 0.9em;
+        margin-left: 20px;
+    }
+
+    .container{
+        height: fit-content;
+    }
+    .content-wrapper {
+        justify-content: flex-end;
+        align-items: center;
+        height: fit-content;
+        flex-direction: column;
+    }
+
+    .game-categories{
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .section-1 {
+        height: fit-content;
+    }
+
+    .section-1-img{
+        display: flex;
+        height: fit-content;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .content-desc{
+        margin-top: 50px;
+        height: fit-content;
+    }
+
+    .game{
+        display: none;
+    }
+}
+
+@media(min-width: 320px) and (max-width: 480px){
+    header {
+        height: 35px;
+        width: 100%;
+        position: fixed;
+        z-index: 99;
+        scroll-behavior: smooth;
+    }
+    .logo {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        left: 4%;
+        bottom: -0.3vw;
+    }
+     /* Adjustments for very small screens */
+     .title {
+        display: none;
+    }
+
+    .container{
+        height: fit-content;
+    }
+    .navigation a {
+        font-size: 0.8em; /* Adjust font size */
+        margin-left: 10px; /* Adjust margin */
+    }
+
+    .navigation .btnLogin {
+        width: 90px; /* Adjust button width */
+        height: 25px;
+        font-size: 0.8em; /* Adjust font size */
+    }
+    .content-desc p {
+        width: 90%; /* Adjust width */
+        height: fit-content;
+    }
+    .content-wrapper {
+        justify-content: flex-end;
+        align-items: center;
+        height: fit-content;
+    }
+    .content-desc{
+        margin-top: 50px;
+        height: fit-content;
+    }
+
+    .logo-section{
+        margin-right: 50px;
+    }
+    .game-categories{
+        width: 90%;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .game-categories h2 {
+        font-size: 1.3rem;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-right: 0;
+        color: #fff;
+        cursor: pointer;
+    }
+    .section-1 {
+        height: fit-content;
+    }
+
+    .section-1-img{
+        display: flex;
+        height: fit-content;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .game{
+        display: none;
+    }
+
+    footer{
+        height: fit-content;
+        font-size: 0.675rem;
+    }
+    .footer-body{
+        margin-top: 20px;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 0.675rem;
+    }
+}
