@@ -198,3 +198,69 @@ body {
     .login-link p a:hover {
         text-decoration: underline;
     }
+
+/*MEDIA*/
+
+@media (max-width: 480px){
+
+    .wrapper {
+        width: 90%;
+        max-width: 400px;
+        height: auto;
+        padding: 20px;
+    }
+
+    .wrapper.active {
+        height: 520px;
+        width: fit-content;
+    }
+
+    .wrapper .form-box.login {
+        transition: transform .18s ease;
+        transform: translateX(0);
+    }
+
+    .wrapper.active .form-box.login{
+        transition: none;
+        transform: translateX(-400px);
+    }
+
+    .wrapper .form-box.register {
+        position: absolute;
+        transition: none;
+        transform: translateX(400px)
+    }
+
+    .wrapper.active .form-box.register {
+        position: absolute;
+        transition: transform .18s ease;
+        transform: translateX(0);
+    }
+
+    .wrapper h1 {
+        font-size: 30px;
+    }
+
+    .input-box {
+        margin: 20px 0;
+    }
+
+    .icon-back {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5em;
+    }
+
+    .input-box input {
+        padding: 0px 40px 0 15px;
+    }
+
+    .remember-forgot {
+        margin: -10px 0 10px;
+    }
+
+    .register-link,
+    .login-link {
+        margin: 15px 0;
+    }
+}
