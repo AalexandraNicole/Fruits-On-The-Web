@@ -13,7 +13,10 @@
 html,
 body {
     margin: 0;
-    background-color: black;
+    background: url("../images/HomePage.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 a {
@@ -23,6 +26,7 @@ a {
 /* Desktops */
 @media (min-width: 1025px) {
     header {
+        top: 0;
         background-color: var(--mainColor);
         border-bottom: 1px solid black;
         height: 5vw;
@@ -39,7 +43,7 @@ a {
         border-radius: 20%;
         border-color: rgb(197, 156, 234);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/menuClose.webp");
+        background-image: url("../images/menuClose.webp");
         background-size: contain;
     }
 
@@ -76,7 +80,7 @@ a {
         border-radius: 20%;
         border-color: rgb(197, 156, 234);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/profile.png");
+        background-image: url("../images/profile.png");
         background-size: contain;
     }
 
@@ -90,7 +94,7 @@ a {
         border-radius: 60%;
         border-color: rgb(140, 158, 229);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/logout.png");
+        background-image: url("../images/logout.png");
         background-size: contain;
     }
 
@@ -103,7 +107,7 @@ a {
         height: 3.2vw;
         border-radius: 50%;
         border-color: rgb(156, 132, 220);
-        background-image: url("/Fruits-On-The-Web/images/favourite.png");
+        background-image: url("../images/favourite.png");
         background-size: contain;
     }
 
@@ -118,7 +122,7 @@ a {
         border-radius: 60%;
         border-color: rgb(118, 125, 207);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/ranks.png");
+        background-image: url("../images/ranks.png");
         background-size: contain;
     }
 
@@ -315,7 +319,7 @@ a {
     .ranksBox {
         visibility: hidden;
         position: fixed;
-        background-image: url("/Fruits-On-The-Web/images/ranksBg.jpg");
+        background-image: url("../images/ranksBg.jpg");
         background-size: cover;
         border-radius: 10%;
         width: 20vw;
@@ -327,239 +331,256 @@ a {
         justify-content: space-around;
     }
 
-    .profileDiv {
+    /* ADMIN */
+
+    .searchContainer {
+        margin-top: 90px;
+        margin-bottom: 20px;
+        margin-right: 40px;
+        margin-left: 140px;
+      }
+      
+      #searchInput {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      #searchInput:focus {
+        outline: none;
+        border-color: #666;
+      }
+
+    .ranksBox1{
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        padding-top: 9vw;
-        padding-left: 3vw;
-        padding-bottom: 3vw;
     }
-
-    .profileBox {
-        background-color: white;
-        border-radius: 20px;
-        width: 70vw;
-        height: 40vw;
-    }
-
-    #profPic {
-        padding-left: 5vw;
-        padding-right: 1vw;
-        width: 2.5vw;
-        height: 2.5vw;
-    }
-
-    #textProf {
+    .playerBox {
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        padding: 15px 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        max-width: 500px;
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
-        padding-top: 1.5vw;
-        font-family: cursive;
-        font-size: 1.5vw;
-    }
-
-    #lineProfile {
-        height: 0.05vw;
-        width: 70vw;
+      }
+      
+      .playerName {
+        font-size: 1.3em;
+        font-weight: bold;
+      }
+      
+      .actions {
+        display: flex;
+        gap: 10px;
+      }
+      
+      .deleteButton,
+      .banButton,
+      .btnView {
+        justify-self: unset;
+        background-color: #8144fe;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin: 0;
+        transition: background-color 0.3s;
+      }
+      .playerName i{
+        bottom: 10px;
+      }
+      
+      .deleteButton:hover,
+      .banButton:hover,
+      .btnView:hover {
         background-color: #1a1b36;
-    }
+      }
 
-    .roundProfile {
-        display: flex;
-        padding-top: 4vw;
-        padding-left: 13vw;
-    }
-
-    .boxProfile {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2vw;
-        border: 1px solid rgb(220, 219, 219);
-        border-radius: 10px;
-        width: 15vw;
-        height: 20vw;
-    }
-
-    #avatar {
-        width: 8vw;
-        height: 8vw;
-        background-color: rgb(238, 213, 247);
-        border-radius: 50%;
-        border: 2px solid rgb(220, 219, 219);
-    }
-
-    #nameProfile {
-        font-size: 2vw;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-    #scoreProfile {
-        font-size: 1vw;
-        color: var(--graysh);
-    }
-
-    .area {
-        padding-left: 2vw;
-    }
-
-    .detailsProfile {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        row-gap: 0.5vw;
-        padding-left: 1vw;
-        padding-right: 1vw;
-        width: 30vw;
-        height: 26vw;
-        background-color: rgb(249, 243, 251);
-        border: 1px solid rgb(238, 216, 245);
-        border-radius: 10px;
-    }
-
-    #name {
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        padding-left: 0.5vw;
-        height: 3.5vw;
-        background-color: #3b089b;
-        border-radius: 5px;
+      /*REPORTS*/
+      /* Styles for the "View Reports" button/link */
+    .viewReportsButton {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #1a1b36;
         color: white;
-        font-size: 1.5vw;
-    }
-
-    #password {
-        font-size: 1.2vw;
-        font-family: cursive;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        padding-left: 0.5vw;
-        height: 3.5vw;
-        background-color: #3b089b;
+        text-decoration: none;
         border-radius: 5px;
-        color: white;
+        transition: background-color 0.3s;
+        margin-left: 140px;
+    }
+    
+    .viewReportsButton:hover {
+        background-color: #8144fe;
+    }
+    
+    /* Styles for the user reports section */
+    .userReports {
+        margin-left: 150px;
+        margin-right: 40px;
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #A48EFF;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: none;
     }
 
-    #email {
-        font-size: 1.4vw;
-        font-family: fantasy;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        padding-left: 0.5vw;
-        height: 3.5vw;
-        background-color: #3b089b;
-        border-radius: 5px;
-        color: white;
-    }
+    .report {
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+      }
 
-    .editProfile {
-        height: 3vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    .report h3 {
+        margin: 0;
+        font-size: 1.2em;
+        color: #333;
+      }
+      
+      .report p {
+        margin: 8px 0;
+        color: #666;
+      }
+      
+      .report p:first-child {
+        font-weight: bold;
+      }
+      
+      .report p:last-child {
+        margin-bottom: 0;
+      }
 
-    #editProf {
-        width: 2vw;
-        height: 2vw;
-        padding-right: 0.5vw;
-    }
-
-    .resetPass {
-        height: 3vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #resetPassw {
-        width: 2vw;
-        height: 2vw;
-        padding-right: 0.5vw;
-    }
-
-    label {
+      .report a {
+        text-decoration: none;
+        color: inherit;
         display: block;
-        padding-bottom: 1vw;
-    }
-
-    input {
-        padding-bottom: 1vw;
-        padding-right: 5vw;
-        padding-left: 0.5vw;
-    }
-
-    .editPBox {
-        visibility: hidden;
-        position: absolute;
-        top: 20vw;
-        left: 33vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 35vw;
-        height: 23vw;
-        background-color: #1a1b36;
-        color: white;
-        border-radius: 10px;
-        font-size: 1.2vw;
-    }
-
-    .inputGroup {
-        padding-bottom: 2vw;
-    }
-
-    #subm {
-        font-size: 1vw;
-        margin-top: 0.5vw;
-        padding: 1vw 2vw;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .editPasBox {
-        visibility: hidden;
-        position: absolute;
-        top: 20vw;
-        left: 33vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 35vw;
-        height: 23vw;
-        background-color: #1a1b36;
-        color: white;
-        border-radius: 10px;
-        font-size: 1.2vw;
-    }
-
-    .inputGroupPass {
-        padding-bottom: 2vw;
-    }
-
-    #submi {
-        font-size: 1vw;
-        margin-top: 0.5vw;
-        padding: 1vw 2vw;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+      }
+      
+      .report a:hover {
+        background-color: #f0f0f0;
+      }
+      
+      /* Adjust styles for h3 and p inside the clickable report */
+      .report a h3 {
+        margin: 0;
+        font-size: 1.2em;
+        color: #333;
+      }
+      
+      .report a p {
+        margin: 8px 0;
+        color: #666;
+      }
+      
+      .report a p:first-child {
+        font-weight: bold;
+      }
+      
+      .report a p:last-child {
+        margin-bottom: 0;
+      }
 }
+
+/*REPORTS*/
+      /* Styles for the "View Reports" button/link */
+      .viewReportsButton {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #1a1b36;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin-left: 140px;
+    }
+    
+    .viewReportsButton:hover {
+        background-color: #8144fe;
+    }
+    
+    /* Styles for the user reports section */
+    .userReports {
+        margin-left: 150px;
+        margin-right: 40px;
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #A48EFF;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    .report {
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+      }
+
+    .report h3 {
+        margin: 0;
+        font-size: 1.2em;
+        color: #333;
+      }
+      
+      .report p {
+        margin: 8px 0;
+        color: #666;
+      }
+      
+      .report p:first-child {
+        font-weight: bold;
+      }
+      
+      .report p:last-child {
+        margin-bottom: 0;
+      }
+
+      .report a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+      
+      .report a:hover {
+        background-color: #f0f0f0;
+      }
+      
+      /* Adjust styles for h3 and p inside the clickable report */
+      .report a h3 {
+        margin: 0;
+        font-size: 1.2em;
+        color: #333;
+      }
+      
+      .report a p {
+        margin: 8px 0;
+        color: #666;
+      }
+      
+      .report a p:first-child {
+        font-weight: bold;
+      }
+      
+      .report a p:last-child {
+        margin-bottom: 0;
+      }
 
 /* Tablets */
 @media (min-width: 481px) and (max-width: 1024px) {
     header {
+        top: 0;
         background-color: var(--mainColor);
         border-bottom: 1px solid black;
         height: 7vw;
@@ -576,7 +597,7 @@ a {
         border-radius: 20%;
         border-color: rgb(197, 156, 234);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/menuClose.webp");
+        background-image: url("../images/menuClose.webp");
         background-size: contain;
     }
     
@@ -614,7 +635,7 @@ a {
         border-radius: 20%;
         border-color: rgb(197, 156, 234);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/profile.png");
+        background-image: url("../images/profile.png");
         background-size: contain;
     }
     
@@ -628,7 +649,7 @@ a {
         border-radius: 60%;
         border-color: rgb(140, 158, 229);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/logout.png");
+        background-image: url("../images/logout.png");
         background-size: contain;
     }
     
@@ -641,7 +662,7 @@ a {
         height: 4.5vw;
         border-radius: 50%;
         border-color: rgb(156, 132, 220);
-        background-image: url("/Fruits-On-The-Web/images/favourite.png");
+        background-image: url("../images/favourite.png");
         background-size: contain;
     }
     
@@ -656,7 +677,7 @@ a {
         border-radius: 60%;
         border-color: rgb(118, 125, 207);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/ranks.png");
+        background-image: url("../images/ranks.png");
         background-size: contain;
     }
     
@@ -854,7 +875,7 @@ a {
     .ranksBox {
         visibility: hidden;
         position: fixed;
-        background-image: url("/Fruits-On-The-Web/images/ranksBg.jpg");
+        background-image: url("../images/ranksBg.jpg");
         background-size: cover;
         border-radius: 10%;
         width: 28vw;
@@ -866,241 +887,95 @@ a {
         justify-content: space-around;
     }
 
-    .profileDiv {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 15vw;
-        padding-left: 3.5vw;
-        padding-bottom: 4vw;
-    }
+    /*ADMIN*/
 
-    .profileBox {
-        background-color: white;
-        border-radius: 20px;
-        width: 70vw;
-        height: 110vw;
-    }
+    .searchContainer {
+        margin-top: 90px;
+        margin-bottom: 20px;
+        margin-right: 40px;
+        margin-left: 70px;
+      }
+      
+      #searchInput {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      #searchInput:focus {
+        outline: none;
+        border-color: #666;
+      }
 
-    #profPic {
-        padding-left: 8vw;
-        padding-right: 3vw;
-        width: 7vw;
-        height: 7vw;
-    }
-
-    #textProf {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding-top: 3vw;
-        font-family: cursive;
-        font-size: 3.5vw;
-    }
-
-    #lineProfile {
-        height: 0.05vw;
-        width: 70vw;
-        background-color: #1a1b36;
-    }
-
-    .roundProfile {
-        display: flex;
-        padding-top: 8vw;
-        padding-left: 1vw;
-    }
-
-    .boxProfile {
+    .ranksBox1{
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        gap: 3vw;
-        border: 1px solid rgb(220, 219, 219);
-        border-radius: 10px;
-        width: 27vw;
-        height: 40vw;
+        margin-left: 40px;
     }
-
-    #avatar {
-        width: 16vw;
-        height: 16vw;
-        background-color: rgb(238, 213, 247);
-        border-radius: 50%;
-        border: 2px solid rgb(220, 219, 219);
-    }
-
-    #nameProfile {
-        font-size: 4vw;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-    #scoreProfile {
-        font-size: 2vw;
-        color: var(--graysh);
-    }
-
-    .area {
-        padding-left: 1vw;
-    }
-
-    .detailsProfile {
+    .playerBox {
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        padding: 15px 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        max-width: 500px;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        row-gap: 3vw;
-        padding-top: 6vw;
-        padding-left: 1vw;
-        padding-right: 1vw;
-        width: 37vw;
-        height: 73vw;
-        background-color: rgb(249, 243, 251);
-        border: 1px solid rgb(238, 216, 245);
-        border-radius: 10px;
-    }
-
-    #name {
-        display: flex;
-        justify-content: start;
+        justify-content: space-between;
         align-items: center;
-        padding-left: 0.5vw;
-        height: 6vw;
-        background-color: #3b089b;
-        border-radius: 5px;
-        color: white;
-        font-size: 3.5vw;
-    }
-
-    #password {
-        font-size: 2.2vw;
-        font-family: cursive;
+      }
+      
+      .playerName {
+        font-size: 1.3em;
+        font-weight: bold;
+      }
+      
+      .actions {
         display: flex;
-        justify-content: start;
-        align-items: center;
-        padding-left: 0.5vw;
-        height: 6vw;
-        background-color: #3b089b;
-        border-radius: 5px;
-        color: white;
-    }
-
-    #email {
-        font-size: 3vw;
-        font-family: fantasy;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        padding-left: 0.5vw;
-        height: 6vw;
-        background-color: #3b089b;
-        border-radius: 5px;
-        color: white;
-    }
-
-    .editProfile {
-        height: 8vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #editProf {
-        width: 5vw;
-        height: 5vw;
-        padding-right: 1vw;
-    }
-
-    .resetPass {
-        height: 8vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #resetPassw {
-        width: 5vw;
-        height: 5vw;
-        padding-right: 1vw;
-    }
-
-    label {
-        display: block;
-        padding-bottom: 1vw;
-    }
-
-    input {
-        padding-bottom: 3vw;
-        padding-right: 25vw;
-        padding-left: 0.5vw;
-    }
-
-    .editPBox {
-        visibility: hidden;
-        position: absolute;
-        top: 45vw;
-        left: 20vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 60vw;
-        height: 60vw;
-        background-color: #1a1b36;
-        color: white;
-        border-radius: 10px;
-        font-size: 3.5vw;
-    }
-
-    .inputGroup {
-        padding-bottom: 7vw;
-    }
-
-    #subm {
-        font-size: 3vw;
-        margin-top: 0.5vw;
-        padding: 1.5vw 2.5vw;
-        background-color: #007bff;
+        gap: 10px;
+      }
+      
+      .deleteButton,
+      .banButton,
+      .btnView {
+        justify-self: unset;
+        background-color: #8144fe;
         color: white;
         border: none;
         border-radius: 5px;
+        padding: 10px 20px;
         cursor: pointer;
-    }
-
-    .editPasBox {
-        visibility: hidden;
-        position: absolute;
-        top: 45vw;
-        left: 20vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 60vw;
-        height: 60vw;
+        margin: 0;
+        transition: background-color 0.3s;
+      }
+      .playerName i{
+        bottom: 10px;
+      }
+      
+      .deleteButton:hover,
+      .banButton:hover,
+      .btnView:hover {
         background-color: #1a1b36;
-        color: white;
-        border-radius: 10px;
-        font-size: 3.5vw;
-    }
+      }
 
-    .inputGroupPass {
-        padding-bottom: 7vw;
-    }
-
-    #submi {
-        font-size: 3vw;
-        margin-top: 0.5vw;
-        padding: 1.5vw 2.5vw;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
+      /*REPORTS*/
+      .viewReportsButton {
+        margin-left: 70px; /* Adjust margin for medium screens */
     }
     
+        .userReports {
+            margin-left: 80px; /* Adjust margin for medium screens */
+            margin-right: 60px; /* Adjust margin for medium screens */
+        }
 }
 
 /* Smartphones */
 @media (min-width: 320px) and (max-width: 480px) {
     header {
+        top: 0;
         background-color: var(--mainColor);
         border-bottom: 1px solid black;
         height: 10vw;
@@ -1117,7 +992,7 @@ a {
         border-radius: 20%;
         border-color: rgb(197, 156, 234);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/menuClose.webp");
+        background-image: url("../images/menuClose.webp");
         background-size: contain;
     }
     
@@ -1155,7 +1030,7 @@ a {
         border-radius: 20%;
         border-color: rgb(197, 156, 234);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/profile.png");
+        background-image: url("../images/profile.png");
         background-size: contain;
     }
     
@@ -1169,7 +1044,7 @@ a {
         border-radius: 60%;
         border-color: rgb(140, 158, 229);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/logout.png");
+        background-image: url("../images/logout.png");
         background-size: contain;
     }
     
@@ -1182,7 +1057,7 @@ a {
         height: 6.2vw;
         border-radius: 50%;
         border-color: rgb(156, 132, 220);
-        background-image: url("/Fruits-On-The-Web/images/favourite.png");
+        background-image: url("../images/favourite.png");
         background-size: contain;
     }
     
@@ -1197,7 +1072,7 @@ a {
         border-radius: 60%;
         border-color: rgb(118, 125, 207);
         background-color: white;
-        background-image: url("/Fruits-On-The-Web/images/ranks.png");
+        background-image: url("../images/ranks.png");
         background-size: contain;
     }
     
@@ -1395,7 +1270,7 @@ a {
     .ranksBox {
         visibility: hidden;
         position: fixed;
-        background-image: url("/Fruits-On-The-Web/images/ranksBg.jpg");
+        background-image: url("../images/ranksBg.jpg");
         background-size: cover;
         border-radius: 10%;
         width: 40vw;
@@ -1406,234 +1281,90 @@ a {
         display: flex;
         justify-content: space-around;
     }
+/*Admin*/ 
 
-    .profileDiv {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 18vw;
-        padding-left: 8vw;
-        padding-bottom: 5vw;
-    }
-
-    .profileBox {
-        background-color: white;
+    .searchContainer {
+        margin-top: 70px;
+        margin-left: 60px;
+        margin-right: 20px;
         border-radius: 20px;
-        width: 70vw;
-        height: 180vw;
-    }
+      }
+    
+      #searchInput {
+        width: 90%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      
+      #searchInput:focus {
+        outline: none;
+        border-color: #666;
+      }
 
-    #profPic {
-        padding-left: 4vw;
-        padding-right: 2vw;
-        width: 12vw;
-        height: 12vw;
-    }
-
-    #textProf {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding-top: 3vw;
-        font-family: cursive;
-        font-size: 6.5vw;
-    }
-
-    #lineProfile {
-        height: 0.05vw;
-        width: 70vw;
-        background-color: #1a1b36;
-    }
-
-    .roundProfile {
-        display: block;
-        padding-top: 9vw;
-        padding-left: 8vw;
-    }
-
-    .boxProfile {
+    .ranksBox1 {
+        margin-top: 20px;;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        gap: 1vw;
-        border: 1px solid rgb(220, 219, 219);
-        border-radius: 10px;
-        width: 55vw;
-        height: 40vw;
-    }
-
-    #avatar {
-        width: 22vw;
-        height: 22vw;
-        background-color: rgb(238, 213, 247);
-        border-radius: 50%;
-        border: 2px solid rgb(220, 219, 219);
-    }
-
-    #nameProfile {
-        font-size: 5vw;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-    #scoreProfile {
-        font-size: 3vw;
-        color: var(--graysh);
-    }
-
-    .area {
-        padding-top: 2vw;
-    }
-
-    .detailsProfile {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        row-gap: 1vw;
-        padding-left: 1vw;
-        padding-right: 1vw;
-        width: 53vw;
-        height: 90vw;
-        background-color: rgb(249, 243, 251);
-        border: 1px solid rgb(238, 216, 245);
-        border-radius: 10px;
-    }
-
-    #name {
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        padding-left: 1vw;
-        height: 10vw;
-        background-color: #3b089b;
-        border-radius: 5px;
-        color: white;
-        font-size: 4.5vw;
-    }
-
-    #password {
-        font-size: 3vw;
-        font-family: cursive;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        padding-left: 1vw;
-        height: 10vw;
-        background-color: #3b089b;
-        border-radius: 5px;
-        color: white;
-    }
-
-    #email {
-        font-size: 3.4vw;
-        font-family: fantasy;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        padding-left: 1vw;
-        height: 10vw;
-        background-color: #3b089b;
-        border-radius: 5px;
-        color: white;
-    }
-
-    .editProfile {
-        height: 10vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #editProf {
-        width: 7vw;
-        height: 7vw;
-        padding-right: 1vw;
-    }
-
-    .resetPass {
-        height: 10vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #resetPassw {
-        width: 7vw;
-        height: 7vw;
-        padding-right: 1vw;
-    }
-
-    label {
-        display: block;
-        padding-bottom: 3vw;
-    }
-
-    input {
-        padding-bottom: 3vw;
-        padding-right: 12vw;
-        padding-left: 0.5vw;
-    }
-
-    .editPBox {
-        visibility: hidden;
-        position: absolute;
-        top: 70vw;
-        left: 15vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 78vw;
-        height: 90vw;
-        background-color: #1a1b36;
-        color: white;
-        border-radius: 10px;
-        font-size: 6.2vw;
-    }
-
-    .inputGroup {
-        padding-bottom: 8vw;
-    }
-
-    #subm {
-        font-size: 6vw;
-        margin-top: 0.5vw;
-        padding: 2.5vw 3.5vw;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .editPasBox {
-        visibility: hidden;
-        position: absolute;
-        top: 70vw;
-        left: 15vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 78vw;
-        height: 90vw;
-        background-color: #1a1b36;
-        color: white;
-        border-radius: 10px;
-        font-size: 6.2vw;
-    }
-
-    .inputGroupPass {
-        padding-bottom: 8vw;
-    }
-
-    #submi {
-        font-size: 6vw;
-        margin-top: 0.5vw;
-        padding: 2.5vw 3.5vw;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
+        margin-left: 60px;
     }
     
+    .playerBox {
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 500px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .playerName {
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+    
+    .actions {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .deleteButton,
+    .banButton,
+    .btnView {
+      justify-self: unset;
+      background-color: #8144fe;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+      margin: 0;
+      transition: background-color 0.3s;
+    }
+    
+    .playerName i {
+      bottom: 10px;
+    }
+    
+    .deleteButton:hover,
+    .banButton:hover,
+    .btnView:hover {
+      background-color: #1a1b36;
+    }
+
+    /*REPORTS*/
+    .viewReportsButton {
+        margin-left: 60px; /* Adjust margin for small screens */
+    }
+    
+    .userReports {
+        margin-left: 80px; /* Adjust margin for small screens */
+        margin-right: 30px; /* Adjust margin for small screens */
+    }
 }

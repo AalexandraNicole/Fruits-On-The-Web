@@ -7,6 +7,8 @@
     <title>FrOW</title>
     <link rel="stylesheet" href="../css/AdminPage.css">
     <link rel="shortcut icon" type="image/x-icon" href="../images/logo.gif" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -64,61 +66,67 @@
         </ul>
     </div>
 
-    <div class="profileDiv">
-        <div class="profileBox">
-            <p id="textProf"><img alt="Check" id="profPic" src="../images/profilePic.png"> My profile</p>
-            <div id="lineProfile"></div>
-            <div class="roundProfile">
-                <div class="boxProfile">
-                    <img alt="Check" id="avatar" src="../images/avatar.png">
-                    <div id="nameProfile">TatiCory</div>
-                    <div id="scoreProfile">Score Level</div>
-                </div>
-                <div class="area">
-                    <div class="detailsProfile">
-                        <p id="name">TatiCory</p>
-                        <p id="password">taticory123</p>
-                        <p id="email">taticory@gmail.com</p>
-                        <button class="editProfile" onclick="showEditProfile()"><img alt="Check" id="editProf" src="../images/editProfile.png">Edit Profile</button>
-                        <button class="resetPass" onclick="showEditPass()"><img alt="Check" id="resetPassw" src="../images/password.png">Reset Password</button>
-                    </div>
-                </div>
+        <div class="searchContainer">
+            <input type="text" id="searchInput" placeholder="Search for a user...">
+        </div>
+
+        <div class="ranksBox1">
+            <div class="playerBox">
+            <span class="playerName">
+                <i class="bx bxs-user"></i>
+                Mike Thert
+            </span>
+            <button class="deleteButton">Delete</button>
+            <button onclick="window.location='profilePage.html';" id="btnView" class="btnView">View</button>
+            <button class="banButton">Bann</button>
+            </div>
+            <div class="playerBox">
+            <span class="playerName">
+                <i class="bx bxs-user"></i>
+                Alin Chutr
+            </span>
+            <button class="deleteButton">Delete</button>
+            <button onclick="window.location='profilePage.html';" id="btnView" class="btnView">View</button>
+            <button class="banButton">Bann</button>
             </div>
         </div>
-    </div>
 
-    <div class="editPBox"> 
-        <form id="editFormProfile">
-        
-            <div class="inputGroup">
-                <label for="newName">New Username:</label>
-                <input type="text" id="newName" name="newName">
-            </div>
-            <div class="inputGroup">
-                <label for="newEmail">New Email:</label>
-                <input type="email" id="newEmail" name="newEmail">
-            </div>
+        <a href="#userReports" class="viewReportsButton" id="viewReportsButton">View Reports</a>
 
-            <a href="profilePage.html"><button id="subm" type="submit">Submit</button></a>
-        </form>
-    </div>
-
-    <div class="editPasBox">
-        <form id="editFormPassword">
-            <div class="inputGroupPass">
-                <label for="newPass">New Password:</label>
-                <input type="password" id="newPass" name="newPass">
-            </div>
-            <div class="inputGroupPass">
-                <label for="confirmPass">Confirm Password:</label>
-                <input type="password" id="confirmPass" name="confirmPass">
-            </div>
-
-            <a href="profilePage.html"><button id="submi" type="submit">Submit</button></a>
-        </form>
-    </div>
+        <!-- Placeholder for user reports section -->
+        <div id="userReports" class="userReports">
+            <h2>User Reports</h2>
+            <div class="report">
+                <a href="#report1" class="reportLink">
+                  <h3>Report #1</h3>
+                  <p>Date: January 15, 2024</p>
+                  <p>Reported User: John Doe</p>
+                  <p>Reason: Inappropriate behavior</p>
+                  <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et ultrices metus.</p>
+                </a>
+              </div>
+              <div class="report">
+                <a href="#report2" class="reportLink">
+                  <h3>Report #2</h3>
+                  <p>Date: February 3, 2024</p>
+                  <p>Reported User: Jane Smith</p>
+                  <p>Reason: Spamming</p>
+                  <p>Details: Aliquam erat volutpat. Maecenas id scelerisque elit.</p>
+                </a>
+              </div>
+            <div class="report">
+                <a href="#report3" class="reportLink">
+                  <h3>Report #3</h3>
+                  <p>Date: January 25, 2024</p>
+                  <p>Reported User: Marin Doe</p>
+                  <p>Reason: Bug</p>
+                  <p>Details: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et ultrices metus.</p>
+                </a>
+              </div>
+        </div>
 
     <script src="../js/profilePage.js"></script>
+    <script src="../js/AdminPage.js"></script>
 </body>
 
 </html>

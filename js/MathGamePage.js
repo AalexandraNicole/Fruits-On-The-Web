@@ -103,7 +103,7 @@ document.getElementById("startreset").onclick = function () {
         hide("gameOver");
 
         //change start to reset        
-        document.getElementById("startreset").innerHTML = "Reset Game";
+        document.getElementById("startreset").innerHTML = "Exit";
 
         //start count
         startCountdown();
@@ -131,11 +131,13 @@ for (i = 1; i < 5; i++) {
 
             } else {
                 //wrong answer
+                //increase score
                 hide("correct");
                 show("wrong");
                 setTimeout(function () {
                     hide("wrong");
-                }, 1000);
+                }, 500);
+                generateQA();
             }
         }
     }
@@ -154,7 +156,7 @@ function startCountdown() {
             show("gameOver");
 
             //game over            
-            document.getElementById("gameOver").innerHTML = "<p>Time over!</p><p>Your score is " + score + ".</p>";
+            document.getElementById("gameOver").innerHTML = "<p>Time's up!</p><p>Your score is " + score + ".</p>";
             hide("timeremaining");
             hide("correct");
             hide("wrong");
@@ -194,8 +196,8 @@ function getRandomFruitImageUrl() {
 }
 
 function generateQA() {
-    var x = 1 + Math.round(9 * Math.random());
-    var y = 1 + Math.round(9 * Math.random());
+    var x = 1 + Math.round(2 * Math.random());
+    var y = 1 + Math.round(2 * Math.random());
     correctAnswer = x + y;
 
     // Generate a random fruit image URL
@@ -235,8 +237,8 @@ function generateQA() {
             var wrongAnswer;
             do {
                 wrongAnswer = (1 +
-                    Math.round(9 * Math.random())) * (1 +
-                        Math.round(9 * Math.random()));//wrong answer
+                    Math.round(2 * Math.random())) * (1 +
+                        Math.round(1 * Math.random()));//wrong answer
 
             } while (answers.indexOf(wrongAnswer) > -1)
 

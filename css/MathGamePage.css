@@ -274,7 +274,7 @@ a {
       text-transform: uppercase;
       position: absolute;
       top: 100px;
-      left: 45px;
+      left: 100px;
       z-index: 2;
       display: none;
     }
