@@ -46,7 +46,7 @@
             </p>
             
           </section>
-          <section id="Root">
+          <section id="conv">
             <!-- review? -->
             <h3>Document Conventions</h3>
             <p>
@@ -55,7 +55,7 @@
                  to detailed requirements unless otherwise stated
             </p>
           </section>
-          <section id="Root">
+          <section id="reading">
             <!-- review? -->
             <h3>Intended Audience and Reading Suggestions</h3>
             <p>
@@ -72,7 +72,7 @@
                   sections and delving into specific requirements as needed.
             </p>
           </section>
-          <section id="Root">
+          <section id="scope">
             <!-- review? -->
             <h3>Product Scope</h3>
             <p>
@@ -86,7 +86,7 @@
                 content, the application seeks to foster awareness and understanding of nutrition and dietary choices from an early age.
             </p>
           </section>
-          <section id="Root">
+          <section id="ref">
             <!-- review? -->
             <h3>References</h3>
             <p>
@@ -105,7 +105,7 @@
         <h2>Overall Description</h2>
         <p>
           </p>
-        <section id="Root">
+        <section id="perspective">
           <!-- review? -->
           <h3>Product Perspective</h3>
           <p>
@@ -118,7 +118,7 @@
             providing a seamless user experience across platforms.
           </p>
         </section>
-        <section id="Root">
+        <section id="product">
             <!-- review? -->
             <h3>Product Functions</h3>
             <p>
@@ -132,7 +132,7 @@
                 functionalities for managing user accounts and content.
             </p>
           </section>
-        <section id="Root">
+        <section id="character">
             <!-- review? -->
             <h3>User Classes and Characteristics</h3>
             <p>
@@ -147,7 +147,7 @@
                 features to support their children's learning progress.
             </p>
           </section>
-        <section id="Root">
+        <section id="environm">
             <!-- review? -->
             <h3>Operating Environment</h3>
             <p>
@@ -163,7 +163,7 @@
                 for access to online features and content delivery.
             </p>
           </section>
-        <section id="Root">
+        <section id="design">
             <!-- review? -->
             <h3>Design and Implementation Constraints</h3>
             <p>
@@ -184,7 +184,7 @@
                 will be used to ensure code quality and consistency.
             </p>
           </section>
-        <section id="Root">
+        <section id="document">
             <!-- review? -->
             <h3>User Documentation</h3>
             <p>
@@ -199,7 +199,7 @@
                 with easy access to support resources whenever needed.
             </p>
           </section>
-        <section id="Root">
+        <section id="dependencies">
             <!-- review? -->
             <h3>Assumptions and Dependencies</h3>
             <p>
@@ -222,7 +222,7 @@
         <!-- review? -->
         <h3>External Interface Requirements</h3>
         <p></p>
-        <section id="Root">
+        <section id="interfaces">
             <!-- review? -->
             <h3>User Interfaces</h3>
             <p>
@@ -238,7 +238,7 @@
                  accessibility.
             </p>
           </section>
-        <section id="Root">
+        <section id="hard">
             <!-- review? -->
             <h3>Hardware Interfaces</h3>
             <p>
@@ -253,6 +253,425 @@
                  on a wide range of devices and platforms.
             </p>
           </section>
+        <section id="soft">
+          <h3>Software Interfaces</h3>
+          <p>The educational web gaming platform interfaces with several specific software components to 
+          facilitate its functionalities:
+          <h4>Database Interface</h4>
+              Component Name: Vegetable and fruit image database
+              <br>Version: N/K
+              <br>Data Items: Images of various vegetables and fruits, along with associated metadata such as 
+              names, nutritional information, and classifications.
+              <br>Purpose: Provides the platform with a repository of images and information to be used in 
+              games, educational content, and recipes.
+              <br>Data Sharing Mechanism: API calls are made to retrieve specific images and information based 
+              on user interactions within the platform.
+      
+          <h4>User Profile Database Interface</h4>
+              Component Name: User profile database
+              <br>Version: N/K
+              <br>Data Items: User profiles containing user IDs, usernames, passwords, game scores, emails and 
+              preferences.
+              <br>Purpose: Stores and manages user-related data, including game progress and leaderboard 
+              rankings.
+              <br>Data Sharing Mechanism: The platform communicates with the user profile database via API 
+              requests to update and retrieve user information as needed.
+      
+          <h4>Leaderboard Interface</h4>
+              Component Name: Leaderboard service
+              <br>Version: N/K
+              <br>Data Items: Top player names, scores and rankings.
+              <br>Purpose: Provides real-time leaderboard data to display the top players within the platform.
+              <br>Data Sharing Mechanism: The platform periodically fetches updated leaderboard data via 
+              API calls and displays it to users in many manners, as a pop-up display and also a separate page.
+      
+          <h4>External API Interfaces</h4>
+              Component Name: Random tips API
+              <br>Version: N/K
+              <br>Data Items: Health tips provided by a doctor.
+              <br>Purpose: Supplies the platform with random health tips to be displayed to users.
+              <br>Data Sharing Mechanism: The platform makes API requests to retrieve random health tips, 
+              which are then displayed to users via the platform's interface.
+      
+          <h4>Operating System Interface</h4>
+              Component Name: Web server environment
+              <br>Version: N/K
+              <br>Purpose: Hosts and serves the educational web gaming platform to users.
+              <br>Data Sharing Mechanism: The platform runs within the web server environment, utilizing 
+              its resources and services to deliver content and functionality to users' web browsers.
+      
+          <h4>Frontend Libraries</h4>
+              Component Name: JavaScript
+              <br>Version: N/K
+              <br>Purpose: Facilitates the development of the platform's user interface and interactive 
+              elements.
+              <br>Data Sharing Mechanism: Utilizes frontend libraries to create engaging and responsive user 
+              experiences within the platform.
+          
+          <h4>Backend Libraries</h4>
+              Component Name: Node.js,
+              <br>Version: N/K
+              <br>Purpose: Supports the development of the platform's backend logic and API endpoints.
+              <br>Data Sharing Mechanism: Utilizes backend libraries to handle API requests, interact with 
+              databases, and manage user sessions.
+          <br>These software interfaces enable the educational web gaming platform to provide a seamless and 
+          interactive experience for its users while accessing and managing various data sources and services.
+          </p>
+        </section>
+        <section id="comm">
+          <h3>Communications Interfaces</h3>
+          <p>
+              The educational web gaming platform requires several communication functions to operate 
+              effectively and securely:
+      
+          <h4>HTTP(S) Communication</h4>
+              Protocol: HTTP/HTTPS
+              <br>Purpose: Facilitates communication between the user's web browser and the platform's web 
+              server.
+              <br>Standards: Utilizes HTTP/HTTPS protocols for data transfer between the client and server, 
+              ensuring compatibility with web browsers.
+              <br>Security: HTTPS is employed to encrypt data transmitted between the client and server, 
+              ensuring confidentiality and integrity of user data.
+              <br>Message Formatting: Data exchanged between client and server adheres to standard HTTP 
+              message formats, including headers and payloads.
+      
+          <h4>API Communication</h4>
+              Protocol: HTTP/HTTPS
+              <br>Purpose: Enables communication between the platform and external APIs for data retrieval 
+              and updates.
+              <br>Standards: Utilizes GraphQL APIs over HTTP/HTTPS for interfacing with external services.
+              <br>Security: API requests are made over HTTPS to ensure data confidentiality and integrity 
+              during transmission.
+              <br>Message Formatting: API requests and responses conform to the specified API endpoint 
+              formats, typically JSON or XML payloads.
+      
+          <h4>Web Socket Communication</h4>
+              Protocol: WebSocket
+              <br>Purpose: Supports real-time communication between the platform and users for interactive 
+              features such as chat or notifications.
+              <br>Standards: Utilizes the WebSocket protocol for bidirectional communication between the 
+              client and server.
+              <br>Security: WebSocket connections may be secured using SSL/TLS encryption to prevent 
+              unauthorized access or tampering of data.
+              <br>Message Formatting: WebSocket messages adhere to the WebSocket frame format, allowing for 
+              efficient and low-latency communication between client and server.
+      
+          <h4>Email Communication</h4>
+              Protocol: SMTP
+              <br>Purpose: Facilitates communication with users via email for account verification, password 
+              resets, and notifications.
+              <br>Standards: Utilizes SMTP for sending emails.
+              <br>Security: SMTP communication may be secured using SSL/TLS encryption to protect sensitive 
+              email content during transmission.
+              <br>Message Formatting: Email messages conform to MIME standards, allowing for the inclusion 
+              of text, HTML, and attachments as needed.
+      
+          <h4>RSS Feed Communication</h4>
+              Protocol: HTTP/HTTPS
+              <br>Purpose: Provides access to the leaderboard of top players as an RSS feed.
+              <br>Standards: Utilizes HTTP/HTTPS to fetch the RSS feed data from the server.
+              <br>Security: RSS feed URLs may be accessed over HTTPS to ensure data integrity and 
+              confidentiality.
+              <br>Message Formatting: RSS feed entries adhere to the RSS specification, containing metadata 
+              such as title, description, and link.
+      
+          <br>These communication interfaces enable the educational web gaming platform to interact with 
+          users, external APIs, and services securely and efficiently, enhancing the overall user experience 
+          and functionality of the platform.
+          </p>
+        </section>
     </section>
+    <section id="features">
+      <h2>System Features</h2>
+        <section id="sys">
+          <h3>Game Features/ Vegetable and Fruit Matching</h3>
+          <p> Description: Match vegetable and fruit images with their names.
+          <br>Priority: High
+          <br>Stimulus/Response Sequences:
+              <br>User selects game and starts matching images with names.
+              <br>System validates matches, rewards points, and ends game on completion.
+          <br>Functional Requirements:
+              <br>Display images and names for matching.
+              <br>Validate matches and track scores.
+              <br>Provide feedback for correct and incorrect matches.
+              <br>Implement time limits or attempts for gameplay.
+          </p>
+        </section>
+        <section id="educational">
+          <h3>Educational Content Features/ Vegetable and Fruit Information</h3>
+          <p>Description: Provide nutritional information and fun facts about vegetables and fruits.
+              <br>Priority: Medium
+              <br>Functional Requirements:
+                  <br>Display nutritional value, benefits, and facts.
+                  <br>Enable easy navigation through information sections.
+                  <br>Include interactive elements like links.
+          </p>
+        </section>
+        <section id="educLib">
+          <h3>Educational Content Features/ Recipe Library</h3>
+          <p>Description: Offer healthy recipes using vegetables and fruits.
+              <br>Priority: Medium
+              <br>Functional Requirements:
+                 <br> Display recipes with ingredients, instructions, and images.
+                 <br> Display recipes within the links.
+          </p>
+        </section>
+        <section id="profile">
+          <h3>Profile Management Features/ User Registration and Login</h3>
+          <p>Description: Enable user registration, login, and profile management.
+              <br>Priority: High
+              <br>Stimulus/Response Sequences: User registers, logs in, and manages profile.
+              <br>Functional Requirements:
+                  <br>Securely store and validate user credentials.
+                  <br>Encrypt sensitive information.
+                  <br>Provide password recovery options.
+          </p>
+        </section>
+        <section id="profileTrack">
+          <h3>Profile Management Features/ Progress Tracking</h3>
+        <p>Description: Track and display user progress and achievements.
+        <br>Priority: High
+        <br>Stimulus/Response Sequences: User views progress and achievements.
+        <br>Functional Requirements:
+            <br>Record and update scores and achievements.
+            <br>Display progress visually.
+    </p>
+        </section>
+        <section id="leaderbord">
+          <h3>Leaderboard Features/ Top Player Leaderboard</h3>
+          <p> Description: Display top player scores.
+              <br>Priority: High
+              <br>Stimulus/Response Sequences: User accesses leaderboard and views top scores.
+              <br>Functional Requirements:
+                  <br>Retrieve and display top player scores.
+                  <br>Update leaderboard in real-time.
+          </p>
+        </section>
+    </section>
+    <section id="nonfunctional">
+      <h2>Other Nonfunctional Requirements</h2>
+      <section id="perf">
+        <h3>Performance Requirements</h3>
+        <p><br>Response Time:
+            <br>Requirement: System response time: ≤ 1 second.
+            <br>Rationale: Quick responses enhance user engagement.
+    
+        <br>Gameplay Smoothness:
+           <br>Requirement: Minimum frame rate: 30 fps.
+            <br>Rationale: Smooth animations ensure enjoyable gameplay.
+    
+        <br>Scalability:
+            <br>Requirement: Concurrent user load: ≥ 1000 users.
+            <br>Rationale: Accommodates increasing user demand.
+    
+        <br>Database Performance:
+        <br>Requirement: Query execution time: ≤ 100 milliseconds.
+        <br>Rationale: Ensures quick access to essential data.
+    
+        <br>Network Latency:
+        <br>Requirement: Latency: ≤ 100 milliseconds.
+        <br>Rationale: Minimizes delays for real-time interactions.
+    
+        <br>Error Handling Time:
+        <br> Requirement: Error resolution: ≤ 3 seconds.
+        <br>Rationale: Swiftly resolves issues to minimize disruptions.
+    
+        <br>Data Processing Time:
+        <br>Requirement: Processing time: ≤ 5 seconds.
+        <br>Rationale: Timely delivery of dynamic content and updates.
+        </p>
+      </section>
+      <section id="safety">
+        <h3>Safety Requirements</h3>
+        <p>Content Safety:
+            <br>Requirement: Ensure age-appropriate content.
+            <br>Safeguard: Implement content moderation.
+            <br>Prevention: Regularly review content for compliance.
+    
+            <br>User Data Protection:
+            <br>Requirement: Safeguard personal data.
+            <br>Safeguard: Use robust encryption and access controls.
+            <br>Prevention: Conduct security audits regularly.
+    
+            <br>Gameplay Safety:
+            <br>Requirement: Ensure safe and educational gameplay.
+            <br>Safeguard: Design with user safety in mind.
+            <br>Prevention: Test with children and educators.
+    
+            <br>Accessibility and Inclusivity:
+            <br>Requirement: Ensure accessibility for all users.
+            <br>Safeguard: Implement inclusive features.
+            <br>Prevention: Adhere to accessibility standards.
+    
+            <br>Parental Controls:
+            <br> Requirement: Provide parental oversight features.
+            <br>Safeguard: Secure parental control settings.
+            <br>Prevention: Educate guardians on usage.
+        </p>
+      </section>
+      <section id="security">
+        <h3>Security Requirements</h3>
+        <p>Data Encryption:
+            <br>Requirement: Encrypt user data in transit and at rest.
+            <br>Rationale: Protect sensitive information from unauthorized access.
+    
+            <br>User Authentication:
+            <br>Requirement: Implement secure user authentication.
+            <br>Rationale: Ensure only authorized access to the system.
+    
+            <br>Access Control:
+            <br>Requirement: Enforce role-based access control.
+            <br>Rationale: Restrict access to sensitive features and data.
+    
+            <br>Data Integrity:
+            <br>Requirement: Ensure data integrity measures.
+            <br>Rationale: Maintain accuracy and reliability of user data.
+    
+            <br>Security Monitoring:
+            <br>Requirement: Implement real-time monitoring.
+            <br>Rationale: Detect and respond to security incidents promptly.
+    
+            <br>Compliance:
+            <br>Requirement: Ensure compliance with data protection regulations.
+            <br>Rationale: Avoid legal liabilities and penalties.
+    
+            <br>Regular Audits:
+            <br>Requirement: Conduct security audits regularly.
+            <br>Rationale: Identify and address security weaknesses.
+    
+            <br>Incident Response Plan:
+            <br>Requirement: Develop an incident response plan.
+            <br>Rationale: Enable swift responses to security breaches.
+        </p>
+      </section>
+      <section id="attributes">
+        <h3>Software Quality Attributes</h3>
+        <p>Usability:
+            <br>Requirement: Ensure a user-friendly interface with intuitive navigation.
+            <br>Rationale: Enhances user satisfaction and adoption.
+    
+            <br>Reliability:
+            <br> Requirement: Minimize system downtime to less than 1% of total uptime.
+            <br>Rationale: Ensures consistent and dependable performance.
+    
+            <br>Maintainability:
+            <br> Requirement: Maintainability index of at least 80% as per industry standards.
+            <br>Rationale: Facilitates ease of future updates and enhancements.
+    
+            <br>Robustness:
+            <br>Requirement: Handle unexpected inputs gracefully without system crashes.
+            <br>Rationale: Ensures stability under adverse conditions.
+    
+            <br>Testability:
+            <br>Requirement: Achieve code coverage of 90% for automated tests.
+            <br>Rationale: Facilitates efficient and thorough testing processes.
+    
+            <br>Adaptability:
+            <br>Requirement: Support seamless integration with future technologies.
+            <br>Rationale: Enables scalability and future-proofing of the system.
+    
+            <br>Portability:
+            <br>Requirement: Ensure compatibility across major web browsers and devices.
+            <br>Rationale: Provides flexibility and accessibility to users.
+    
+            <br>These quality attributes ensure the product meets high standards of performance, 
+            reliability, and usability, contributing to a positive user experience and efficient 
+            development processes.
+        </p>
+      </section>
+      <section id="business">
+        <h3>Business Rules</h3>
+        <p>User Roles and Permissions:
+            <br>Rule: Administrators have full access to system administration functions, including user 
+            management and content moderation.
+            <br>Implication: Implement role-based access control to restrict access based on user roles.
+    
+            <br>Age Restrictions:
+            <br>Rule: Users must be at least 13 years old to register for an account without parental consent.
+    
+            <br>Content Approval Process:
+            <br>Rule: User-generated content undergoes moderation before being published to ensure 
+            compliance with content guidelines.
+    
+            <br>Data Privacy:
+            <br>Rule: User data cannot be shared with third parties without explicit consent.
+            <br>Implication: Implement robust data protection measures and obtain user consent for data sharing.
+    
+            <br>Advertisement Guidelines:
+            <br>Rule: Advertisements must be age-appropriate and comply with advertising regulations.
+            <br>Implication: Implement ad content screening and adhere to advertising standards.
+            <br>These business rules define the operational guidelines and constraints for the product, 
+            guiding the implementation of functional requirements to ensure adherence to regulatory 
+            requirements and business policies.
+        </p>
+      </section>
+  </section>
+  <section id="other">
+    <h2>Other Requirements</h2>
+    <section id="database">
+      <h3>Database Requirements:</h3>
+      <p>
+          <br>Requirement: Utilize a relational database management system (RDBMS) to store user data, 
+          game progress, and content information.
+          <br>Implication: Choose a scalable and reliable RDBMS such as MySQL or PostgreSQL and design 
+          an efficient database schema.
+      </p>
+    </section>
+    <section id="legal">
+      <h3>Legal Compliance:</h3>
+      <p>
+          <br>Requirement: Ensure compliance with relevant laws and regulations governing online 
+          educational platforms, data protection, and children's online privacy.
+          <br>Implication: Conduct legal assessments and adhere to applicable laws such as GDPR, COPPA, 
+          and FERPA.
+      </p>
+    </section>
+    <section id="reuse">
+      <h3>
+        Reuse Objectives:</h3>
+    <p>
+        <br>Requirement: Design components for reusability to facilitate future expansion and 
+        development of additional features.
+        <br>Implication: Implement modular and extensible architecture following best practices for 
+        code reuse and maintainability.
+    </p>
+    </section>
+    <section id="glossary">
+      <h3>Appendix A: Glossary</h3>
+      <p>
+          <br>RDBMS: Relational Database Management System
+          <br>GDPR: General Data Protection Regulation
+          <br>COPPA: Children's Online Privacy Protection Act
+          <br>FERPA: Family Educational Rights and Privacy Act
+      </p>
+    </section>
+    <section id="analysis">
+      <h3>Appendix B: Analysis Models</h3>
+      <p>
+          <br>Entity-Relationship Diagram (ERD):
+          <br>Diagram illustrating the relationships between different entities in the system, such as 
+          users, games, and content.
+      <br>These analysis models provide visual representations of the system's architecture, and 
+      relationships, aiding in the understanding and design of the software solution.
+      </p>
+    </section>
+    <section id="determinedList">
+      <h3>Appendix C: To Be Determined List</h3>
+      <p>
+          <br>TBD: Specify the exact database management system (DBMS) to be used for storing user data.
+          <br>TBD: Determine the specific encryption algorithms and protocols to be employed for data 
+          encryption.
+          <br>TBD: Define the detailed procedures and criteria for content moderation and approval.
+          <br>TBD: Investigate and confirm any additional legal requirements and regulations applicable 
+          to the project.
+          <br>TBD: Determine the extent of code reuse and establish guidelines for modular design and 
+          development.
+          <br>TBD: Specify any additional analysis models or diagrams required for comprehensive system 
+          understanding and design.
+          <br>TBD: Identify and define any supplementary features or functionalities to enhance the 
+          overall user experience and system performance.
+      </p>
+    </section>
+</section>
 </body>
 </html>
