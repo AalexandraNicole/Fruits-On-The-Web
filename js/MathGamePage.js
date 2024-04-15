@@ -94,6 +94,11 @@ document.getElementById("startreset").onclick = function () {
 
         document.getElementById("timeremainingvalue").innerHTML = timeremaining;
 
+        //show choices
+        show("choices");
+        show("instruction");
+        show("score");
+
         //hide game over
         hide("gameOver");
 
@@ -149,7 +154,7 @@ function startCountdown() {
             show("gameOver");
 
             //game over            
-            document.getElementById("gameOver").innerHTML = "<p>Game over!</p><p>Your score is " + score + ".</p>";
+            document.getElementById("gameOver").innerHTML = "<p>Time over!</p><p>Your score is " + score + ".</p>";
             hide("timeremaining");
             hide("correct");
             hide("wrong");
@@ -250,3 +255,19 @@ function generateFruitImages(number) {
     }
     return images;
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var container = document.getElementById('container');
+    var startButton = document.getElementById('startreset');
+    var backgroundState = 'first';
+  
+    startButton.addEventListener('click', function() {
+      if (backgroundState === 'first') {
+        container.style.background = 'url("")';
+        backgroundState = 'second';
+      } else {
+        container.style.background = 'url("../images/MathGround.jpg")';
+        backgroundState = 'first';
+      }
+    });
+  });
