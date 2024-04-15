@@ -26,7 +26,7 @@ body {
 
 .container{
     width: 100%;
-    height: 100vh;
+    height: fit-content;
     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/HomePage.png);
     background-size: cover;
     background-position: center;
@@ -115,16 +115,17 @@ header {
 /* Content desc starts here */
 .content-wrapper{
     width: 80%;
-    min-height: 80vh;
+    height: fit-content + 100px;
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     color: #fff;
 }
-/* .content-desc{
-
-} */
+ .content-desc{
+    margin-top: 100px;
+    height: fit-content;
+} 
 
 .content-desc h1{
     font-size: 3rem;
@@ -137,6 +138,7 @@ header {
     margin-bottom: 10px;
 }
 .content-desc span{
+    
     font-weight: bold;
     color: #fff;
     -webkit-text-stroke-width: 1.5px; /* Width of the stroke */
@@ -157,6 +159,7 @@ header {
     text-align: left;
     cursor: pointer;
     color: #fff;
+    margin-bottom: 200px;
 }
 
 /* FOoter section */

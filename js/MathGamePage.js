@@ -196,8 +196,8 @@ function getRandomFruitImageUrl() {
 }
 
 function generateQA() {
-    var x = 1 + Math.round(2 * Math.random());
-    var y = 1 + Math.round(2 * Math.random());
+    var x = 1 + Math.round(1 * Math.random());
+    var y = 1 + Math.round(1 * Math.random());
     correctAnswer = x + y;
 
     // Generate a random fruit image URL
