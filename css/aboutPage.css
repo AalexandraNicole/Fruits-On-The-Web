@@ -2,7 +2,7 @@
     --mainColor: rgba(33, 34, 51, 0.9);
     --menuColor: rgba(29, 31, 60, 0.9);
     --bg: ##1b1c3a;
-    --graysh : #666A7F;
+    --graysh: #666A7F;
 }
 
 @font-face {
@@ -317,7 +317,7 @@ a {
         padding-top: 12vw;
         color: white;
         font-size: 4vw;
-        font-weight: 1200;
+        font-weight: 1000;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         letter-spacing: 0.2vw;
     }
@@ -642,7 +642,7 @@ a {
         padding-top: 20vw;
         color: white;
         font-size: 6vw;
-        font-weight: 1200;
+        font-weight: 1000;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         letter-spacing: 0.2vw;
     }
@@ -967,7 +967,7 @@ a {
         padding-top: 30vw;
         color: white;
         font-size: 8vw;
-        font-weight: 1200;
+        font-weight: 1000;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         letter-spacing: 0.2vw;
     }

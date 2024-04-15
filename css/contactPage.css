@@ -1,9 +1,9 @@
 :root {
     --mainColor: rgba(33, 34, 51, 0.9);
     --menuColor: rgba(29, 31, 60, 0.9);
-    --bg: ##2a294f;
-    --graysh : #666A7F;
-    --violetish : #A48EFF;
+    --bg: #2a294f;
+    --graysh: #666A7F;
+    --violetish: #A48EFF;
 }
 
 @font-face {
