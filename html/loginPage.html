@@ -26,14 +26,14 @@
             <span class="icon-back"><ion-icon name="arrow-back-outline"></ion-icon></span>
         </a>
         <div class="form-box login">
-            <form action="">
+            <form action="/login" method="POST">
                 <h1>Login</h1>
                 <div class="input-box">
-                    <input type="email" placeholder="Email" required="">
+                    <input type="email" name="email" id="email" placeholder="Email" required="">
                     <i class="bx bxs-envelope"></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Password" required="">
+                    <input type="password" name="password" id="password" placeholder="Password" required="">
                     <i class="bx bxs-lock"></i>
                 </div>
 
@@ -44,7 +44,7 @@
                     <a href="#"> Forgot password? </a>
                 </div>
 
-                <button type="submit" onclick="window.location='loggedPage.html';" id="btnLogin" class="btn"> Login </button>
+                <button type="submit" id="btnLogin" class="btn"> Login </button>
 
                 <div class="register-link">
                     <p> Don't have an account? <a href="#">Register</a></p>
@@ -53,18 +53,18 @@
         </div>
 
         <div class="form-box register">
-            <form action="">
+            <form action="/register" method="POST">
                 <h1>Registration</h1>
                 <div class="input-box">
-                    <input type="text" placeholder="Username" required="">
+                    <input type="text" name="username" id="username" placeholder="Username" required="">
                     <i class="bx bxs-user"></i>
                 </div>
                 <div class="input-box">
-                    <input type="email" placeholder="Email" required="">
+                    <input type="email" name="email" id="email" placeholder="Email" required="">
                     <i class="bx bxs-envelope"></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Password" required="">
+                    <input type="password" name="password" id="password" placeholder="Password" required="">
                     <i class="bx bxs-lock"></i>
                 </div>
 
