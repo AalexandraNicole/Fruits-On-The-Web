@@ -1,6 +1,6 @@
 const { getRandomInt, obfuscateName, shuffleArray } = require("../utils/utils");
 
-async function getRandomChallengeHandler(req, res, services, query) {
+async function getRandomChallengeHandler(_, res, services, query) {
   const db = services.get("mongodb")?.db;
   if (db == null) {
     console.log("No db connection");

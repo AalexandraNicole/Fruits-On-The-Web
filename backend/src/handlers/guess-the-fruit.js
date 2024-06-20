@@ -1,19 +1,5 @@
 const ObjectId = require("mongodb").ObjectId;
-
-function getBody(req) {
-  return new Promise((resolve) => {
-    const bodyParts = [];
-    let body;
-    req
-      .on("data", (chunk) => {
-        bodyParts.push(chunk);
-      })
-      .on("end", () => {
-        body = Buffer.concat(bodyParts).toString();
-        resolve(JSON.parse(body));
-      });
-  });
-}
+const { getBody } = require("../utils/utils");
 
 async function guessTheFruitHandler(req, res, services) {
   const body = await getBody(req);
