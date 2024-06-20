@@ -1,14 +1,14 @@
 :root {
     --mainColor: rgba(33, 34, 51, 0.9);
     --menuColor: rgba(29, 31, 60, 0.9);
-    --bg: #1a1b36;
+    --bg: #1a2742;
     --graysh: #666A7F;
 }
 
 @font-face {
     font-family: 'titleFont';
     src: url('/Fruits-On-The-Web/fonts/OPTICopperplate.otf');
-  }
+}
 
 html,
 body {
@@ -147,7 +147,7 @@ a {
         width: 13vw;
     }
 
-    .menuBar:hover .lineMenu{
+    .menuBar:hover .lineMenu {
         width: 11vw;
     }
 
@@ -224,7 +224,7 @@ a {
         justify-content: center;
         align-items: center;
         width: 11vw;
-        
+
     }
 
     .contact:hover {
@@ -273,7 +273,7 @@ a {
         font-size: 1vw;
         font-family: 'Courier New', Courier, monospace;
         border: 0;
-        width: 12vw; 
+        width: 12vw;
         display: flex;
         justify-content: start;
     }
@@ -338,26 +338,27 @@ a {
         margin-bottom: 20px;
         margin-right: 40px;
         margin-left: 140px;
-      }
-      
-      #searchInput {
+    }
+
+    #searchInput {
         width: 100%;
         padding: 10px;
         font-size: 16px;
         border: 1px solid #ccc;
         border-radius: 5px;
-      }
-      
-      #searchInput:focus {
+    }
+
+    #searchInput:focus {
         outline: none;
         border-color: #666;
-      }
+    }
 
-    .ranksBox1{
+    .ranksBox1 {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .playerBox {
         background-color: #f9f9f9;
         border-radius: 8px;
@@ -369,21 +370,21 @@ a {
         display: flex;
         justify-content: space-between;
         align-items: center;
-      }
-      
-      .playerName {
+    }
+
+    .playerName {
         font-size: 1.3em;
         font-weight: bold;
-      }
-      
-      .actions {
+    }
+
+    .actions {
         display: flex;
         gap: 10px;
-      }
-      
-      .deleteButton,
-      .banButton,
-      .btnView {
+    }
+
+    .deleteButton,
+    .banButton,
+    .btnView {
         justify-self: unset;
         background-color: #8144fe;
         color: white;
@@ -393,19 +394,20 @@ a {
         cursor: pointer;
         margin: 0;
         transition: background-color 0.3s;
-      }
-      .playerName i{
-        bottom: 10px;
-      }
-      
-      .deleteButton:hover,
-      .banButton:hover,
-      .btnView:hover {
-        background-color: #1a1b36;
-      }
+    }
 
-      /*REPORTS*/
-      /* Styles for the "View Reports" button/link */
+    .playerName i {
+        bottom: 10px;
+    }
+
+    .deleteButton:hover,
+    .banButton:hover,
+    .btnView:hover {
+        background-color: #1a1b36;
+    }
+
+    /*REPORTS*/
+    /* Styles for the "View Reports" button/link */
     .viewReportsButton {
         display: inline-block;
         padding: 10px 20px;
@@ -416,11 +418,11 @@ a {
         transition: background-color 0.3s;
         margin-left: 140px;
     }
-    
+
     .viewReportsButton:hover {
         background-color: #8144fe;
     }
-    
+
     /* Styles for the user reports section */
     .userReports {
         margin-left: 150px;
@@ -439,143 +441,143 @@ a {
         border-radius: 8px;
         border: 1px solid #ddd;
         background-color: #fff;
-      }
+    }
 
     .report h3 {
         margin: 0;
         font-size: 1.2em;
         color: #333;
-      }
-      
-      .report p {
+    }
+
+    .report p {
         margin: 8px 0;
         color: #666;
-      }
-      
-      .report p:first-child {
-        font-weight: bold;
-      }
-      
-      .report p:last-child {
-        margin-bottom: 0;
-      }
+    }
 
-      .report a {
+    .report p:first-child {
+        font-weight: bold;
+    }
+
+    .report p:last-child {
+        margin-bottom: 0;
+    }
+
+    .report a {
         text-decoration: none;
         color: inherit;
         display: block;
-      }
-      
-      .report a:hover {
+    }
+
+    .report a:hover {
         background-color: #f0f0f0;
-      }
-      
-      /* Adjust styles for h3 and p inside the clickable report */
-      .report a h3 {
+    }
+
+    /* Adjust styles for h3 and p inside the clickable report */
+    .report a h3 {
         margin: 0;
         font-size: 1.2em;
         color: #333;
-      }
-      
-      .report a p {
+    }
+
+    .report a p {
         margin: 8px 0;
         color: #666;
-      }
-      
-      .report a p:first-child {
+    }
+
+    .report a p:first-child {
         font-weight: bold;
-      }
-      
-      .report a p:last-child {
+    }
+
+    .report a p:last-child {
         margin-bottom: 0;
-      }
+    }
 }
 
 /*REPORTS*/
-      /* Styles for the "View Reports" button/link */
-      .viewReportsButton {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #1a1b36;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-        margin-left: 140px;
-    }
-    
-    .viewReportsButton:hover {
-        background-color: #8144fe;
-    }
-    
-    /* Styles for the user reports section */
-    .userReports {
-        margin-left: 150px;
-        margin-right: 40px;
-        margin-top: 20px;
-        padding: 20px;
-        background-color: #A48EFF;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        display: none;
-    }
+/* Styles for the "View Reports" button/link */
+.viewReportsButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1a1b36;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-left: 140px;
+}
 
-    .report {
-        margin-bottom: 20px;
-        padding: 15px;
-        border-radius: 8px;
-        border: 1px solid #ddd;
-        background-color: #fff;
-      }
+.viewReportsButton:hover {
+    background-color: #8144fe;
+}
 
-    .report h3 {
-        margin: 0;
-        font-size: 1.2em;
-        color: #333;
-      }
-      
-      .report p {
-        margin: 8px 0;
-        color: #666;
-      }
-      
-      .report p:first-child {
-        font-weight: bold;
-      }
-      
-      .report p:last-child {
-        margin-bottom: 0;
-      }
+/* Styles for the user reports section */
+.userReports {
+    margin-left: 150px;
+    margin-right: 40px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #A48EFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+}
 
-      .report a {
-        text-decoration: none;
-        color: inherit;
-        display: block;
-      }
-      
-      .report a:hover {
-        background-color: #f0f0f0;
-      }
-      
-      /* Adjust styles for h3 and p inside the clickable report */
-      .report a h3 {
-        margin: 0;
-        font-size: 1.2em;
-        color: #333;
-      }
-      
-      .report a p {
-        margin: 8px 0;
-        color: #666;
-      }
-      
-      .report a p:first-child {
-        font-weight: bold;
-      }
-      
-      .report a p:last-child {
-        margin-bottom: 0;
-      }
+.report {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.report h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.report p {
+    margin: 8px 0;
+    color: #666;
+}
+
+.report p:first-child {
+    font-weight: bold;
+}
+
+.report p:last-child {
+    margin-bottom: 0;
+}
+
+.report a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.report a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Adjust styles for h3 and p inside the clickable report */
+.report a h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.report a p {
+    margin: 8px 0;
+    color: #666;
+}
+
+.report a p:first-child {
+    font-weight: bold;
+}
+
+.report a p:last-child {
+    margin-bottom: 0;
+}
 
 /* Tablets */
 @media (min-width: 481px) and (max-width: 1024px) {
@@ -587,7 +589,7 @@ a {
         width: 100%;
         position: fixed;
     }
-    
+
     .openMen {
         left: 2vw;
         bottom: 1.8vw;
@@ -600,11 +602,11 @@ a {
         background-image: url("../images/menuClose.webp");
         background-size: contain;
     }
-    
+
     .openMen:hover {
         background-color: rgb(193, 175, 175);
     }
-    
+
     .logo {
         position: absolute;
         width: 7vw;
@@ -612,7 +614,7 @@ a {
         left: 6%;
         bottom: -0.3vw;
     }
-    
+
     .title {
         position: absolute;
         color: white;
@@ -621,14 +623,14 @@ a {
         bottom: -2vw;
         font-family: 'titleFont';
     }
-    
+
     .icons {
         margin: 0;
         position: absolute;
         right: 3vw;
         bottom: 1vw;
     }
-    
+
     .profileButton {
         width: 4.5vw;
         height: 4.5vw;
@@ -638,11 +640,11 @@ a {
         background-image: url("../images/profile.png");
         background-size: contain;
     }
-    
+
     .profileButton:hover {
         background-color: rgb(226, 196, 226);
     }
-    
+
     .logout {
         width: 4.5vw;
         height: 4.5vw;
@@ -652,11 +654,11 @@ a {
         background-image: url("../images/logout.png");
         background-size: contain;
     }
-    
+
     .logout:hover {
         background-color: rgb(4, 0, 4);
     }
-    
+
     .fav {
         width: 4.5vw;
         height: 4.5vw;
@@ -665,12 +667,12 @@ a {
         background-image: url("../images/favourite.png");
         background-size: contain;
     }
-    
+
     .fav:hover {
         background-color: rgb(156, 132, 220);
         ;
     }
-    
+
     .ranks {
         width: 4.5vw;
         height: 4.5vw;
@@ -680,12 +682,12 @@ a {
         background-image: url("../images/ranks.png");
         background-size: contain;
     }
-    
+
     .ranks:hover {
         background-color: rgb(194, 192, 244);
         ;
     }
-    
+
     .menuBar {
         position: fixed;
         background-color: var(--menuColor);
@@ -697,26 +699,26 @@ a {
         border-right: 0.01vw solid rgb(124, 130, 196);
         overflow: auto;
     }
-    
+
     .menuBar:hover {
         width: 24vw;
     }
 
-    .menuBar:hover .lineMenu{
+    .menuBar:hover .lineMenu {
         width: 22vw;
     }
-    
+
     .menuIcons {
         position: absolute;
         width: 3.6vw;
         height: 3.6vw;
         left: 1.9vw;
     }
-    
+
     #menuList {
         list-style: none;
     }
-    
+
     .menuButtons {
         visibility: hidden;
         background-color: var(--bg);
@@ -732,11 +734,11 @@ a {
         width: 5vw;
         transition: margin-left 0.3s;
     }
-    
+
     .menuButtons:hover {
         margin-left: 2.8vw;
     }
-    
+
     .lineCurrent {
         position: absolute;
         background-color: #A48EFF;
@@ -744,7 +746,7 @@ a {
         height: 3.4vw;
         top: 2vw;
     }
-    
+
     .lineMenu {
         position: absolute;
         width: 5vw;
@@ -781,17 +783,17 @@ a {
         width: 22vw;
         height: 3.5vw;
     }
-    
+
     .contact:hover {
         background-color: #A48EFF;
     }
-    
+
     .contactImg {
         width: 3vw;
         height: 3vw;
         padding-right: 1vw;
     }
-    
+
     .about {
         visibility: hidden;
         background-color: var(--bg);
@@ -801,11 +803,11 @@ a {
         border: 0;
         padding-top: 6vw;
     }
-    
+
     .about:hover {
         color: var(--graysh);
     }
-    
+
     .infoP {
         visibility: hidden;
         background-color: var(--bg);
@@ -817,11 +819,11 @@ a {
         display: flex;
         justify-content: start;
     }
-    
+
     .infoP:hover {
         color: var(--graysh);
     }
-    
+
     .terms {
         visibility: hidden;
         background-color: var(--bg);
@@ -833,11 +835,11 @@ a {
         display: flex;
         justify-content: start;
     }
-    
+
     .terms:hover {
         color: var(--graysh);
     }
-    
+
     .privacy {
         visibility: hidden;
         background-color: var(--bg);
@@ -846,11 +848,11 @@ a {
         font-family: 'Courier New', Courier, monospace;
         border: 0;
     }
-    
+
     .privacy:hover {
         color: var(--graysh);
     }
-    
+
     .admin {
         visibility: hidden;
         background-color: var(--bg);
@@ -859,11 +861,11 @@ a {
         font-family: 'Courier New', Courier, monospace;
         border: 0;
     }
-    
+
     .admin:hover {
         color: var(--graysh);
     }
-    
+
     .nameYear {
         visibility: hidden;
         color: var(--graysh);
@@ -871,7 +873,7 @@ a {
         width: 14vw;
         padding-top: 30vw;
     }
-    
+
     .ranksBox {
         visibility: hidden;
         position: fixed;
@@ -894,27 +896,28 @@ a {
         margin-bottom: 20px;
         margin-right: 40px;
         margin-left: 70px;
-      }
-      
-      #searchInput {
+    }
+
+    #searchInput {
         width: 100%;
         padding: 10px;
         font-size: 16px;
         border: 1px solid #ccc;
         border-radius: 5px;
-      }
-      
-      #searchInput:focus {
+    }
+
+    #searchInput:focus {
         outline: none;
         border-color: #666;
-      }
+    }
 
-    .ranksBox1{
+    .ranksBox1 {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-left: 40px;
     }
+
     .playerBox {
         background-color: #f9f9f9;
         border-radius: 8px;
@@ -926,21 +929,21 @@ a {
         display: flex;
         justify-content: space-between;
         align-items: center;
-      }
-      
-      .playerName {
+    }
+
+    .playerName {
         font-size: 1.3em;
         font-weight: bold;
-      }
-      
-      .actions {
+    }
+
+    .actions {
         display: flex;
         gap: 10px;
-      }
-      
-      .deleteButton,
-      .banButton,
-      .btnView {
+    }
+
+    .deleteButton,
+    .banButton,
+    .btnView {
         justify-self: unset;
         background-color: #8144fe;
         color: white;
@@ -950,26 +953,30 @@ a {
         cursor: pointer;
         margin: 0;
         transition: background-color 0.3s;
-      }
-      .playerName i{
-        bottom: 10px;
-      }
-      
-      .deleteButton:hover,
-      .banButton:hover,
-      .btnView:hover {
-        background-color: #1a1b36;
-      }
-
-      /*REPORTS*/
-      .viewReportsButton {
-        margin-left: 70px; /* Adjust margin for medium screens */
     }
-    
-        .userReports {
-            margin-left: 80px; /* Adjust margin for medium screens */
-            margin-right: 60px; /* Adjust margin for medium screens */
-        }
+
+    .playerName i {
+        bottom: 10px;
+    }
+
+    .deleteButton:hover,
+    .banButton:hover,
+    .btnView:hover {
+        background-color: #1a1b36;
+    }
+
+    /*REPORTS*/
+    .viewReportsButton {
+        margin-left: 70px;
+        /* Adjust margin for medium screens */
+    }
+
+    .userReports {
+        margin-left: 80px;
+        /* Adjust margin for medium screens */
+        margin-right: 60px;
+        /* Adjust margin for medium screens */
+    }
 }
 
 /* Smartphones */
@@ -982,7 +989,7 @@ a {
         width: 100%;
         position: fixed;
     }
-    
+
     .openMen {
         left: 2vw;
         bottom: 2.3vw;
@@ -995,11 +1002,11 @@ a {
         background-image: url("../images/menuClose.webp");
         background-size: contain;
     }
-    
+
     .openMen:hover {
         background-color: rgb(193, 175, 175);
     }
-    
+
     .logo {
         position: absolute;
         width: 10vw;
@@ -1007,7 +1014,7 @@ a {
         left: 8%;
         bottom: -0.2vw;
     }
-    
+
     .title {
         position: absolute;
         color: white;
@@ -1016,14 +1023,14 @@ a {
         bottom: -2vw;
         font-family: 'titleFont';
     }
-    
+
     .icons {
         margin: 0;
         position: absolute;
         right: 2vw;
         bottom: 1vw;
     }
-    
+
     .profileButton {
         width: 6vw;
         height: 6vw;
@@ -1033,11 +1040,11 @@ a {
         background-image: url("../images/profile.png");
         background-size: contain;
     }
-    
+
     .profileButton:hover {
         background-color: rgb(226, 196, 226);
     }
-    
+
     .logout {
         width: 6.3vw;
         height: 6.3vw;
@@ -1047,11 +1054,11 @@ a {
         background-image: url("../images/logout.png");
         background-size: contain;
     }
-    
+
     .logout:hover {
         background-color: rgb(4, 0, 4);
     }
-    
+
     .fav {
         width: 6.2vw;
         height: 6.2vw;
@@ -1060,12 +1067,12 @@ a {
         background-image: url("../images/favourite.png");
         background-size: contain;
     }
-    
+
     .fav:hover {
         background-color: rgb(156, 132, 220);
         ;
     }
-    
+
     .ranks {
         width: 6.3vw;
         height: 6.3vw;
@@ -1075,12 +1082,12 @@ a {
         background-image: url("../images/ranks.png");
         background-size: contain;
     }
-    
+
     .ranks:hover {
         background-color: rgb(194, 192, 244);
         ;
     }
-    
+
     .menuBar {
         position: fixed;
         background-color: var(--menuColor);
@@ -1092,26 +1099,26 @@ a {
         border-right: 0.01vw solid rgb(124, 130, 196);
         overflow: auto;
     }
-    
+
     .menuBar:hover {
         width: 42vw;
     }
 
-    .menuBar:hover .lineMenu{
+    .menuBar:hover .lineMenu {
         width: 40vw;
     }
-    
+
     .menuIcons {
         position: absolute;
         width: 5vw;
         height: 5vw;
         left: 1.9vw;
     }
-    
+
     #menuList {
         list-style: none;
     }
-    
+
     .menuButtons {
         visibility: hidden;
         background-color: var(--bg);
@@ -1127,11 +1134,11 @@ a {
         width: 5vw;
         transition: margin-left 0.3s;
     }
-    
+
     .menuButtons:hover {
         margin-left: 2.8vw;
     }
-    
+
     .lineCurrent {
         position: absolute;
         background-color: #A48EFF;
@@ -1139,7 +1146,7 @@ a {
         height: 5.5vw;
         top: 3.6vw;
     }
-    
+
     .lineMenu {
         position: absolute;
         width: 8vw;
@@ -1160,7 +1167,7 @@ a {
         justify-content: flex-start;
         align-items: flex-start;
     }
-    
+
     .contact {
         visibility: hidden;
         display: flex;
@@ -1176,17 +1183,17 @@ a {
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         letter-spacing: 0.01vw;
     }
-    
+
     .contact:hover {
         background-color: #A48EFF;
     }
-    
+
     .contactImg {
         width: 5vw;
         height: 5vw;
         padding-right: 3vw;
     }
-    
+
     .about {
         visibility: hidden;
         background-color: var(--bg);
@@ -1195,11 +1202,11 @@ a {
         font-family: 'Courier New', Courier, monospace;
         border: 0;
     }
-    
+
     .about:hover {
         color: var(--graysh);
     }
-    
+
     .infoP {
         visibility: hidden;
         background-color: var(--bg);
@@ -1211,11 +1218,11 @@ a {
         display: flex;
         justify-content: start;
     }
-    
+
     .infoP:hover {
         color: var(--graysh);
     }
-    
+
     .terms {
         visibility: hidden;
         background-color: var(--bg);
@@ -1227,11 +1234,11 @@ a {
         display: flex;
         justify-content: start;
     }
-    
+
     .terms:hover {
         color: var(--graysh);
     }
-    
+
     .privacy {
         visibility: hidden;
         background-color: var(--bg);
@@ -1240,11 +1247,11 @@ a {
         font-family: 'Courier New', Courier, monospace;
         border: 0;
     }
-    
+
     .privacy:hover {
         color: var(--graysh);
     }
-    
+
     .admin {
         visibility: hidden;
         background-color: var(--bg);
@@ -1253,11 +1260,11 @@ a {
         font-family: 'Courier New', Courier, monospace;
         border: 0;
     }
-    
+
     .admin:hover {
         color: var(--graysh);
     }
-    
+
     .nameYear {
         visibility: hidden;
         color: var(--graysh);
@@ -1266,7 +1273,7 @@ a {
         height: 2vw;
         padding-top: 7vw;
     }
-    
+
     .ranksBox {
         visibility: hidden;
         position: fixed;
@@ -1281,90 +1288,95 @@ a {
         display: flex;
         justify-content: space-around;
     }
-/*Admin*/ 
+
+    /*Admin*/
 
     .searchContainer {
         margin-top: 70px;
         margin-left: 60px;
         margin-right: 20px;
         border-radius: 20px;
-      }
-    
-      #searchInput {
+    }
+
+    #searchInput {
         width: 90%;
         padding: 10px;
         font-size: 16px;
         border: 1px solid #ccc;
         border-radius: 5px;
-      }
-      
-      #searchInput:focus {
+    }
+
+    #searchInput:focus {
         outline: none;
         border-color: #666;
-      }
+    }
 
     .ranksBox1 {
-        margin-top: 20px;;
+        margin-top: 20px;
+        ;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-left: 60px;
     }
-    
+
     .playerBox {
-      background-color: #f9f9f9;
-      border-radius: 8px;
-      padding: 15px 20px;
-      margin-bottom: 15px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      width: 80%;
-      max-width: 500px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        padding: 15px 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        max-width: 500px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-    
+
     .playerName {
-      font-size: 1.3em;
-      font-weight: bold;
+        font-size: 1.3em;
+        font-weight: bold;
     }
-    
+
     .actions {
-      display: flex;
-      gap: 10px;
+        display: flex;
+        gap: 10px;
     }
-    
+
     .deleteButton,
     .banButton,
     .btnView {
-      justify-self: unset;
-      background-color: #8144fe;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      padding: 5px 10px;
-      cursor: pointer;
-      margin: 0;
-      transition: background-color 0.3s;
+        justify-self: unset;
+        background-color: #8144fe;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        margin: 0;
+        transition: background-color 0.3s;
     }
-    
+
     .playerName i {
-      bottom: 10px;
+        bottom: 10px;
     }
-    
+
     .deleteButton:hover,
     .banButton:hover,
     .btnView:hover {
-      background-color: #1a1b36;
+        background-color: #1a1b36;
     }
 
     /*REPORTS*/
     .viewReportsButton {
-        margin-left: 60px; /* Adjust margin for small screens */
+        margin-left: 60px;
+        /* Adjust margin for small screens */
     }
-    
+
     .userReports {
-        margin-left: 80px; /* Adjust margin for small screens */
-        margin-right: 30px; /* Adjust margin for small screens */
+        margin-left: 80px;
+        /* Adjust margin for small screens */
+        margin-right: 30px;
+        /* Adjust margin for small screens */
     }
 }
