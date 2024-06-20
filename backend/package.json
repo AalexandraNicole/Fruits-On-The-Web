@@ -1,0 +1,16 @@
+{
+  "name": "prob",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^6.7.0",
+    "mongoose": "^8.4.3",
+    "rss-generator": "^0.0.3"
+  }
+}
