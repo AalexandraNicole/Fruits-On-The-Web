@@ -5,6 +5,7 @@ const optionsHandler = require("./options");
 const registerHandler = require("./register");
 const loginHandler = require("./login");
 const logoutHandler = require("./logout");
+const contactHandler = require("./contact");
 
 module.exports = {
   testHandler,
@@ -14,4 +15,5 @@ module.exports = {
   registerHandler,
   loginHandler,
   logoutHandler,
+  contactHandler,
 };

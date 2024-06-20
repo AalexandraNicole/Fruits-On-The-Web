@@ -51,6 +51,16 @@ const routes = [
     url: "/logout",
     handler: handlers.optionsHandler,
   },
+  {
+    method: "POST",
+    url: "/contact",
+    handler: handlers.contactHandler,
+  },
+  {
+    method: "OPTIONS",
+    url: "/contact",
+    handler: handlers.optionsHandler,
+  },
 ];
 
 module.exports = routes;
