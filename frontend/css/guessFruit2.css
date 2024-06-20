@@ -9,7 +9,7 @@
 @font-face {
     font-family: 'titleFont';
     src: url('../fonts/OPTICopperplate.otf');
-  }
+}
 
 html,
 body {
@@ -146,15 +146,47 @@ a {
         align-items: start;
         padding-left: 5vw;
         padding-right: 5vw;
-        padding-top: 1vw;
+        padding-top: 2vw;
         padding-bottom: 2vw;
     }
 
+    #resultContainer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1vw;
+        padding-left: 22vw;
+    }
+
+    #resultContainer p {
+        font-size: 4vw;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    #resultContainer button {
+        font-size: 2vw;
+        border-radius: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: var(--menuColor);
+        color: white;
+    }
+
+    #resultContainer button:hover {
+        background-color: white;
+        color: var(--menuColor);
+    }
+
     #gameImg {
-        width: 15vw;
-        height: 15vw;
+        width: 18vw;
+        height: 18vw;
         margin: 0;
-        padding-bottom: 2vw;
+        align-self: center;
+    }
+
+    #fruitName {
+        margin: 0;
+        font-family: fantasy;
+        font-weight: 1000;
+        font-size: 2.5vw;
         align-self: center;
     }
 
@@ -168,17 +200,17 @@ a {
         border: 0;
     }
 
-    .option {
-        align-self: center;
+    #fruit {
         border-radius: 10px;
-        width: 30vw;
+        width: 36vw;
         height: 2.5vw;
         font-size: 1.5vw;
         color: white;
         background-color: #a13ea1;
+        padding-left: 25vw;
     }
 
-    .option:hover {
+    #fruit:hover {
         background-color: #bba5f9;
     }
 }
@@ -192,7 +224,7 @@ a {
         width: 100%;
         position: fixed;
     }
-    
+
     .backButton {
         left: 2vw;
         bottom: 1.8vw;
@@ -205,11 +237,11 @@ a {
         background-image: url("../images/back.png");
         background-size: contain;
     }
-    
+
     .backButton:hover {
         background-color: rgb(193, 175, 175);
     }
-    
+
     .logo {
         position: absolute;
         width: 7vw;
@@ -217,7 +249,7 @@ a {
         left: 6%;
         bottom: -0.3vw;
     }
-    
+
     .title {
         position: absolute;
         color: white;
@@ -226,14 +258,14 @@ a {
         bottom: -2vw;
         font-family: 'titleFont';
     }
-    
+
     .icons {
         margin: 0;
         position: absolute;
         right: 3vw;
         bottom: 1vw;
     }
-    
+
     .profileButton {
         width: 4.5vw;
         height: 4.5vw;
@@ -243,11 +275,11 @@ a {
         background-image: url("../images/profile.png");
         background-size: contain;
     }
-    
+
     .profileButton:hover {
         background-color: rgb(226, 196, 226);
     }
-    
+
     .logout {
         width: 4.5vw;
         height: 4.5vw;
@@ -257,11 +289,11 @@ a {
         background-image: url("../images/logout.png");
         background-size: contain;
     }
-    
+
     .logout:hover {
         background-color: rgb(4, 0, 4);
     }
-    
+
     .fav {
         width: 4.5vw;
         height: 4.5vw;
@@ -270,11 +302,11 @@ a {
         background-image: url("../images/favourite.png");
         background-size: contain;
     }
-    
+
     .fav:hover {
         background-color: rgb(156, 132, 220);
     }
-    
+
     .ranks {
         width: 4.5vw;
         height: 4.5vw;
@@ -284,11 +316,11 @@ a {
         background-image: url("../images/ranks.png");
         background-size: contain;
     }
-    
+
     .ranks:hover {
         background-color: rgb(194, 192, 244);
     }
-    
+
     .gamesGrid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -309,16 +341,43 @@ a {
         align-items: start;
         padding-left: 5vw;
         padding-right: 5vw;
-        padding-top: 10vw;
+        padding-top: 5vw;
         padding-bottom: 1vw;
     }
 
+    #resultContainer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4vw;
+        padding-left: 16vw;
+        padding-top: 8vw;
+    }
+
+    #resultContainer p {
+        font-size: 8vw;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    #resultContainer button {
+        font-size: 4vw;
+        border-radius: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: var(--menuColor);
+        color: white;
+    }
+
+    #resultContainer button:hover {
+        background-color: white;
+        color: var(--menuColor);
+    }
+
     #gameImg {
+        align-self: center;
         width: 40vw;
         height: 40vw;
         margin: 0;
-        align-self: center;
-        padding-bottom: 4vw;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
     }
 
     #back {
@@ -331,17 +390,25 @@ a {
         border: 0;
     }
 
-    .option {
+    #fruitName {
+        margin: 0;
+        font-family: fantasy;
+        font-weight: 1000;
+        font-size: 5vw;
         align-self: center;
+    }
+
+    #fruit {
         border-radius: 10px;
         width: 60vw;
         height: 6.5vw;
         font-size: 4vw;
         color: white;
         background-color: #a13ea1;
+        padding-left: 3vw;
     }
 
-    .option:hover {
+    #fruit:hover {
         background-color: #bba5f9;
     }
 }
@@ -355,7 +422,7 @@ a {
         width: 100%;
         position: fixed;
     }
-    
+
     .backButton {
         left: 2vw;
         bottom: 2.3vw;
@@ -368,11 +435,11 @@ a {
         background-image: url("../images/back.png");
         background-size: contain;
     }
-    
+
     .backButton:hover {
         background-color: rgb(193, 175, 175);
     }
-    
+
     .logo {
         position: absolute;
         width: 10vw;
@@ -380,7 +447,7 @@ a {
         left: 8%;
         bottom: -0.2vw;
     }
-    
+
     .title {
         position: absolute;
         color: white;
@@ -389,14 +456,14 @@ a {
         bottom: -2vw;
         font-family: 'titleFont';
     }
-    
+
     .icons {
         margin: 0;
         position: absolute;
         right: 2vw;
         bottom: 1vw;
     }
-    
+
     .profileButton {
         width: 6vw;
         height: 6vw;
@@ -406,11 +473,11 @@ a {
         background-image: url("../images/profile.png");
         background-size: contain;
     }
-    
+
     .profileButton:hover {
         background-color: rgb(226, 196, 226);
     }
-    
+
     .logout {
         width: 6.3vw;
         height: 6.3vw;
@@ -420,11 +487,11 @@ a {
         background-image: url("../images/logout.png");
         background-size: contain;
     }
-    
+
     .logout:hover {
         background-color: rgb(4, 0, 4);
     }
-    
+
     .fav {
         width: 6.2vw;
         height: 6.2vw;
@@ -433,11 +500,11 @@ a {
         background-image: url("../images/favourite.png");
         background-size: contain;
     }
-    
+
     .fav:hover {
         background-color: rgb(156, 132, 220);
     }
-    
+
     .ranks {
         width: 6.3vw;
         height: 6.3vw;
@@ -447,11 +514,11 @@ a {
         background-image: url("../images/ranks.png");
         background-size: contain;
     }
-    
+
     .ranks:hover {
         background-color: rgb(194, 192, 244);
     }
-    
+
     .gamesGrid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -472,8 +539,34 @@ a {
         align-items: start;
         padding-left: 5vw;
         padding-right: 5vw;
-        padding-top: 12vw;
+        padding-top: 10vw;
         padding-bottom: 1vw;
+    }
+
+    #resultContainer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 9vw;
+        padding-left: 12vw;
+        padding-top: 11vw;
+    }
+
+    #resultContainer p {
+        font-size: 10vw;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    #resultContainer button {
+        font-size: 5vw;
+        border-radius: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: var(--menuColor);
+        color: white;
+    }
+
+    #resultContainer button:hover {
+        background-color: white;
+        color: var(--menuColor);
     }
 
     #gameImg {
@@ -481,10 +574,17 @@ a {
         height: 50vw;
         margin: 0;
         align-self: center;
-        padding-bottom: 5vw;
-        padding-top: 5vw;
+        padding-top: 10vw;
+        padding-bottom: 8vw;
     }
 
+    #fruitName {
+        margin: 0;
+        font-family: fantasy;
+        font-weight: 1000;
+        font-size: 7vw;
+        align-self: center;
+    }
 
     #back {
         margin: 0;
@@ -496,17 +596,16 @@ a {
         border: 0;
     }
 
-    .option {
+    #fruit {
         border-radius: 10px;
         width: 60vw;
         height: 8.5vw;
         font-size: 5vw;
         color: white;
         background-color: #a13ea1;
-        align-self: center;
     }
 
-    .option:hover {
+    #fruit:hover {
         background-color: #bba5f9;
     }
 }

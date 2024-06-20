@@ -9,7 +9,7 @@
 @font-face {
     font-family: 'titleFont';
     src: url('../fonts/OPTICopperplate.otf');
-  }
+}
 
 html,
 body {
@@ -150,6 +150,31 @@ a {
         padding-bottom: 2vw;
     }
 
+    #resultContainer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1vw;
+        padding-left: 22vw;
+    }
+
+    #resultContainer p {
+        font-size: 4vw;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    #resultContainer button {
+        font-size: 2vw;
+        border-radius: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: var(--menuColor);
+        color: white;
+    }
+
+    #resultContainer button:hover {
+        background-color: white;
+        color: var(--menuColor);
+    }
+
     #gameImg {
         padding-bottom: 5vw;
         width: 18vw;
@@ -170,12 +195,12 @@ a {
 
     #fruit {
         border-radius: 10px;
-        width: 30vw;
+        width: 36vw;
         height: 2.5vw;
         font-size: 1.5vw;
         color: white;
         background-color: #a13ea1;
-        padding-left: 30vw;
+        padding-left: 25vw;
     }
 
     #fruit:hover {
@@ -192,7 +217,7 @@ a {
         width: 100%;
         position: fixed;
     }
-    
+
     .backButton {
         left: 2vw;
         bottom: 1.8vw;
@@ -205,11 +230,11 @@ a {
         background-image: url("../images/back.png");
         background-size: contain;
     }
-    
+
     .backButton:hover {
         background-color: rgb(193, 175, 175);
     }
-    
+
     .logo {
         position: absolute;
         width: 7vw;
@@ -217,7 +242,7 @@ a {
         left: 6%;
         bottom: -0.3vw;
     }
-    
+
     .title {
         position: absolute;
         color: white;
@@ -226,14 +251,14 @@ a {
         bottom: -2vw;
         font-family: 'titleFont';
     }
-    
+
     .icons {
         margin: 0;
         position: absolute;
         right: 3vw;
         bottom: 1vw;
     }
-    
+
     .profileButton {
         width: 4.5vw;
         height: 4.5vw;
@@ -243,11 +268,11 @@ a {
         background-image: url("../images/profile.png");
         background-size: contain;
     }
-    
+
     .profileButton:hover {
         background-color: rgb(226, 196, 226);
     }
-    
+
     .logout {
         width: 4.5vw;
         height: 4.5vw;
@@ -257,11 +282,11 @@ a {
         background-image: url("../images/logout.png");
         background-size: contain;
     }
-    
+
     .logout:hover {
         background-color: rgb(4, 0, 4);
     }
-    
+
     .fav {
         width: 4.5vw;
         height: 4.5vw;
@@ -270,11 +295,11 @@ a {
         background-image: url("../images/favourite.png");
         background-size: contain;
     }
-    
+
     .fav:hover {
         background-color: rgb(156, 132, 220);
     }
-    
+
     .ranks {
         width: 4.5vw;
         height: 4.5vw;
@@ -284,11 +309,11 @@ a {
         background-image: url("../images/ranks.png");
         background-size: contain;
     }
-    
+
     .ranks:hover {
         background-color: rgb(194, 192, 244);
     }
-    
+
     .gamesGrid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -311,6 +336,32 @@ a {
         padding-right: 5vw;
         padding-top: 8vw;
         padding-bottom: 1vw;
+    }
+
+    #resultContainer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4vw;
+        padding-left: 16vw;
+        padding-top: 8vw;
+    }
+
+    #resultContainer p {
+        font-size: 8vw;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    #resultContainer button {
+        font-size: 4vw;
+        border-radius: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: var(--menuColor);
+        color: white;
+    }
+
+    #resultContainer button:hover {
+        background-color: white;
+        color: var(--menuColor);
     }
 
     #gameImg {
@@ -356,7 +407,7 @@ a {
         width: 100%;
         position: fixed;
     }
-    
+
     .backButton {
         left: 2vw;
         bottom: 2.3vw;
@@ -369,11 +420,11 @@ a {
         background-image: url("../images/back.png");
         background-size: contain;
     }
-    
+
     .backButton:hover {
         background-color: rgb(193, 175, 175);
     }
-    
+
     .logo {
         position: absolute;
         width: 10vw;
@@ -381,7 +432,7 @@ a {
         left: 8%;
         bottom: -0.2vw;
     }
-    
+
     .title {
         position: absolute;
         color: white;
@@ -390,14 +441,14 @@ a {
         bottom: -2vw;
         font-family: 'titleFont';
     }
-    
+
     .icons {
         margin: 0;
         position: absolute;
         right: 2vw;
         bottom: 1vw;
     }
-    
+
     .profileButton {
         width: 6vw;
         height: 6vw;
@@ -407,11 +458,11 @@ a {
         background-image: url("../images/profile.png");
         background-size: contain;
     }
-    
+
     .profileButton:hover {
         background-color: rgb(226, 196, 226);
     }
-    
+
     .logout {
         width: 6.3vw;
         height: 6.3vw;
@@ -421,11 +472,11 @@ a {
         background-image: url("../images/logout.png");
         background-size: contain;
     }
-    
+
     .logout:hover {
         background-color: rgb(4, 0, 4);
     }
-    
+
     .fav {
         width: 6.2vw;
         height: 6.2vw;
@@ -434,11 +485,11 @@ a {
         background-image: url("../images/favourite.png");
         background-size: contain;
     }
-    
+
     .fav:hover {
         background-color: rgb(156, 132, 220);
     }
-    
+
     .ranks {
         width: 6.3vw;
         height: 6.3vw;
@@ -448,11 +499,11 @@ a {
         background-image: url("../images/ranks.png");
         background-size: contain;
     }
-    
+
     .ranks:hover {
         background-color: rgb(194, 192, 244);
     }
-    
+
     .gamesGrid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -475,6 +526,32 @@ a {
         padding-right: 5vw;
         padding-top: 12vw;
         padding-bottom: 1vw;
+    }
+
+    #resultContainer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 9vw;
+        padding-left: 12vw;
+        padding-top: 11vw;
+    }
+
+    #resultContainer p {
+        font-size: 10vw;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    #resultContainer button {
+        font-size: 5vw;
+        border-radius: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: var(--menuColor);
+        color: white;
+    }
+
+    #resultContainer button:hover {
+        background-color: white;
+        color: var(--menuColor);
     }
 
     #gameImg {
