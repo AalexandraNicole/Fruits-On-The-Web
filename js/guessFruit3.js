@@ -4,12 +4,6 @@ function fillChallenge(challenge) {
   challengeId = challenge.challengeId;
   const img = document.querySelector("#gameImg");
   img.src = challenge.image;
-  const option1 = document.querySelector("#option1");
-  option1.innerHTML = challenge.options[0];
-  const option2 = document.querySelector("#option2");
-  option2.innerHTML = challenge.options[1];
-  const option3 = document.querySelector("#option3");
-  option3.innerHTML = challenge.options[2];
 }
 
 function submitGuess(guess) {
@@ -27,16 +21,17 @@ function submitGuess(guess) {
 }
 
 function attachSubmitGuessHandler(option) {
-  document.querySelector(option).addEventListener("click", () => {
-    submitGuess(document.querySelector(option).innerHTML);
+  document.querySelector(option).addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      submitGuess(document.querySelector(option).value);
+    }
   });
 }
 
 function displayResult(data) {
   document.querySelector("#gameImg").style.display = "none";
-  document.querySelector("#option1").style.display = "none";
-  document.querySelector("#option2").style.display = "none";
-  document.querySelector("#option3").style.display = "none";
+  document.querySelector("#fruit").style.display = "none";
 
   const actualContainer = document.querySelector(".gameArea");
 
@@ -46,7 +41,7 @@ function displayResult(data) {
   actualContainer.appendChild(resultContainer);
 
   const resultMessage = document.createElement("p");
-  resultMessage.innerText = data.guessed ? "Correct!\n Score: +1" : "Wrong!";
+  resultMessage.innerText = data.guessed ? "Correct!\n Score: +3" : "Wrong!";
   resultMessage.style.color = data.guessed ? "green" : "red";
   resultContainer.appendChild(resultMessage);
 
@@ -61,20 +56,17 @@ function displayResult(data) {
 }
 
 function fetchNewChallenge() {
-  return fetch("http://localhost:3000/random_challenge?difficulty=easy")
+  return fetch("http://localhost:3000/random_challenge?difficulty=hard")
     .then((response) => response.json())
     .then((challenge) => {
       fillChallenge(challenge);
       document.querySelector("#gameImg").style.display = "initial";
-      document.querySelector("#option1").style.display = "initial";
-      document.querySelector("#option2").style.display = "initial";
-      document.querySelector("#option3").style.display = "initial";
+      document.querySelector("#fruit").style.display = "initial";
+      document.querySelector("#fruit").value = "";
     })
     .catch((error) => console.error("Error:", error));
 }
 
 fetchNewChallenge();
 
-attachSubmitGuessHandler("#option1");
-attachSubmitGuessHandler("#option2");
-attachSubmitGuessHandler("#option3");
+attachSubmitGuessHandler("#fruit");
