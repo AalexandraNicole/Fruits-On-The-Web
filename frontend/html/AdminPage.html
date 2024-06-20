@@ -19,7 +19,7 @@
         <div class="icons">
             <a href="ranksPage.html"><button class="ranks" onmouseenter="showRanks()" onmouseleave="hideRanks()"></button></a>
             <a href="profilePage.html"><button class="profileButton"></button></a>
-            <a href="MainUnloggedPage.html"><button class="logout"></button></a>
+            <button class="logout" onclick="logout(event)"></button>
         </div>
     </header>
     <div class="menuBar" onmouseenter="showMenuButtons()" onmouseleave="hideMenuButtons()">
@@ -37,7 +37,7 @@
                 </button></a>
             </li>
             <img class="menuIcons" alt="Check" src="../images/logout.png">
-            <li><button class="menuButtons">LogOut
+            <li><button class="menuButtons" onclick="logout(event)">LogOut
                 </button>
             </li>
         </ul>

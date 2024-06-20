@@ -14,61 +14,76 @@ let privacy = document.querySelector(".privacy");
 let trigger = 1;
 
 function showMenu() {
-    if (trigger === 1) {
-        menuButton.style.backgroundImage = "url('../images/menuOpen.png')";
-        menuBar.style.visibility = "hidden";
-        trigger = 0;
-    } else {
-        menuButton.style.backgroundImage = "url('../images/menuClose.webp')";
-        menuBar.style.visibility = "visible";
-        trigger = 1;
-    }
-};
+  if (trigger === 1) {
+    menuButton.style.backgroundImage = "url('../images/menuOpen.png')";
+    menuBar.style.visibility = "hidden";
+    trigger = 0;
+  } else {
+    menuButton.style.backgroundImage = "url('../images/menuClose.webp')";
+    menuBar.style.visibility = "visible";
+    trigger = 1;
+  }
+}
 
 function showMenuButtons() {
-    menuButtons.forEach(function (button) {
-        button.style.visibility = "visible";
-    })
+  menuButtons.forEach(function (button) {
+    button.style.visibility = "visible";
+  });
 
-    nameYear.style.visibility = "visible";
-    contact.style.visibility = "visible";
-    about.style.visibility = "visible";
-    admin.style.visibility = "visible";
-    infoP.style.visibility = "visible";
-    privacy.style.visibility = "visible";
-    terms.style.visibility = "visible";
+  nameYear.style.visibility = "visible";
+  contact.style.visibility = "visible";
+  about.style.visibility = "visible";
+  admin.style.visibility = "visible";
+  infoP.style.visibility = "visible";
+  privacy.style.visibility = "visible";
+  terms.style.visibility = "visible";
 
-    menuBar.scroll = 0;
-};
+  menuBar.scroll = 0;
+}
 
 function hideMenuButtons() {
-    menuButtons.forEach(function (button) {
-        button.style.visibility = "hidden";
-    })
+  menuButtons.forEach(function (button) {
+    button.style.visibility = "hidden";
+  });
 
-    nameYear.style.visibility = "hidden";
-    contact.style.visibility = "hidden";
-    about.style.visibility = "hidden";
-    admin.style.visibility = "hidden";
-    infoP.style.visibility = "hidden";
-    privacy.style.visibility = "hidden";
-    terms.style.visibility = "hidden";
-};
+  nameYear.style.visibility = "hidden";
+  contact.style.visibility = "hidden";
+  about.style.visibility = "hidden";
+  admin.style.visibility = "hidden";
+  infoP.style.visibility = "hidden";
+  privacy.style.visibility = "hidden";
+  terms.style.visibility = "hidden";
+}
 
 function showRanks() {
-    rankBox.style.visibility = "visible";
+  rankBox.style.visibility = "visible";
 }
 
 function hideRanks() {
-    rankBox.style.visibility = "hidden";
+  rankBox.style.visibility = "hidden";
 }
 
 function showDoctorBox() {
-    doctorButton.style.backgroundImage = "url('../images/meds.gif')";
-    doctorBox.style.visibility = "visible";
+  doctorButton.style.backgroundImage = "url('../images/meds.gif')";
+  doctorBox.style.visibility = "visible";
 }
 
 function hideDoctorBox() {
-    doctorButton.style.backgroundImage = "url('../images/med.gif')";
-    doctorBox.style.visibility = "hidden";
+  doctorButton.style.backgroundImage = "url('../images/med.gif')";
+  doctorBox.style.visibility = "hidden";
 }
+
+logout = (event) => {
+  event.preventDefault();
+  const requestOptions = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+  };
+  fetch("http://localhost:3000/logout", requestOptions)
+    .then((response) => {
+      if (response.redirected) {
+        window.location.href = response.url;
+      }
+    })
+    .catch((error) => console.error("Error:", error));
+};

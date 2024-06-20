@@ -8,7 +8,7 @@
 @font-face {
     font-family: 'titleFont';
     src: url('../fonts/OPTICopperplate.otf');
-  }
+}
 
 html,
 body {
@@ -146,7 +146,7 @@ a {
         width: 13vw;
     }
 
-    .menuBar:hover .lineMenu{
+    .menuBar:hover .lineMenu {
         width: 11vw;
     }
 
@@ -223,7 +223,7 @@ a {
         justify-content: center;
         align-items: center;
         width: 11vw;
-        
+
     }
 
     .contact:hover {
@@ -272,7 +272,7 @@ a {
         font-size: 1vw;
         font-family: 'Courier New', Courier, monospace;
         border: 0;
-        width: 12vw; 
+        width: 12vw;
         display: flex;
         justify-content: start;
     }
@@ -324,7 +324,7 @@ a {
         width: 20vw;
         height: 30vw;
         top: 5vw;
-        right: 4vw;
+        right: 1vw;
         font-size: 2vw;
         display: flex;
         justify-content: space-around;
@@ -365,10 +365,10 @@ a {
 
     .gamesGrid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 2.5vw;
         width: 70vw;
-        height: 40vw;
+        height: 34vw;
         padding-left: 14vw;
         padding-top: 10vw;
         padding-bottom: 5vw;
@@ -484,7 +484,7 @@ a {
         width: 100%;
         position: fixed;
     }
-    
+
     .openMen {
         left: 2vw;
         bottom: 1.8vw;
@@ -497,11 +497,11 @@ a {
         background-image: url("../images/menuClose.webp");
         background-size: contain;
     }
-    
+
     .openMen:hover {
         background-color: rgb(193, 175, 175);
     }
-    
+
     .logo {
         position: absolute;
         width: 7vw;
@@ -509,7 +509,7 @@ a {
         left: 6%;
         bottom: -0.3vw;
     }
-    
+
     .title {
         position: absolute;
         color: white;
@@ -518,14 +518,14 @@ a {
         bottom: -2vw;
         font-family: 'titleFont';
     }
-    
+
     .icons {
         margin: 0;
         position: absolute;
         right: 3vw;
         bottom: 1vw;
     }
-    
+
     .profileButton {
         width: 4.5vw;
         height: 4.5vw;
@@ -535,11 +535,11 @@ a {
         background-image: url("../images/profile.png");
         background-size: contain;
     }
-    
+
     .profileButton:hover {
         background-color: rgb(226, 196, 226);
     }
-    
+
     .logout {
         width: 4.5vw;
         height: 4.5vw;
@@ -549,11 +549,11 @@ a {
         background-image: url("../images/logout.png");
         background-size: contain;
     }
-    
+
     .logout:hover {
         background-color: rgb(4, 0, 4);
     }
-    
+
     .fav {
         width: 4.5vw;
         height: 4.5vw;
@@ -562,11 +562,11 @@ a {
         background-image: url("../images/favourite.png");
         background-size: contain;
     }
-    
+
     .fav:hover {
         background-color: rgb(156, 132, 220);
     }
-    
+
     .ranks {
         width: 4.5vw;
         height: 4.5vw;
@@ -576,11 +576,11 @@ a {
         background-image: url("../images/ranks.png");
         background-size: contain;
     }
-    
+
     .ranks:hover {
         background-color: rgb(194, 192, 244);
     }
-    
+
     .menuBar {
         position: fixed;
         background-color: var(--menuColor);
@@ -592,26 +592,26 @@ a {
         border-right: 0.01vw solid rgb(124, 130, 196);
         overflow: auto;
     }
-    
+
     .menuBar:hover {
         width: 24vw;
     }
 
-    .menuBar:hover .lineMenu{
+    .menuBar:hover .lineMenu {
         width: 22vw;
     }
-    
+
     .menuIcons {
         position: absolute;
         width: 3.6vw;
         height: 3.6vw;
         left: 1.9vw;
     }
-    
+
     #menuList {
         list-style: none;
     }
-    
+
     .menuButtons {
         visibility: hidden;
         background-color: var(--bg);
@@ -627,11 +627,11 @@ a {
         width: 5vw;
         transition: margin-left 0.3s;
     }
-    
+
     .menuButtons:hover {
         margin-left: 2.8vw;
     }
-    
+
     .lineCurrent {
         position: absolute;
         background-color: #A48EFF;
@@ -639,7 +639,7 @@ a {
         height: 3.4vw;
         top: 2vw;
     }
-    
+
     .lineMenu {
         position: absolute;
         width: 5vw;
@@ -676,17 +676,17 @@ a {
         width: 22vw;
         height: 3.5vw;
     }
-    
+
     .contact:hover {
         background-color: #A48EFF;
     }
-    
+
     .contactImg {
         width: 3vw;
         height: 3vw;
         padding-right: 1vw;
     }
-    
+
     .about {
         visibility: hidden;
         background-color: var(--bg);
@@ -696,11 +696,11 @@ a {
         border: 0;
         padding-top: 6vw;
     }
-    
+
     .about:hover {
         color: var(--graysh);
     }
-    
+
     .infoP {
         visibility: hidden;
         background-color: var(--bg);
@@ -712,11 +712,11 @@ a {
         display: flex;
         justify-content: start;
     }
-    
+
     .infoP:hover {
         color: var(--graysh);
     }
-    
+
     .terms {
         visibility: hidden;
         background-color: var(--bg);
@@ -728,11 +728,11 @@ a {
         display: flex;
         justify-content: start;
     }
-    
+
     .terms:hover {
         color: var(--graysh);
     }
-    
+
     .privacy {
         visibility: hidden;
         background-color: var(--bg);
@@ -741,11 +741,11 @@ a {
         font-family: 'Courier New', Courier, monospace;
         border: 0;
     }
-    
+
     .privacy:hover {
         color: var(--graysh);
     }
-    
+
     .admin {
         visibility: hidden;
         background-color: var(--bg);
@@ -754,11 +754,11 @@ a {
         font-family: 'Courier New', Courier, monospace;
         border: 0;
     }
-    
+
     .admin:hover {
         color: var(--graysh);
     }
-    
+
     .nameYear {
         visibility: hidden;
         color: var(--graysh);
@@ -766,7 +766,7 @@ a {
         width: 14vw;
         padding-top: 30vw;
     }
-    
+
     .ranksBox {
         visibility: hidden;
         position: fixed;
@@ -776,12 +776,12 @@ a {
         width: 28vw;
         height: 40vw;
         top: 7vw;
-        right: 6vw;
+        right: 2vw;
         font-size: 3vw;
         display: flex;
         justify-content: space-around;
     }
-    
+
     .doctorButton {
         position: fixed;
         width: 10vw;
@@ -794,7 +794,7 @@ a {
         background-image: url("../images/med.gif");
         background-size: contain;
     }
-    
+
     .doctorBox {
         visibility: hidden;
         position: fixed;
@@ -814,13 +814,13 @@ a {
         padding-left: 1vw;
         padding-right: 1vw;
     }
-    
+
     .gamesGrid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         grid-gap: 10vw;
-        width: 75vw;
-        height: 100vw;
+        width: 60vw;
+        height: 105vw;
         padding-left: 16vw;
         padding-top: 15vw;
         padding-bottom: 10vw;
@@ -829,7 +829,7 @@ a {
     .name {
         border-radius: 10%;
     }
-    
+
     #name1 {
         background-image: url("../images/game1.png");
         background-size: contain;
@@ -936,7 +936,7 @@ a {
         width: 100%;
         position: fixed;
     }
-    
+
     .openMen {
         left: 2vw;
         bottom: 2.3vw;
@@ -949,11 +949,11 @@ a {
         background-image: url("../images/menuClose.webp");
         background-size: contain;
     }
-    
+
     .openMen:hover {
         background-color: rgb(193, 175, 175);
     }
-    
+
     .logo {
         position: absolute;
         width: 10vw;
@@ -961,7 +961,7 @@ a {
         left: 8%;
         bottom: -0.2vw;
     }
-    
+
     .title {
         position: absolute;
         color: white;
@@ -970,14 +970,14 @@ a {
         bottom: -2vw;
         font-family: 'titleFont';
     }
-    
+
     .icons {
         margin: 0;
         position: absolute;
         right: 2vw;
         bottom: 1vw;
     }
-    
+
     .profileButton {
         width: 6vw;
         height: 6vw;
@@ -987,11 +987,11 @@ a {
         background-image: url("../images/profile.png");
         background-size: contain;
     }
-    
+
     .profileButton:hover {
         background-color: rgb(226, 196, 226);
     }
-    
+
     .logout {
         width: 6.3vw;
         height: 6.3vw;
@@ -1001,11 +1001,11 @@ a {
         background-image: url("../images/logout.png");
         background-size: contain;
     }
-    
+
     .logout:hover {
         background-color: rgb(4, 0, 4);
     }
-    
+
     .fav {
         width: 6.2vw;
         height: 6.2vw;
@@ -1014,11 +1014,11 @@ a {
         background-image: url("../images/favourite.png");
         background-size: contain;
     }
-    
+
     .fav:hover {
         background-color: rgb(156, 132, 220);
     }
-    
+
     .ranks {
         width: 6.3vw;
         height: 6.3vw;
@@ -1028,11 +1028,11 @@ a {
         background-image: url("../images/ranks.png");
         background-size: contain;
     }
-    
+
     .ranks:hover {
         background-color: rgb(194, 192, 244);
     }
-    
+
     .menuBar {
         position: fixed;
         background-color: var(--menuColor);
@@ -1044,26 +1044,26 @@ a {
         border-right: 0.01vw solid rgb(124, 130, 196);
         overflow: auto;
     }
-    
+
     .menuBar:hover {
         width: 42vw;
     }
 
-    .menuBar:hover .lineMenu{
+    .menuBar:hover .lineMenu {
         width: 40vw;
     }
-    
+
     .menuIcons {
         position: absolute;
         width: 5vw;
         height: 5vw;
         left: 1.9vw;
     }
-    
+
     #menuList {
         list-style: none;
     }
-    
+
     .menuButtons {
         visibility: hidden;
         background-color: var(--bg);
@@ -1079,11 +1079,11 @@ a {
         width: 5vw;
         transition: margin-left 0.3s;
     }
-    
+
     .menuButtons:hover {
         margin-left: 2.8vw;
     }
-    
+
     .lineCurrent {
         position: absolute;
         background-color: #A48EFF;
@@ -1091,7 +1091,7 @@ a {
         height: 5.5vw;
         top: 3.6vw;
     }
-    
+
     .lineMenu {
         position: absolute;
         width: 8vw;
@@ -1112,7 +1112,7 @@ a {
         justify-content: flex-start;
         align-items: flex-start;
     }
-    
+
     .contact {
         visibility: hidden;
         display: flex;
@@ -1128,17 +1128,17 @@ a {
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         letter-spacing: 0.01vw;
     }
-    
+
     .contact:hover {
         background-color: #A48EFF;
     }
-    
+
     .contactImg {
         width: 5vw;
         height: 5vw;
         padding-right: 3vw;
     }
-    
+
     .about {
         visibility: hidden;
         background-color: var(--bg);
@@ -1147,11 +1147,11 @@ a {
         font-family: 'Courier New', Courier, monospace;
         border: 0;
     }
-    
+
     .about:hover {
         color: var(--graysh);
     }
-    
+
     .infoP {
         visibility: hidden;
         background-color: var(--bg);
@@ -1163,11 +1163,11 @@ a {
         display: flex;
         justify-content: start;
     }
-    
+
     .infoP:hover {
         color: var(--graysh);
     }
-    
+
     .terms {
         visibility: hidden;
         background-color: var(--bg);
@@ -1179,11 +1179,11 @@ a {
         display: flex;
         justify-content: start;
     }
-    
+
     .terms:hover {
         color: var(--graysh);
     }
-    
+
     .privacy {
         visibility: hidden;
         background-color: var(--bg);
@@ -1192,11 +1192,11 @@ a {
         font-family: 'Courier New', Courier, monospace;
         border: 0;
     }
-    
+
     .privacy:hover {
         color: var(--graysh);
     }
-    
+
     .admin {
         visibility: hidden;
         background-color: var(--bg);
@@ -1205,11 +1205,11 @@ a {
         font-family: 'Courier New', Courier, monospace;
         border: 0;
     }
-    
+
     .admin:hover {
         color: var(--graysh);
     }
-    
+
     .nameYear {
         visibility: hidden;
         color: var(--graysh);
@@ -1218,7 +1218,7 @@ a {
         height: 2vw;
         padding-top: 7vw;
     }
-    
+
     .ranksBox {
         visibility: hidden;
         position: fixed;
@@ -1228,12 +1228,12 @@ a {
         width: 40vw;
         height: 55vw;
         top: 10vw;
-        right: 8vw;
+        right: 1vw;
         font-size: 5vw;
         display: flex;
         justify-content: space-around;
     }
-    
+
     .doctorButton {
         position: fixed;
         width: 15vw;
@@ -1246,7 +1246,7 @@ a {
         background-image: url("../images/med.gif");
         background-size: contain;
     }
-    
+
     .doctorBox {
         visibility: hidden;
         position: fixed;
@@ -1266,13 +1266,13 @@ a {
         padding-left: 1vw;
         padding-right: 1vw;
     }
-    
+
     .gamesGrid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 4.5vw;
-        width: 55vw;
-        height: 260vw;
+        width: 60vw;
+        height: 160vw;
         padding-left: 24vw;
         padding-top: 16vw;
         padding-bottom: 10vw;
@@ -1281,7 +1281,7 @@ a {
     .name {
         border-radius: 10%;
     }
-    
+
     #name1 {
         background-image: url("../images/game1.png");
         background-size: contain;
