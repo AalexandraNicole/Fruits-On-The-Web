@@ -39,10 +39,13 @@ async function loginHandler(req, res, services, query) {
 
   if (result.success) {
     req.session.isAuthenticated = true;
+    req.session.userEmail = email;
+    console.log("Session Email for autentification!")
+    console.log(req.session.userEmail);
     req.session.user = result.user;
     res.writeHead(301, {
       Location:
-        "http://127.0.0.1:5500/Fruits-On-The-Web/frontend/html/loggedPage.html",
+        "http://127.0.0.1:5501/frontend/html/loggedPage.html",
       "Access-Control-Allow-Origin": "*",
     });
     res.end();

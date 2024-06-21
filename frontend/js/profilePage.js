@@ -71,13 +71,39 @@ function showEditPass() {
   resetPass.style.visibility = "visible";
 }
 
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const response = await fetch("http://localhost:3001/profile", {
+        mode: "no-cors",
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+    });
+    if (!response.ok) {
+      throw new Error("Failed to fetch profile data");
+    }
+    const profileData = await response.json();
+    console.log(profileData);
+
+    document.getElementById("nameProfile").innerText = profileData.username; 
+    document.getElementById("scoreProfile").innerText = `Score: ${profileData.score}`; 
+    document.getElementById("name").innerText = profileData.username; 
+    document.getElementById("email").innerText = profileData.email; 
+    document.getElementById("adminStatus").innerText = profileData.adminStatus; 
+    document.getElementById("password").innerHTML = profileData.password;
+  } catch (error) {
+    console.error("Error loading profile data: ", error);
+  }
+});
+
 logout = (event) => {
   event.preventDefault();
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
   };
-  fetch("http://localhost:3000/logout", requestOptions)
+  fetch("http://localhost:3001/logout", requestOptions)
     .then((response) => {
       if (response.redirected) {
         window.location.href = response.url;

@@ -17,7 +17,7 @@ const mongoDb = require("./services/mongo-db");
     await matchRoute(req, res, routes, services);
   });
 
-  server.listen(3000, () => {
-    console.log("Server running at http://localhost:3000/");
+  server.listen(3001, () => {
+    console.log("Server running at http://localhost:3001/");
   });
 })();

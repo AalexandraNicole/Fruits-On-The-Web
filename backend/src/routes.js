@@ -53,6 +53,16 @@ const routes = [
   },
   {
     method: "POST",
+    url: "/profile",
+    handler: handlers.profileHandler, 
+  },
+  {
+    method: "OPTIONS",
+    url: "/profile",
+    handler: handlers.optionsHandler,
+  },
+  {
+    method: "POST",
     url: "/contact",
     handler: handlers.contactHandler,
   },

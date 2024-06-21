@@ -19,7 +19,7 @@ login = (event, form) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, password }),
   };
-  fetch("http://localhost:3000/login", requestOptions)
+  fetch("http://localhost:3001/login", requestOptions)
     .then((response) => {
       if (response.redirected) {
         window.location.href = response.url;
@@ -38,7 +38,7 @@ register = (event, form) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username, email, password }),
   };
-  fetch("http://localhost:3000/register", requestOptions)
+  fetch("http://localhost:3001/register", requestOptions)
     .then((response) => {
       if (response.redirected) {
         window.location.href = response.url;
