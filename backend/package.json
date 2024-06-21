@@ -9,10 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "mongodb": "^6.7.0",
     "mongoose": "^8.4.3",
+    "nodemailer": "^6.9.14",
     "rss-generator": "^0.0.3",
-    "bcrypt": "^5.1.1",
     "uuid": "^8.3.2"
   }
 }

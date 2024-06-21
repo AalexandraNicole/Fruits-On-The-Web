@@ -52,17 +52,22 @@ function hideMenuButtons() {
   terms.style.visibility = "hidden";
 }
 
-logout = (event) => {
+contact = (event, form) => {
   event.preventDefault();
+  const message = form.message.value;
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message }),
   };
-  fetch("http://localhost:3000/logout", requestOptions)
+  fetch("http://localhost:3000/contact", requestOptions)
     .then((response) => {
       if (response.redirected) {
         window.location.href = response.url;
+        alert("Message not sent!");
       }
     })
     .catch((error) => console.error("Error:", error));
+  alert("Message sent successfully!");
+  form.reset();
 };

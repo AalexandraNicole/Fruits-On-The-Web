@@ -39,6 +39,7 @@ async function loginHandler(req, res, services, query) {
 
   if (result.success) {
     req.session.isAuthenticated = true;
+    req.session.user = result.user;
     res.writeHead(301, {
       Location:
         "http://127.0.0.1:5500/Fruits-On-The-Web/frontend/html/loggedPage.html",
