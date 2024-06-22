@@ -1,6 +1,7 @@
 const http = require("http");
 const routes = require("./routes");
 const matchRoute = require("./middleware/match-route");
+const verifyToken = require("./middleware/verify-token");
 const handleSession = require("./middleware/handle-session");
 const mongoDb = require("./services/mongo-db");
 

@@ -12,14 +12,15 @@ async function handleSession(req, res, services) {
 
   const cookies = querystring.parse(req.headers.cookie, "; ");
   let sessionId = cookies.sessionId;
-
-  if (!sessionId || !sessionStore[sessionId]) {
-    sessionId = uuidv4(); 
-    sessionStore[sessionId] = {};
-    res.setHeader("Set-Cookie", `sessionId=${sessionId}`);
+  
+  if (sessionId && sessionStore[sessionId]) {
+    req.session = sessionStore[sessionId];
+  } else {
+    sessionId = uuidv4();
+    req.session = {};
+    sessionStore[sessionId] = req.session;
+    res.setHeader("Set-Cookie", `sessionId=${sessionId}; HttpOnly; Path=/; SameSite=Lax`);
   }
-
-  req.session = sessionStore[sessionId]; 
 }
 
 module.exports = handleSession;

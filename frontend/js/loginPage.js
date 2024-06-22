@@ -21,9 +21,14 @@ login = (event, form) => {
   };
   fetch("http://localhost:3001/login", requestOptions)
     .then((response) => {
-      if (response.redirected) {
-        window.location.href = response.url;
+      if (!response.ok) {
+        throw new Error("Failed to log in");
       }
+      return response.json();
+    })
+    .then((data) => {
+      localStorage.setItem("token", data.token);  // store the token for later verifycation
+      window.location.href = "loggedPage.html";   // redirect to the logged-in page
     })
     .catch((error) => console.error("Error:", error));
 };

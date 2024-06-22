@@ -1,5 +1,8 @@
 const { getBody } = require("../utils/utils");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+
+const SECRET_KEY = "mySecretKey";
 
 async function authenticate(email, password, db) {
   try {
@@ -17,7 +20,6 @@ async function authenticate(email, password, db) {
       return { success: false, message: "Incorrect password" };
     }
 
-    console.log("User authenticated successfully:", email);
     return { success: true, user };
   } catch (error) {
     console.error("Error authenticating user:", error);
@@ -38,17 +40,15 @@ async function loginHandler(req, res, services, query) {
   const result = await authenticate(email, password, db);
 
   if (result.success) {
-    req.session.isAuthenticated = true;
-    req.session.userEmail = email;
-    console.log("Session Email for autentification!")
-    console.log(req.session.userEmail);
-    req.session.user = result.user;
-    res.writeHead(301, {
-      Location:
-        "http://127.0.0.1:5501/frontend/html/loggedPage.html",
+    console.log("User authenticated successfully:", email);
+    const token = jwt.sign({email}, SECRET_KEY, {expiresIn: '1h'}) ;
+
+     res.writeHead(200, {
+      "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Credentials": "true",
     });
-    res.end();
+    res.end(JSON.stringify({ token }));
   } else {
     req.session.isAuthenticated = false;
     res.writeHead(401, { "Content-Type": "text/plain" });

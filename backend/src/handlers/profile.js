@@ -1,26 +1,23 @@
+const jwt = require("jsonwebtoken");
+const SECRET_KEY = "mySecretKey";
 
-
-async function profileHandler(req, res, services) {
-    console.log("Session Object: ", req.session);
-    const db = services.get("mongodb")?.db;
-    if (db == null) {
-        console.log("No db connection");
-        res.writeHead(500);
-        res.end();
-        return;
-    }
-
-
-  const userEmail = req.session.userEmail; // Get email from session
-  console.log("Email Session: ", userEmail)
-  if (!userEmail) {
-    res.writeHead(401, { "Content-Type": "application/json" });
-    res.end(JSON.stringify({ error: "Ceva e putred" }));
+async function profileHandler(req, res, services, query) {
+  const db = services.get("mongodb")?.db;
+  if (!db) {
+    console.log("No db connection");
+    res.writeHead(500);
+    res.end();
     return;
   }
+  console.log("EMAIL: ", query.email);
+  const email = query.email;
 
   try {
+    const decodedToken = jwt.verify(email, SECRET_KEY);
+    const userEmail = decodedToken.email;
+    console.log("User Email: " + userEmail);
     const user = await db.collection("users").findOne({ email: userEmail });
+
     if (!user) {
       res.writeHead(404, { "Content-Type": "application/json" });
       res.end(JSON.stringify({ error: "User not found" }));
@@ -31,12 +28,12 @@ async function profileHandler(req, res, services) {
       username: user.username,
       email: user.email,
       score: user.score,
-      password: user.password,
       adminStatus: user.adminStatus,
     };
-
-    console.log("Profile Data {profileData}");
-    res.writeHead(200, { "Content-Type": "application/json" });
+    res.writeHead(200, {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    });
     res.end(JSON.stringify(profileData));
   } catch (error) {
     console.error("Error fetching profile data:", error);

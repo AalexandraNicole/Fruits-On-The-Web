@@ -52,17 +52,17 @@ const routes = [
     handler: handlers.optionsHandler,
   },
   {
-    method: "POST",
+    method: "GET",
     url: "/profile",
     handler: handlers.profileHandler, 
   },
   {
-    method: "OPTIONS",
-    url: "/profile",
-    handler: handlers.optionsHandler,
+    method: "GET",
+    url: "/users",
+    handler: handlers.usersHandler, 
   },
   {
-    method: "POST",
+    method: "GET",
     url: "/contact",
     handler: handlers.contactHandler,
   },

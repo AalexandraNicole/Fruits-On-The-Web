@@ -71,31 +71,39 @@ function showEditPass() {
   resetPass.style.visibility = "visible";
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
-  try {
-    const response = await fetch("http://localhost:3001/profile", {
-        mode: "no-cors",
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-    });
-    if (!response.ok) {
-      throw new Error("Failed to fetch profile data");
-    }
-    const profileData = await response.json();
-    console.log(profileData);
+function fetchProfile(){
+  const token = localStorage.getItem("token");
+  console.log("TOKEN ", token);
+  const forFetch = "http://localhost:3001/profile?email=" + token;
+  
+  return fetch(forFetch)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to looad data for Profile");
+      }
+      return response.json();
+    })
+    .then((profileData) => {
 
-    document.getElementById("nameProfile").innerText = profileData.username; 
-    document.getElementById("scoreProfile").innerText = `Score: ${profileData.score}`; 
-    document.getElementById("name").innerText = profileData.username; 
-    document.getElementById("email").innerText = profileData.email; 
-    document.getElementById("adminStatus").innerText = profileData.adminStatus; 
-    document.getElementById("password").innerHTML = profileData.password;
-  } catch (error) {
-    console.error("Error loading profile data: ", error);
-  }
-});
+      const username = profileData.username;
+      let score = profileData.score;
+      if (score == null){
+        score = 0;
+      }
+      const adminStatus = true;//profileData.adminStatus;
+      localStorage.setItem("adminStatus", adminStatus ? "Admin" : "User");
+      // Populate profile data in the HTML
+      document.querySelector("#usernamebig").textContent = username;
+      document.querySelector("#username").textContent = username;
+      document.querySelector("#email").textContent = profileData.email;
+      document.querySelector("#scorebig").textContent = score;
+      document.querySelector("#score").textContent = score;
+      document.querySelector("#adminStatus").textContent = adminStatus ? "Admin" : "User";
+    })
+    .catch((error) => console.error("Error:", error));
+};
+
+fetchProfile();
 
 logout = (event) => {
   event.preventDefault();
