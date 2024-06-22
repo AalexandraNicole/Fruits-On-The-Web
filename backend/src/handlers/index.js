@@ -9,6 +9,8 @@ const logoutHandler = require("./logout");
 const profileHandler = require("./profile");
 const contactHandler = require("./contact");
 const usersHandler = require("./user");
+const adminHandler = require("./admin")
+const usersDeleteHandler = require("./user-delete")
 
 
 module.exports = {
@@ -23,4 +25,6 @@ module.exports = {
   contactHandler,
   optionsHandlerProfile,
   usersHandler,
+  adminHandler,
+  usersDeleteHandler,
 };

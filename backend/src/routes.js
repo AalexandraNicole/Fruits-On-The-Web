@@ -63,6 +63,16 @@ const routes = [
   },
   {
     method: "GET",
+    url: "/user_delete",
+    handler: handlers.usersDeleteHandler, 
+  },
+  {
+    method: "GET",
+    url: "/admin",
+    handler: handlers.adminHandler, 
+  },
+  {
+    method: "GET",
     url: "/contact",
     handler: handlers.contactHandler,
   },

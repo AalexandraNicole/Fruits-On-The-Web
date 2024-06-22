@@ -38,7 +38,7 @@ async function registerHandler(req, res, services, query) {
   if (result.success) {
     res.writeHead(301, {
       Location:
-        "http://127.0.0.1:5500/frontend/html/loginPage.html",
+        "http://127.0.0.1:5501/frontend/html/loginPage.html",
       "Access-Control-Allow-Origin": "*",
     });
     res.end();

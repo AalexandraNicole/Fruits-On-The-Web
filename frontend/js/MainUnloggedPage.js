@@ -1,7 +1,7 @@
 // document.getElementById("btnlogin").onclick = function () {
 //     location.href = "loginPage.html";
 // };
-
+window.onload = localStorage.removeItem("token");
 // Get all category headers
 const categoryHeaders = document.querySelectorAll('.category-header');
 
