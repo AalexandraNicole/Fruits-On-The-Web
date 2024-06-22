@@ -73,6 +73,11 @@ const routes = [
   },
   {
     method: "GET",
+    url: "/random_math_challenge",
+    handler: handlers.getRandomMathChallengeHandler,
+  },
+  {
+    method: "GET",
     url: "/contact",
     handler: handlers.contactHandler,
   },

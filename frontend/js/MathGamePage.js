@@ -73,50 +73,41 @@ function hideDoctorBox() {
   doctorBox.style.visibility = "hidden";
 }
 
-var playing = false;
-var score;
-var action;
-var timeremaining;
-var correctAnswer;
+let playing = false;
+let score;
+let action;
+let timeremaining;
+let correctAnswer;
+let challengeId;
 
 document.getElementById("startreset").onclick = function () {
-  if (playing == true) {
+  if (playing === true) {
     location.reload();
   } else {
     playing = true;
     score = 0;
 
     document.getElementById("scorevalue").innerHTML = score;
-    //show count
     show("timeremaining");
     timeremaining = 60;
-
     document.getElementById("timeremainingvalue").innerHTML = timeremaining;
 
-    //show choices
     show("choices");
     show("instruction");
     show("score");
-
-    //hide game over
     hide("gameOver");
 
-    //change start to reset
     document.getElementById("startreset").innerHTML = "Exit";
 
-    //start count
     startCountdown();
-
-    //generate quetion
     generateQA();
   }
 };
 
-for (i = 1; i < 5; i++) {
+for (let i = 1; i < 5; i++) {
   document.getElementById("box" + i).onclick = function () {
-    if (playing == true) {
+    if (playing === true) {
       if (this.innerHTML == correctAnswer) {
-        //increase score
         score++;
         document.getElementById("scorevalue").innerHTML = score;
         hide("wrong");
@@ -126,31 +117,24 @@ for (i = 1; i < 5; i++) {
         }, 1000);
         generateQA();
       } else {
-        //wrong answer
-        //increase score
         hide("correct");
         show("wrong");
         setTimeout(function () {
           hide("wrong");
         }, 500);
-        generateQA();
       }
     }
   };
 }
 
-//functions
-//start count
 function startCountdown() {
   action = setInterval(function () {
     timeremaining -= 1;
-
     document.getElementById("timeremainingvalue").innerHTML = timeremaining;
-    if (timeremaining == 0) {
+    if (timeremaining === 0) {
       stopCountdown();
       show("gameOver");
 
-      //game over
       document.getElementById("gameOver").innerHTML =
         "<p>Time's up!</p><p>Your score is " + score + ".</p>";
       hide("timeremaining");
@@ -163,118 +147,60 @@ function startCountdown() {
   }, 1000);
 }
 
-//stop count
 function stopCountdown() {
   clearInterval(action);
 }
 
-//hide
 function hide(Id) {
   document.getElementById(Id).style.display = "none";
 }
 
-//show
 function show(Id) {
   document.getElementById(Id).style.display = "block";
 }
 
-//guestion
-function getRandomFruitImageUrl() {
-  var fruitImages = [
-    "../images/apple.jpg",
-    "../images/orange.jpg",
-    "../images/mango.avif",
-    "../images/lime.jpg",
-    "../images/lemon.avif",
-    // Add more URLs as needed
-  ];
-  return fruitImages[Math.floor(Math.random() * fruitImages.length)];
-}
-
 function generateQA() {
-  var x = 1 + Math.round(1 * Math.random());
-  var y = 1 + Math.round(1 * Math.random());
-  correctAnswer = x + y;
+  console.log("GENERATE QA")
+  return fetch("http://localhost:3001/random_math_challenge")
+    .then(response => response.json())
+    .then(data => {
+      const { fruit1, fruit2, operation, challengeId: id } = data;
+      correctAnswer = eval(`${fruit1._id} ${operation} ${fruit2._id}`);
+      challengeId = id;
+      var element = document.getElementById("question");
+      if (fruit1._id == 0) {
+        element.innerHTML =
+          `<img src='../images/zero.jpg' alt='Fruit Image'> + ${fruit2.images}`;
+      } else if (fruit2._id == 0) {
+        element.innerHTML =
+          `${fruit1.images} + <img src='../images/zero.jpg' alt='Fruit Image'>`;
+      } else {
+        console.log(fruit1.images);
+        element.innerHTML =
+          `${fruit1.images} + ${fruit2.images}`;
+      }
 
-  // Generate a random fruit image URL
-  var fruitImageUrl = getRandomFruitImageUrl();
+      const correctPosition = 1 + Math.round(3 * Math.random());
+      document.getElementById("box" + correctPosition).innerHTML = correctAnswer;
 
-  if (x == 0) {
-    document.getElementById("question").innerHTML =
-      "<img src='../images/zero.jpg' alt='Fruit Image'> " +
-      " + " +
-      generateFruitImages(y);
-  } else if (y == 0) {
-    document.getElementById("question").innerHTML =
-      generateFruitImages(x) +
-      " + " +
-      "<img src='../images/zero.jpg' alt='Fruit Image'> ";
-  } else {
-    // Set question with fruit images and operator
-    document.getElementById("question").innerHTML =
-      generateFruitImages(x) + " + " + generateFruitImages(y);
-  }
-  // Check if either group has more than four images
-  var xImages = document.querySelectorAll("#question .x-image").length;
-  var yImages = document.querySelectorAll("#question .y-image").length;
-  if (xImages > 4) {
-    document.getElementById("question").classList.add("x-multiple-lines");
-  } else {
-    document.getElementById("question").classList.remove("x-multiple-lines");
-  }
-  if (yImages > 4) {
-    document.getElementById("question").classList.add("y-multiple-lines");
-  } else {
-    document.getElementById("question").classList.remove("y-multiple-lines");
-  }
-
-  var correctPosition = 1 + Math.round(3 * Math.random());
-
-  // Set correct answer
-  document.getElementById("box" + correctPosition).innerHTML = correctAnswer; //correct answer
-
-  var answers = [correctAnswer];
-
-  for (i = 1; i < 5; i++) {
-    if (i != correctPosition) {
-      var wrongAnswer;
-      do {
-        wrongAnswer =
-          (1 + Math.round(2 * Math.random())) *
-          (1 + Math.round(1 * Math.random())); //wrong answer
-      } while (answers.indexOf(wrongAnswer) > -1);
-
-      document.getElementById("box" + i).innerHTML = wrongAnswer;
-      answers.push(wrongAnswer);
-    }
-  }
+      const answers = [correctAnswer];
+      for (let i = 1; i < 5; i++) {
+        if (i !== correctPosition) {
+          let wrongAnswer;
+          do {
+            wrongAnswer = getRandomInt(1, 3);
+          } while (answers.includes(wrongAnswer));
+          document.getElementById("box" + i).innerHTML = wrongAnswer;
+          answers.push(wrongAnswer);
+        }
+      }
+    })
+    .catch(error => console.error('Error geting question:', error));
 }
 
-// Function to generate a string of fruit images based on a number
-function generateFruitImages(number) {
-  var fruitImageUrl = getRandomFruitImageUrl();
-  var images = "";
-  for (var i = 0; i < number; i++) {
-    images += "<img src='" + fruitImageUrl + "' alt='Fruit Image'> ";
-  }
-  return images;
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  var container = document.getElementById("container");
-  var startButton = document.getElementById("startreset");
-  var backgroundState = "first";
-
-  startButton.addEventListener("click", function () {
-    if (backgroundState === "first") {
-      container.style.background = 'url("")';
-      backgroundState = "second";
-    } else {
-      container.style.background = 'url("../images/MathGround.jpg")';
-      backgroundState = "first";
-    }
-  });
-});
 
 logout = (event) => {
   event.preventDefault();

@@ -1,22 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 :root {
-    --mainColor: rgba(33, 34, 51, 0.9);
-    --menuColor: rgba(29, 31, 60, 0.9);
-    --bg: ##1a2742;
-    --graysh: #666A7F;
+  --mainColor: rgba(33, 34, 51, 0.9);
+  --menuColor: rgba(29, 31, 60, 0.9);
+  --bg: ##1a2742;
+  --graysh: #666a7f;
 }
 
 * {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 @font-face {
-    font-family: 'titleFont';
-    src: url('../fonts/OPTICopperplate.otf');
-  }
+  font-family: "titleFont";
+  src: url("../fonts/OPTICopperplate.otf");
+}
 
-html, body {
+html,
+body {
   height: 100%;
   background: black;
 }
@@ -32,255 +33,243 @@ a {
 /*DESKTOP*/
 
 /* @media (min-width: 1025px) { */
-  header {
-    background-color: var(--mainColor);
-    border-bottom: 1px solid black;
-    height: 5vw;
-    width: 100%;
-    position: fixed;
+header {
+  background-color: var(--mainColor);
+  border-bottom: 1px solid black;
+  height: 5vw;
+  width: 100%;
+  position: fixed;
 }
 
 .backButton {
-    left: 1vw;
-    bottom: 1.3vw;
-    position: absolute;
-    width: 2.2vw;
-    height: 2.2vw;
-    border-radius: 50%;
-    border-color: rgb(197, 156, 234);
-    background-color: white;
-    background-image: url("../images/back.png");
-    background-size: cover;
+  left: 1vw;
+  bottom: 1.3vw;
+  position: absolute;
+  width: 2.2vw;
+  height: 2.2vw;
+  border-radius: 50%;
+  border-color: rgb(197, 156, 234);
+  background-color: white;
+  background-image: url("../images/back.png");
+  background-size: cover;
 }
 
 .backButton:hover {
-    background-color: rgb(193, 175, 175);
+  background-color: rgb(193, 175, 175);
 }
 
 .logo {
-    position: absolute;
-    width: 5vw;
-    height: 5vw;
-    left: 4%;
-    bottom: -0.3vw;
+  position: absolute;
+  width: 5vw;
+  height: 5vw;
+  left: 4%;
+  bottom: -0.3vw;
 }
 
 .title {
-    position: absolute;
-    color: white;
-    left: 8.5%;
-    font-size: 2vw;
-    font-family: 'titleFont';
+  position: absolute;
+  color: white;
+  left: 8.5%;
+  font-size: 2vw;
+  font-family: "titleFont";
 }
 
 .icons {
-    margin: 0;
-    position: absolute;
-    right: 2vw;
-    bottom: 0.8vw;
+  margin: 0;
+  position: absolute;
+  right: 2vw;
+  bottom: 0.8vw;
 }
 
 .profileButton {
-    width: 3vw;
-    height: 3vw;
-    border-radius: 20%;
-    border-color: rgb(197, 156, 234);
-    background-color: white;
-    background-image: url("../images/profile.png");
-    background-size: contain;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 20%;
+  border-color: rgb(197, 156, 234);
+  background-color: white;
+  background-image: url("../images/profile.png");
+  background-size: contain;
 }
 
 .profileButton:hover {
-    background-color: rgb(226, 196, 226);
+  background-color: rgb(226, 196, 226);
 }
 
 .logout {
-    width: 3.3vw;
-    height: 3.3vw;
-    border-radius: 60%;
-    border-color: rgb(140, 158, 229);
-    background-color: white;
-    background-image: url("../images/logout.png");
-    background-size: contain;
+  width: 3.3vw;
+  height: 3.3vw;
+  border-radius: 60%;
+  border-color: rgb(140, 158, 229);
+  background-color: white;
+  background-image: url("../images/logout.png");
+  background-size: contain;
 }
 
 .logout:hover {
-    background-color: rgb(4, 0, 4);
-}
-
-.fav {
-    width: 3.2vw;
-    height: 3.2vw;
-    border-radius: 50%;
-    border-color: rgb(156, 132, 220);
-    background-image: url("../images/favourite.png");
-    background-size: contain;
-}
-
-.fav:hover {
-    background-color: rgb(156, 132, 220);
+  background-color: rgb(4, 0, 4);
 }
 
 .ranks {
-    width: 3.3vw;
-    height: 3.3vw;
-    border-radius: 60%;
-    border-color: rgb(118, 125, 207);
-    background-color: white;
-    background-image: url("../images/ranks.png");
-    background-size: contain;
+  width: 3.3vw;
+  height: 3.3vw;
+  border-radius: 60%;
+  border-color: rgb(118, 125, 207);
+  background-color: white;
+  background-image: url("../images/ranks.png");
+  background-size: contain;
 }
 
 .ranks:hover {
-    background-color: rgb(194, 192, 244);
+  background-color: rgb(194, 192, 244);
 }
 
-  /* The Game */
+/* The Game */
 
-    #container {
-      position: fixed;
-      background: url(../images/MathGround.jpg);
-      height: 560px;
-      width: 750px;
-      margin: 100px 350px auto;
-      padding: 20px;
-      border-radius: 30px;
-      box-shadow: 0px 4px #A48EFF;
-      border: 4px solid #A48EFF;
-    }
-    #score {
-      top: 10px;
-      color: white;
-      position: absolute;
-      right: 10px;
-      display: none;
-    }
-    #correct {
-      position: absolute;
-      left: 250px;
-      background-color: #42e252;
-      color: white;
-      padding: 5px 12px;
-      display: none;
-    }
-    #wrong {
-      position: absolute;
-      left: 250px;
-      background-color: #de401a;
-      color: white;
-      padding: 5px 12px;
-      display: none;
-    }
+#container {
+  position: fixed;
+  background: url(../images/MathGround.jpg);
+  height: 560px;
+  width: 750px;
+  margin: 100px 350px auto;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0px 4px #a48eff;
+  border: 4px solid #a48eff;
+}
+#score {
+  top: 10px;
+  color: white;
+  position: absolute;
+  right: 10px;
+  display: none;
+}
+#correct {
+  position: absolute;
+  left: 250px;
+  background-color: #42e252;
+  color: white;
+  padding: 5px 12px;
+  display: none;
+}
+#wrong {
+  position: absolute;
+  left: 250px;
+  background-color: #de401a;
+  color: white;
+  padding: 5px 12px;
+  display: none;
+}
 
-    #question {
-      width: 100px;
-      height: 100px;
-      margin: 50px auto 10px auto;
-      font-size: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-    }
+#question {
+  width: 100px;
+  height: 100px;
+  margin: 50px auto 10px auto;
+  font-size: 100px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
 
-  .x-multiple-lines {
-    flex-wrap: wrap;
-  }
+.x-multiple-lines {
+  flex-wrap: wrap;
+}
 
-  .y-multiple-lines {
-      flex-wrap: wrap;
-  }
+.y-multiple-lines {
+  flex-wrap: wrap;
+}
 
-    #question img {
-      width: 500px; 
-      height: 100px; 
-  }
-    #instruction {
-      width: 450px;
-      height: 50px;
-      margin: 10px auto;
-      text-align: center;
-      line-height: 45px;
-      color: white;
-      display: none;
-    }
-    #choices {
-      width: 450px;
-      height: 100px;
-      margin: 5px auto;
-      display: none;
-    }
-    .box {
-      margin-right: 36px;
-      width: 85px;
-      height: 85px;
-      background-color: white;
-      float: left;
-      border-radius: 3px;
-      cursor: pointer;
-      box-shadow: 0px 4px black;
-      text-align: center;
-      line-height: 80px;
-      position: relative;
-      transition: all 0.2s;
-    }
-    #startreset {
-      width: 250px;
-      padding: 20px;
-      background-color: #8144fe;
-      margin: 0 auto;
-      border-radius: 3px;
-      cursor: pointer;
-      box-shadow: 0px 4px #A48EFF;
-      text-align: center;
-      color: white;
-      position: relative;
-      transition: all 0.2s;
-      font-size: 18px;
-      font-weight: bold;
-    }
+#question img {
+  width: 500px;
+  height: 100px;
+}
+#instruction {
+  width: 450px;
+  height: 50px;
+  margin: 10px auto;
+  text-align: center;
+  line-height: 45px;
+  color: white;
+  display: none;
+}
+#choices {
+  width: 450px;
+  height: 100px;
+  margin: 5px auto;
+  display: none;
+}
+.box {
+  margin-right: 36px;
+  width: 85px;
+  height: 85px;
+  background-color: white;
+  float: left;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0px 4px black;
+  text-align: center;
+  line-height: 80px;
+  position: relative;
+  transition: all 0.2s;
+}
+#startreset {
+  width: 250px;
+  padding: 20px;
+  background-color: #8144fe;
+  margin: 0 auto;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0px 4px #a48eff;
+  text-align: center;
+  color: white;
+  position: relative;
+  transition: all 0.2s;
+  font-size: 18px;
+  font-weight: bold;
+}
 
-    .box:hover,
-    #startreset:hover {
-      background-color: #4c3ca0;
-      color: black;
-      box-shadow: 0px 4px #3a19cd;
-    }
-    .box:active,
-    #startreset:active {
-      box-shadow: 0px 0px #6b54d3;
-      top: 4px;
-    }
-    #box4 {
-      margin-right: 0;
-    }
-    
-    #timeremaining {
-      color: red;
-      padding: 10px;
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      border-radius: 5px;
-      display: none;
-    }
-    #gameOver {
-      height: 200px;
-      width: 500px;
-      background: black;
-      color: white;
-      font-size: 2.3em;
-      text-align: center;
-      text-transform: uppercase;
-      position: absolute;
-      top: 100px;
-      left: 100px;
-      z-index: 2;
-      display: none;
-    }
+.box:hover,
+#startreset:hover {
+  background-color: #4c3ca0;
+  color: black;
+  box-shadow: 0px 4px #3a19cd;
+}
+.box:active,
+#startreset:active {
+  box-shadow: 0px 0px #6b54d3;
+  top: 4px;
+}
+#box4 {
+  margin-right: 0;
+}
+
+#timeremaining {
+  color: red;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 5px;
+  display: none;
+}
+#gameOver {
+  height: 200px;
+  width: 500px;
+  background: black;
+  color: white;
+  font-size: 2.3em;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  z-index: 2;
+  display: none;
+}
 /*}*/
 
-  /* Tablets */
+/* Tablets */
 @media (min-width: 481px) and (max-width: 1124px) {
   header {
     top: 0;
@@ -303,103 +292,103 @@ a {
     background-image: url("../images/back.png");
     background-size: contain;
   }
-  
+
   .openMen {
-      left: 2vw;
-      bottom: 1.8vw;
-      position: absolute;
-      width: 3.2vw;
-      height: 3.2vw;
-      border-radius: 20%;
-      border-color: rgb(197, 156, 234);
-      background-color: white;
-      background-image: url("../images/menuClose.webp");
-      background-size: contain;
+    left: 2vw;
+    bottom: 1.8vw;
+    position: absolute;
+    width: 3.2vw;
+    height: 3.2vw;
+    border-radius: 20%;
+    border-color: rgb(197, 156, 234);
+    background-color: white;
+    background-image: url("../images/menuClose.webp");
+    background-size: contain;
   }
-  
+
   .openMen:hover {
-      background-color: rgb(193, 175, 175);
+    background-color: rgb(193, 175, 175);
   }
-  
+
   .logo {
-      position: absolute;
-      width: 7vw;
-      height: 7vw;
-      left: 6%;
-      bottom: -0.3vw;
+    position: absolute;
+    width: 7vw;
+    height: 7vw;
+    left: 6%;
+    bottom: -0.3vw;
   }
-  
+
   .title {
     position: absolute;
     color: white;
     left: 12.5%;
     font-size: 4vw;
     bottom: -0vw;
-    font-family: 'titleFont';
+    font-family: "titleFont";
   }
-  
+
   .icons {
-      margin: 0;
-      position: absolute;
-      right: 3vw;
-      bottom: 1vw;
+    margin: 0;
+    position: absolute;
+    right: 3vw;
+    bottom: 1vw;
   }
-  
+
   .profileButton {
-      width: 4.5vw;
-      height: 4.5vw;
-      border-radius: 20%;
-      border-color: rgb(197, 156, 234);
-      background-color: white;
-      background-image: url("../images/profile.png");
-      background-size: contain;
+    width: 4.5vw;
+    height: 4.5vw;
+    border-radius: 20%;
+    border-color: rgb(197, 156, 234);
+    background-color: white;
+    background-image: url("../images/profile.png");
+    background-size: contain;
   }
-  
+
   .profileButton:hover {
-      background-color: rgb(226, 196, 226);
+    background-color: rgb(226, 196, 226);
   }
-  
+
   .logout {
-      width: 4.5vw;
-      height: 4.5vw;
-      border-radius: 60%;
-      border-color: rgb(140, 158, 229);
-      background-color: white;
-      background-image: url("../images/logout.png");
-      background-size: contain;
+    width: 4.5vw;
+    height: 4.5vw;
+    border-radius: 60%;
+    border-color: rgb(140, 158, 229);
+    background-color: white;
+    background-image: url("../images/logout.png");
+    background-size: contain;
   }
-  
+
   .logout:hover {
-      background-color: rgb(4, 0, 4);
+    background-color: rgb(4, 0, 4);
   }
-  
+
   .fav {
-      width: 4.5vw;
-      height: 4.5vw;
-      border-radius: 50%;
-      border-color: rgb(156, 132, 220);
-      background-image: url("../images/favourite.png");
-      background-size: contain;
+    width: 4.5vw;
+    height: 4.5vw;
+    border-radius: 50%;
+    border-color: rgb(156, 132, 220);
+    background-image: url("../images/favourite.png");
+    background-size: contain;
   }
-  
+
   .fav:hover {
-      background-color: rgb(156, 132, 220);
+    background-color: rgb(156, 132, 220);
   }
-  
+
   .ranks {
-      width: 4.5vw;
-      height: 4.5vw;
-      border-radius: 60%;
-      border-color: rgb(118, 125, 207);
-      background-color: white;
-      background-image: url("../images/ranks.png");
-      background-size: contain;
+    width: 4.5vw;
+    height: 4.5vw;
+    border-radius: 60%;
+    border-color: rgb(118, 125, 207);
+    background-color: white;
+    background-image: url("../images/ranks.png");
+    background-size: contain;
   }
-  
+
   .ranks:hover {
-      background-color: rgb(194, 192, 244);
+    background-color: rgb(194, 192, 244);
   }
-  
+
   /*
   Game
   */
@@ -416,7 +405,7 @@ a {
     height: 300px;
     font-size: 80px;
   }
-  #question img{
+  #question img {
     width: 130px;
     height: 150px;
   }
@@ -440,17 +429,16 @@ a {
     padding: 15px;
     font-size: 16px;
   }
-
 }
 
 /* Smartphones */
 @media (min-width: 320px) and (max-width: 690px) {
   header {
-      background-color: var(--mainColor);
-      border-bottom: 1px solid black;
-      height: 10vw;
-      width: 100%;
-      position: fixed;
+    background-color: var(--mainColor);
+    border-bottom: 1px solid black;
+    height: 10vw;
+    width: 100%;
+    position: fixed;
   }
 
   .backButton {
@@ -465,103 +453,102 @@ a {
     background-image: url("../images/back.png");
     background-size: contain;
   }
-  
+
   .openMen {
-      left: 2vw;
-      bottom: 2.3vw;
-      position: absolute;
-      width: 5.2vw;
-      height: 5.2vw;
-      border-radius: 20%;
-      border-color: rgb(197, 156, 234);
-      background-color: white;
-      background-image: url("../images/menuClose.webp");
-      background-size: contain;
-  }
-  
-  .openMen:hover {
-      background-color: rgb(193, 175, 175);
-  }
-  
-  .logo {
-      position: absolute;
-      width: 10vw;
-      height: 10vw;
-      left: 8%;
-      bottom: -0.2vw;
-  }
-  
-  .title {
-      position: absolute;
-      color: white;
-      left: 16.5%;
-      font-size: 4vw;
-      bottom: -0vw;
-      font-family: 'titleFont';
-  }
-  
-  .icons {
-      margin: 0;
-      position: absolute;
-      right: 2vw;
-      bottom: 1vw;
-  }
-  
-  .profileButton {
-      width: 6vw;
-      height: 6vw;
-      border-radius: 20%;
-      border-color: rgb(197, 156, 234);
-      background-color: white;
-      background-image: url("../images/profile.png");
-      background-size: contain;
-  }
-  
-  .profileButton:hover {
-      background-color: rgb(226, 196, 226);
-  }
-  
-  .logout {
-      width: 6.3vw;
-      height: 6.3vw;
-      border-radius: 60%;
-      border-color: rgb(140, 158, 229);
-      background-color: white;
-      background-image: url("../images/logout.png");
-      background-size: contain;
-  }
-  
-  .logout:hover {
-      background-color: rgb(4, 0, 4);
-  }
-  
-  .fav {
-      width: 6.2vw;
-      height: 6.2vw;
-      border-radius: 50%;
-      border-color: rgb(156, 132, 220);
-      background-image: url("../images/favourite.png");
-      background-size: contain;
-  }
-  
-  .fav:hover {
-      background-color: rgb(156, 132, 220);
-  }
-  
-  .ranks {
-      width: 6.3vw;
-      height: 6.3vw;
-      border-radius: 60%;
-      border-color: rgb(118, 125, 207);
-      background-color: white;
-      background-image: url("../images/ranks.png");
-      background-size: contain;
-  }
-  
-  .ranks:hover {
-      background-color: rgb(194, 192, 244);
+    left: 2vw;
+    bottom: 2.3vw;
+    position: absolute;
+    width: 5.2vw;
+    height: 5.2vw;
+    border-radius: 20%;
+    border-color: rgb(197, 156, 234);
+    background-color: white;
+    background-image: url("../images/menuClose.webp");
+    background-size: contain;
   }
 
+  .openMen:hover {
+    background-color: rgb(193, 175, 175);
+  }
+
+  .logo {
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    left: 8%;
+    bottom: -0.2vw;
+  }
+
+  .title {
+    position: absolute;
+    color: white;
+    left: 16.5%;
+    font-size: 4vw;
+    bottom: -0vw;
+    font-family: "titleFont";
+  }
+
+  .icons {
+    margin: 0;
+    position: absolute;
+    right: 2vw;
+    bottom: 1vw;
+  }
+
+  .profileButton {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 20%;
+    border-color: rgb(197, 156, 234);
+    background-color: white;
+    background-image: url("../images/profile.png");
+    background-size: contain;
+  }
+
+  .profileButton:hover {
+    background-color: rgb(226, 196, 226);
+  }
+
+  .logout {
+    width: 6.3vw;
+    height: 6.3vw;
+    border-radius: 60%;
+    border-color: rgb(140, 158, 229);
+    background-color: white;
+    background-image: url("../images/logout.png");
+    background-size: contain;
+  }
+
+  .logout:hover {
+    background-color: rgb(4, 0, 4);
+  }
+
+  .fav {
+    width: 6.2vw;
+    height: 6.2vw;
+    border-radius: 50%;
+    border-color: rgb(156, 132, 220);
+    background-image: url("../images/favourite.png");
+    background-size: contain;
+  }
+
+  .fav:hover {
+    background-color: rgb(156, 132, 220);
+  }
+
+  .ranks {
+    width: 6.3vw;
+    height: 6.3vw;
+    border-radius: 60%;
+    border-color: rgb(118, 125, 207);
+    background-color: white;
+    background-image: url("../images/ranks.png");
+    background-size: contain;
+  }
+
+  .ranks:hover {
+    background-color: rgb(194, 192, 244);
+  }
 
   /*
       GAME
@@ -581,7 +568,7 @@ a {
     font-size: 60px;
   }
 
-  #question img{
+  #question img {
     width: 50;
     height: 50px;
   }

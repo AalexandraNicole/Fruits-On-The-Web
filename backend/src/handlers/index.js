@@ -11,6 +11,7 @@ const contactHandler = require("./contact");
 const usersHandler = require("./user");
 const adminHandler = require("./admin")
 const usersDeleteHandler = require("./user-delete")
+const getRandomMathChallengeHandler = require("./get-random-math-challenge")
 
 
 module.exports = {
@@ -27,4 +28,5 @@ module.exports = {
   usersHandler,
   adminHandler,
   usersDeleteHandler,
+  getRandomMathChallengeHandler,
 };
