@@ -60,7 +60,7 @@ contact = (event, form) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message }),
   };
-  fetch("http://localhost:3000/contact", requestOptions)
+  fetch("http://localhost:3001/contact", requestOptions)
     .then((response) => {
       if (response.redirected) {
         window.location.href = response.url;

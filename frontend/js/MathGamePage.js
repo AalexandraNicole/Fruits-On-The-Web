@@ -282,7 +282,7 @@ logout = (event) => {
     method: "POST",
     headers: { "Content-Type": "application/json" },
   };
-  fetch("http://localhost:3000/logout", requestOptions)
+  fetch("http://localhost:3001/logout", requestOptions)
     .then((response) => {
       if (response.redirected) {
         window.location.href = response.url;
