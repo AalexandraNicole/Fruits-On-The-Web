@@ -9,13 +9,11 @@ async function profileHandler(req, res, services, query) {
     res.end();
     return;
   }
-  console.log("EMAIL: ", query.email);
   const email = query.email;
 
   try {
     const decodedToken = jwt.verify(email, SECRET_KEY);
     const userEmail = decodedToken.email;
-    console.log("User Email: " + userEmail);
     const user = await db.collection("users").findOne({ email: userEmail });
 
     if (!user) {

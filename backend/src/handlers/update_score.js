@@ -33,7 +33,7 @@ async function updateScoreHandler(req, res, services) {
         { email: userEmail },
         { $set: { score: newScore } }
         );
-        cpnsole.log("Updated score: ", newScore);
+        console.log("Updated score: ", newScore);
         if (updated.modifiedCount > 0) {
             res.writeHead(200, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
             res.end(JSON.stringify({ success: true, newScore }));

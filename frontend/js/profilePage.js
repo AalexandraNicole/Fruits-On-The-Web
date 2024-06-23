@@ -63,10 +63,6 @@ function hideRanks() {
   rankBox.style.visibility = "hidden";
 }
 
-function showEditProfile() {
-  editProfile.style.visibility = "visible";
-}
-
 function showEditPass() {
   resetPass.style.visibility = "visible";
 }

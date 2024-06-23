@@ -18,14 +18,17 @@ function fetchProfile(){
       if (score == null){
         score = 0;
       }
-      const adminStatus = profileData.adminStatus;
+
+      let adminStatus =  "User";
+      if (profileData.adminStatus === "true"){
+        adminStatus = "Admin";
+      }
       // Populate profile data in the HTML
       document.querySelector("#usernamebig").textContent = username;
       document.querySelector("#username").textContent = username;
       document.querySelector("#email").textContent = profileData.email;
       document.querySelector("#scorebig").textContent = score;
-      document.querySelector("#score").textContent = score;
-      document.querySelector("#adminStatus").textContent = adminStatus ? "Admin" : "User";
+      document.querySelector("#adminStatus").textContent = adminStatus;
     })
     .catch((error) => console.error("Error-fetchProfile:", error));
 };

@@ -417,29 +417,16 @@ a {
     border-radius: 10px;
   }
 
-  #name {
+  #username {
     display: flex;
     justify-content: start;
     align-items: center;
     padding-left: 0.5vw;
     height: 3.5vw;
-    background-color: #3b089b;
+    background-color: #a884ea;
     border-radius: 5px;
     color: white;
     font-size: 1.5vw;
-  }
-
-  #password {
-    font-size: 1.2vw;
-    font-family: cursive;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding-left: 0.5vw;
-    height: 3.5vw;
-    background-color: #3b089b;
-    border-radius: 5px;
-    color: white;
   }
 
   #email {
@@ -450,7 +437,7 @@ a {
     align-items: center;
     padding-left: 0.5vw;
     height: 3.5vw;
-    background-color: #3b089b;
+    background-color: #a884ea;
     border-radius: 5px;
     color: white;
   }
@@ -955,40 +942,27 @@ a {
     border-radius: 10px;
   }
 
-  #name {
+  #username {
     display: flex;
     justify-content: start;
     align-items: center;
     padding-left: 0.5vw;
     height: 6vw;
-    background-color: #3b089b;
+    background-color: #a884ea;
     border-radius: 5px;
     color: white;
     font-size: 3.5vw;
   }
 
-  #password {
-    font-size: 2.2vw;
-    font-family: cursive;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding-left: 0.5vw;
-    height: 6vw;
-    background-color: #3b089b;
-    border-radius: 5px;
-    color: white;
-  }
-
   #email {
-    font-size: 3vw;
+    font-size: 2vw;
     font-family: fantasy;
     display: flex;
     justify-content: start;
     align-items: center;
     padding-left: 0.5vw;
     height: 6vw;
-    background-color: #3b089b;
+    background-color: #a884ea;
     border-radius: 5px;
     color: white;
   }
@@ -1492,29 +1466,18 @@ a {
     border-radius: 10px;
   }
 
-  #name {
+  #username {
     display: flex;
     justify-content: start;
     align-items: center;
     padding-left: 1vw;
+    padding-right: 1vw;
     height: 10vw;
-    background-color: #3b089b;
+    width: fit-content;
+    background-color: #a884ea;
     border-radius: 5px;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 4.5vw;
-  }
-
-  #password {
-    font-size: 3vw;
-    font-family: cursive;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding-left: 1vw;
-    height: 10vw;
-    background-color: #3b089b;
-    border-radius: 5px;
-    color: white;
   }
 
   #email {
@@ -1525,7 +1488,7 @@ a {
     align-items: center;
     padding-left: 1vw;
     height: 10vw;
-    background-color: #3b089b;
+    background-color: #a884ea;
     border-radius: 5px;
     color: white;
   }

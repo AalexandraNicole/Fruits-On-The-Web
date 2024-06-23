@@ -14,7 +14,6 @@ async function adminHandler(req, res, services, query){
     try {
         const decodedToken = jwt.verify(email, SECRET_KEY);
         const userEmail = decodedToken.email;
-        console.log("User Email: " + userEmail);
         const user = await db.collection("users").findOne({ email: userEmail });
 
         if (!user) {
@@ -24,7 +23,6 @@ async function adminHandler(req, res, services, query){
         }
 
         const status = { status: user.adminStatus};
-        console.log("STATUS: ", status);
         res.writeHead(200, {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
