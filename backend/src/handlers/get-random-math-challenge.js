@@ -1,4 +1,4 @@
-const { getRandomInt, obfuscateName, shuffleArray } = require("../utils/utils");
+const {getRandomInt}  = require("../utils/utils");
 
 async function getRandomMathChallengeHandler(_, res, services, query) {
   const db = services.get("mongodb")?.db;
@@ -47,8 +47,10 @@ async function getRandomMathChallengeHandler(_, res, services, query) {
             images: fruitImages2,
         },
         operation,
-        challengeId: `${fruit1._id}-${operation}-${fruit2._id}`, // A simple identifier for the challenge
+        challengeId: `${fruit1._id}-${operation}-${fruit2._id}`, 
     };
+
+    console.log("Generated challenge:", challenge);
 
     res.writeHead(200, {
         'Content-Type': 'application/json',

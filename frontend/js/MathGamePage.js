@@ -81,9 +81,12 @@ let correctAnswer;
 let challengeId;
 
 document.getElementById("startreset").onclick = function () {
+  console.log("Start/Reset button clicked");
   if (playing === true) {
+    console.log("Reloading the game");
     location.reload();
   } else {
+    console.log("Starting the game");
     playing = true;
     score = 0;
 
@@ -128,6 +131,7 @@ for (let i = 1; i < 5; i++) {
 }
 
 function startCountdown() {
+  console.log("Starting countdown");
   action = setInterval(function () {
     timeremaining -= 1;
     document.getElementById("timeremainingvalue").innerHTML = timeremaining;
@@ -162,23 +166,23 @@ function show(Id) {
 function generateQA() {
   console.log("GENERATE QA")
   return fetch("http://localhost:3001/random_math_challenge")
-    .then(response => response.json())
+    .then(response => {
+      console.log("Response received from server:", response);
+      return response.json();
+    })
     .then(data => {
+      if (!data || !data.fruit1 || !data.fruit2) {
+        throw new Error("No data received from server");
+      }
+      console.log("Data received:", data);
       const { fruit1, fruit2, operation, challengeId: id } = data;
+      
       correctAnswer = eval(`${fruit1._id} ${operation} ${fruit2._id}`);
       challengeId = id;
       var element = document.getElementById("question");
-      if (fruit1._id == 0) {
-        element.innerHTML =
-          `<img src='../images/zero.jpg' alt='Fruit Image'> + ${fruit2.images}`;
-      } else if (fruit2._id == 0) {
-        element.innerHTML =
-          `${fruit1.images} + <img src='../images/zero.jpg' alt='Fruit Image'>`;
-      } else {
-        console.log(fruit1.images);
-        element.innerHTML =
-          `${fruit1.images} + ${fruit2.images}`;
-      }
+
+      console.log(fruit1.images);
+      element.innerHTML = `${fruit1.images} + ${fruit2.images}`;        
 
       const correctPosition = 1 + Math.round(3 * Math.random());
       document.getElementById("box" + correctPosition).innerHTML = correctAnswer;
@@ -188,7 +192,7 @@ function generateQA() {
         if (i !== correctPosition) {
           let wrongAnswer;
           do {
-            wrongAnswer = getRandomInt(1, 3);
+            wrongAnswer = getRandomInt(1, 10);
           } while (answers.includes(wrongAnswer));
           document.getElementById("box" + i).innerHTML = wrongAnswer;
           answers.push(wrongAnswer);
