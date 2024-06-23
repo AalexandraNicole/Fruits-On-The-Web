@@ -83,7 +83,6 @@ let challengeId;
 document.getElementById("startreset").onclick = function () {
   console.log("Start/Reset button clicked");
   if (playing === true) {
-    console.log("Reloading the game");
     location.reload();
   } else {
     console.log("Starting the game");
@@ -125,13 +124,32 @@ for (let i = 1; i < 5; i++) {
         setTimeout(function () {
           hide("wrong");
         }, 500);
+        generateQA();
       }
     }
   };
 }
 
+function fetchScore(score){
+  const token = localStorage.getItem("token");
+  console.log("UPDATE SCORE FOR: ", token);
+  const requestOptions = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ score, token }),
+  };
+  fetch("http://localhost:3001/update_score", requestOptions)
+    .then((response) => response.json())
+    .then((data) => {
+      if(data){
+        console.log("SCORE UPDATED");
+      }
+    })
+    .catch((error) => console.error("Error:", error));
+}
+
+
 function startCountdown() {
-  console.log("Starting countdown");
   action = setInterval(function () {
     timeremaining -= 1;
     document.getElementById("timeremainingvalue").innerHTML = timeremaining;
@@ -145,6 +163,7 @@ function startCountdown() {
       hide("correct");
       hide("wrong");
       playing = false;
+      fetchScore(score);
 
       document.getElementById("startreset").innerHTML = "Start Game";
     }
@@ -164,24 +183,20 @@ function show(Id) {
 }
 
 function generateQA() {
-  console.log("GENERATE QA")
   return fetch("http://localhost:3001/random_math_challenge")
     .then(response => {
-      console.log("Response received from server:", response);
       return response.json();
     })
     .then(data => {
       if (!data || !data.fruit1 || !data.fruit2) {
         throw new Error("No data received from server");
       }
-      console.log("Data received:", data);
       const { fruit1, fruit2, operation, challengeId: id } = data;
-      
+
       correctAnswer = eval(`${fruit1._id} ${operation} ${fruit2._id}`);
       challengeId = id;
       var element = document.getElementById("question");
 
-      console.log(fruit1.images);
       element.innerHTML = `${fruit1.images} + ${fruit2.images}`;        
 
       const correctPosition = 1 + Math.round(3 * Math.random());

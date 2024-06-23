@@ -23,6 +23,16 @@ const routes = [
   },
   {
     method: "POST",
+    url: "/update_score",
+    handler: handlers.updateScoreHandler,
+  },
+  {
+    method: "OPTIONS",
+    url: "/update_score",
+    handler: handlers.optionsHandler,
+  },
+  {
+    method: "POST",
     url: "/register",
     handler: handlers.registerHandler,
   },

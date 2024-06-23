@@ -9,9 +9,10 @@ const logoutHandler = require("./logout");
 const profileHandler = require("./profile");
 const contactHandler = require("./contact");
 const usersHandler = require("./user");
-const adminHandler = require("./admin")
-const usersDeleteHandler = require("./user-delete")
-const getRandomMathChallengeHandler = require("./get-random-math-challenge")
+const adminHandler = require("./admin");
+const usersDeleteHandler = require("./user-delete");
+const getRandomMathChallengeHandler = require("./get-random-math-challenge");
+const updateScoreHandler = require("./update_score");
 
 
 module.exports = {
@@ -29,4 +30,5 @@ module.exports = {
   adminHandler,
   usersDeleteHandler,
   getRandomMathChallengeHandler,
+  updateScoreHandler,
 };
