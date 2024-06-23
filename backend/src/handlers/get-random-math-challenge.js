@@ -31,7 +31,6 @@ async function getRandomMathChallengeHandler(_, res, services, query) {
         for (let i = 0; i < num; i++) {
             images += `<img src='${fruit.image}' alt='Fruit Image'> `;
         }
-        console.log("IMAGES: ", images);
         return images;
     };
     const fruitImages1 = generateFruitImages(fruit1, num1);
@@ -50,7 +49,6 @@ async function getRandomMathChallengeHandler(_, res, services, query) {
         challengeId: `${fruit1._id}-${operation}-${fruit2._id}`, 
     };
 
-    console.log("Generated challenge:", challenge);
 
     res.writeHead(200, {
         'Content-Type': 'application/json',

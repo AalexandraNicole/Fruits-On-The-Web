@@ -18,7 +18,7 @@ async function updateScoreHandler(req, res, services) {
     const token  = body.token;
     try{
         const decodedToken = jwt.verify(token, SECRET_KEY);
-        const userEmail = decodedToken.token;
+        const userEmail = decodedToken.email;
         const user = await db.collection('users').findOne({ email: userEmail });
 
         if (!user) {
@@ -30,10 +30,10 @@ async function updateScoreHandler(req, res, services) {
         const newScore = user.score + score;
 
         const updated = await db.collection('users').updateOne(
-        { token },
+        { email: userEmail },
         { $set: { score: newScore } }
         );
-
+        cpnsole.log("Updated score: ", newScore);
         if (updated.modifiedCount > 0) {
             res.writeHead(200, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
             res.end(JSON.stringify({ success: true, newScore }));

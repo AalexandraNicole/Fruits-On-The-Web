@@ -13,6 +13,7 @@ const adminHandler = require("./admin");
 const usersDeleteHandler = require("./user-delete");
 const getRandomMathChallengeHandler = require("./get-random-math-challenge");
 const updateScoreHandler = require("./update_score");
+const authorizationHandler = require("./authorization");
 
 
 module.exports = {
@@ -31,4 +32,5 @@ module.exports = {
   usersDeleteHandler,
   getRandomMathChallengeHandler,
   updateScoreHandler,
+  authorizationHandler,
 };

@@ -33,6 +33,16 @@ const routes = [
   },
   {
     method: "POST",
+    url: "/authorization",
+    handler: handlers.authorizationHandler,
+  },
+  {
+    method: "OPTIONS",
+    url: "/authorization",
+    handler: handlers.optionsHandler,
+  },
+  {
+    method: "POST",
     url: "/register",
     handler: handlers.registerHandler,
   },

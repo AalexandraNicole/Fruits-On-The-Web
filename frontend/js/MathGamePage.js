@@ -91,7 +91,7 @@ document.getElementById("startreset").onclick = function () {
 
     document.getElementById("scorevalue").innerHTML = score;
     show("timeremaining");
-    timeremaining = 60;
+    timeremaining = 10;
     document.getElementById("timeremainingvalue").innerHTML = timeremaining;
 
     show("choices");
@@ -142,7 +142,7 @@ function fetchScore(score){
     .then((response) => response.json())
     .then((data) => {
       if(data){
-        console.log("SCORE UPDATED");
+        console.log("Score updated status: ", data.success, " SCORE: ", data.newScore);
       }
     })
     .catch((error) => console.error("Error:", error));
