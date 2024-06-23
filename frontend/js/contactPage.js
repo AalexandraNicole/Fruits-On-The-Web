@@ -28,12 +28,12 @@ function showMenuButtons() {
   });
 
   nameYear.style.visibility = "visible";
-  contact.style.visibility = "visible";
   about.style.visibility = "visible";
   admin.style.visibility = "visible";
   infoP.style.visibility = "visible";
   privacy.style.visibility = "visible";
   terms.style.visibility = "visible";
+  contact.style.visibility = "visible";
 
   menuBar.scroll = 0;
 }
@@ -44,15 +44,15 @@ function hideMenuButtons() {
   });
 
   nameYear.style.visibility = "hidden";
-  contact.style.visibility = "hidden";
   about.style.visibility = "hidden";
   admin.style.visibility = "hidden";
   infoP.style.visibility = "hidden";
   privacy.style.visibility = "hidden";
   terms.style.visibility = "hidden";
+  contact.style.visibility = "hidden";
 }
 
-contact = (event, form) => {
+contactSend = (event, form) => {
   event.preventDefault();
   const message = form.message.value;
   const requestOptions = {
