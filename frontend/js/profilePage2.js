@@ -59,29 +59,35 @@ document.getElementById('editFormPassword').addEventListener('submit', function(
     return;
   }
 
-  const requestOptions = {
-    method: 'POST',
-    headers: { 
-      'Content-Type': 'application/json',
-      ...getAuthorizationHeader(),
-    },
-    body: JSON.stringify({ newPass, token })
-  };
+  const text = "Are you sure you want change your password?";
+  if (confirm(text)) {
+    const requestOptions = {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json',
+        ...getAuthorizationHeader(),
+      },
+      body: JSON.stringify({ newPass, token })
+    };
 
-  fetch('http://localhost:3001/update_password', requestOptions)
-    .then(response => response.json())
-    .then(data => {
-      if (data.success) {
-        alert("Passwords updated!");
-        console.log("Password updated successfully: ", data.pass);
-        window.location.href = "profilePage.html";
-      } else {
-        console.error("Error updating password:", data.error);
+    fetch('http://localhost:3001/update_password', requestOptions)
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          console.log("Password updated successfully: ", data.pass);
+          window.location.href = "profilePage.html";
+        } else {
+          console.error("Error updating password:", data.error);
+          alert("Error updating password");
+        }
+      })
+      .catch(error => {
+        console.error("Error:", error);
         alert("Error updating password");
-      }
-    })
-    .catch(error => {
-      console.error("Error:", error);
-      alert("Error updating password");
-    });
+      });
+  }else {
+    console.log("Password updated cancel!");
+    window.location.href = "profilePage.html";
+  }
+  
 });

@@ -1,4 +1,5 @@
 const { getBody } = require("../utils/utils");
+const bcrypt = require("bcrypt");
 
 async function updatePasswordHandler(req, res, services) {
   const body = await getBody(req);
@@ -24,10 +25,10 @@ async function updatePasswordHandler(req, res, services) {
       res.end(JSON.stringify({ error: "User not found" }));
       return;
     }
-
+    const hashedPassword = await bcrypt.hash(pass, 10);
     const updated = await db
       .collection("users")
-      .updateOne({ email: userEmail }, { $set: { password: pass } });
+      .updateOne({ email: userEmail }, { $set: { password: hashedPassword } });
     console.log("Updated pass: ", pass);
     if (updated.modifiedCount > 0) {
       res.writeHead(200, {

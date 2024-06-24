@@ -40,6 +40,7 @@ async function loginHandler(req, res, services, query) {
   const result = await authenticate(email, password, db);
 
   if (result.success) {
+    const success = result.success;
     console.log("User authenticated successfully:", email);
     const token = jwt.sign({email}, SECRET_KEY, {expiresIn: '1h'}) ;
 
@@ -48,11 +49,19 @@ async function loginHandler(req, res, services, query) {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Credentials": "true",
     });
-    res.end(JSON.stringify({ token }));
-  } else {
-    req.session.isAuthenticated = false;
-    res.writeHead(401, { "Content-Type": "text/plain" });
-    res.end(result.message);
+    res.end(JSON.stringify({ token, success }));
+  } else if (!result.success) {
+      const success = result.success;
+      const token = result.message;
+      res.writeHead(200, {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Credentials": "true",
+      });
+      res.end(JSON.stringify({ token, success }));
+    } else {
+      res.writeHead(401, { "Content-Type": "text/plain" });
+      res.end(result.message);
   }
 }
 
