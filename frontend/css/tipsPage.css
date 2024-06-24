@@ -321,7 +321,7 @@ a {
         height: 30vw;
         top: 5vw;
         right: 1vw;
-        font-size: 2vw;
+        font-size: 1.5vw;
         display: flex;
         justify-content: space-around;
     }
@@ -701,7 +701,7 @@ a {
         height: 40vw;
         top: 7vw;
         right: 2vw;
-        font-size: 3vw;
+        font-size: 2vw;
         display: flex;
         justify-content: space-around;
     }
@@ -1081,7 +1081,7 @@ a {
         height: 55vw;
         top: 10vw;
         right: 1vw;
-        font-size: 5vw;
+        font-size: 2.5vw;
         display: flex;
         justify-content: space-around;
     }
