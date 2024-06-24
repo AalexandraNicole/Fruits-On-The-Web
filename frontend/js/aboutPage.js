@@ -52,11 +52,6 @@ function hideMenuButtons() {
   terms.style.visibility = "hidden";
 }
 
-function getAuthorizationHeader() {
-  const token = localStorage.getItem("token");
-  return { Authorization: `Bearer ${token}` };
-}
-
 logout = () => {
   localStorage.removeItem("token");
   window.location.href =

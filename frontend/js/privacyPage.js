@@ -10,11 +10,6 @@ let terms = document.querySelector(".terms");
 let privacy = document.querySelector(".privacy");
 let trigger = 1;
 
-function getAuthorizationHeader() {
-  const token = localStorage.getItem("token");
-  return { Authorization: `Bearer ${token}` };
-}
-
 function showMenu() {
   if (trigger === 1) {
     menuButton.style.backgroundImage = "url('../images/menuOpen.png')";
