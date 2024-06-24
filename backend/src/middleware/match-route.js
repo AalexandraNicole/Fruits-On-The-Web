@@ -1,8 +1,19 @@
 const url = require("url");
 
-function routeNotFound(res) {
-  res.writeHead(404, { "Content-Type": "text/plain" });
+function notFound(res) {
+  res.writeHead(404, {
+    "Content-Type": "text/plain",
+    "Access-Control-Allow-Origin": "*",
+  });
   res.end("Not Found");
+}
+
+function unauthorized(res) {
+  res.writeHead(401, {
+    "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*",
+  });
+  res.end();
 }
 
 function parseUrl(reqUrl) {
@@ -19,9 +30,18 @@ async function matchRoute(req, res, routes, services) {
     (route) => route.method === req.method && route.url === pathname
   );
   if (route) {
-    route.handler(req, res, services, query);
+    if (route.protected) {
+      const authenticated = req.user;
+      if (authenticated) {
+        route.handler(req, res, services, query);
+      } else {
+        unauthorized(res);
+      }
+    } else {
+      route.handler(req, res, services, query);
+    }
   } else {
-    routeNotFound(res);
+    notFound(res);
   }
 }
 

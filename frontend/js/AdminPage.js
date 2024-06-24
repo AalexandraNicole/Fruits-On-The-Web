@@ -1,18 +1,32 @@
+function getAuthorizationHeader() {
+  const token = localStorage.getItem("token");
+  return { Authorization: `Bearer ${token}` };
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const token = localStorage.getItem("token");
   const forFetch = "http://localhost:3001/admin?email=" + token;
-  return fetch(forFetch)
+  return fetch(forFetch, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthorizationHeader(),
+    },
+  })
     .then((response) => {
-      if (!response.ok) {
-        throw new Error("Failed to looad data for verification");
+      if (response.status === 200) {
+        return response.json();
+      } else if (response.status === 401) {
+        window.location.href = "loginPage.html";
+      } else {
+        throw new Error("Failed to load data for verification");
       }
-      return response.json();
     })
     .then((status) => {
       if (status.status !== "true") {
-        console.log("UPS YOU ARE NOT ADMIN ", status.status)
+        console.log("UPS YOU ARE NOT ADMIN ", status.status);
         window.location.href = "loginpage.html";
-      }else{
+      } else {
         fetchUsers();
       }
     })
@@ -20,17 +34,31 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function fetchUsers() {
-  return fetch('http://localhost:3001/users')
-  .then(response => response.json())
-  .then(data => {
-    const usersContainer = document.getElementById('usersContainer');
-    usersContainer.innerHTML = ''; // Clear any existing content
+  return fetch("http://localhost:3001/users", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthorizationHeader(),
+    },
+  })
+    .then((response) => {
+      if (response.status === 200) {
+        return response.json();
+      } else if (response.status === 401) {
+        window.location.href = "loginPage.html";
+      } else {
+        throw new Error("Failed to load data for verification");
+      }
+    })
+    .then((data) => {
+      const usersContainer = document.getElementById("usersContainer");
+      usersContainer.innerHTML = ""; // Clear any existing content
 
-    data.users.forEach(user => {
-      const userElement = document.createElement('div');
-      userElement.classList.add('playerBox');
+      data.users.forEach((user) => {
+        const userElement = document.createElement("div");
+        userElement.classList.add("playerBox");
 
-      userElement.innerHTML = `
+        userElement.innerHTML = `
       <span class="playerName">
       <i class="bx bxs-user"></i>
       ${user.username}
@@ -40,25 +68,39 @@ function fetchUsers() {
       <button class="banButton">Ban</button>
       `;
 
-      usersContainer.appendChild(userElement);
-    });
-  })
-  .catch(error => console.error('Error fetching users:', error));
+        usersContainer.appendChild(userElement);
+      });
+    })
+    .catch((error) => console.error("Error fetching users:", error));
 }
 
-function deleteUser(user_id){
+function deleteUser(user_id) {
   console.log("Deleting user: ", user_id);
   const forFetch = "http://localhost:3001/user_delete?id=" + user_id;
-  return fetch(forFetch)
-  .then(response => response.json())
-  .then(data => {
-    if(data.success){
-      fetchUsers();
-    }else{
-      console.error('Error deleting user: ', data.error);
-    }
+  return fetch(forFetch, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthorizationHeader(),
+    },
   })
-  .catch(error => console.error('Error deleting user:', error));
+    .then((response) => {
+      if (response.status === 200) {
+        return response.json();
+      } else if (response.status === 401) {
+        window.location.href = "loginPage.html";
+      } else {
+        throw new Error("Failed to load data for verification");
+      }
+    })
+    .then((data) => {
+      if (data.success) {
+        fetchUsers();
+      } else {
+        console.error("Error deleting user: ", data.error);
+      }
+    })
+    .catch((error) => console.error("Error deleting user:", error));
 }
 const searchInput = document.getElementById("searchInput");
 
@@ -79,17 +121,8 @@ searchInput.addEventListener("input", function () {
   });
 });
 
-logout = (event) => {
-  event.preventDefault();
-  const requestOptions = {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-  };
-  fetch("http://localhost:3001/logout", requestOptions)
-    .then((response) => {
-      if (response.redirected) {
-        window.location.href = response.url;
-      }
-    })
-    .catch((error) => console.error("Error:", error));
+logout = () => {
+  localStorage.removeItem("token");
+  window.location.href =
+    "http://127.0.0.1:5501/frontend/html/MainUnloggedPage.html";
 };

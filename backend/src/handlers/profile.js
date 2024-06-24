@@ -1,7 +1,4 @@
-const jwt = require("jsonwebtoken");
-const SECRET_KEY = "mySecretKey";
-
-async function profileHandler(req, res, services, query) {
+async function profileHandler(req, res, services) {
   const db = services.get("mongodb")?.db;
   if (!db) {
     console.log("No db connection");
@@ -9,11 +6,8 @@ async function profileHandler(req, res, services, query) {
     res.end();
     return;
   }
-  const email = query.email;
-
   try {
-    const decodedToken = jwt.verify(email, SECRET_KEY);
-    const userEmail = decodedToken.email;
+    const userEmail = req.user.email;
     const user = await db.collection("users").findOne({ email: userEmail });
 
     if (!user) {

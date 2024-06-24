@@ -13,6 +13,11 @@ let terms = document.querySelector(".terms");
 let privacy = document.querySelector(".privacy");
 let trigger = 1;
 
+function getAuthorizationHeader() {
+  const token = localStorage.getItem("token");
+  return { Authorization: `Bearer ${token}` };
+}
+
 function showMenu() {
   if (trigger === 1) {
     menuButton.style.backgroundImage = "url('../images/menuOpen.png')";
@@ -130,24 +135,39 @@ for (let i = 1; i < 5; i++) {
   };
 }
 
-function fetchScore(score){
+function fetchScore(score) {
   const token = localStorage.getItem("token");
   console.log("UPDATE SCORE FOR: ", token);
   const requestOptions = {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthorizationHeader(),
+    },
     body: JSON.stringify({ score, token }),
   };
   fetch("http://localhost:3001/update_score", requestOptions)
-    .then((response) => response.json())
+    .then((response) => {
+      if (response.status === 200) {
+        return response.json();
+      } else if (response.status === 401) {
+        window.location.href = "loginPage.html";
+      } else {
+        throw new Error("Failed to load data for verification");
+      }
+    })
     .then((data) => {
-      if(data){
-        console.log("Score updated status: ", data.success, " SCORE: ", data.newScore);
+      if (data) {
+        console.log(
+          "Score updated status: ",
+          data.success,
+          " SCORE: ",
+          data.newScore
+        );
       }
     })
     .catch((error) => console.error("Error:", error));
 }
-
 
 function startCountdown() {
   action = setInterval(function () {
@@ -183,11 +203,23 @@ function show(Id) {
 }
 
 function generateQA() {
-  return fetch("http://localhost:3001/random_math_challenge")
-    .then(response => {
-      return response.json();
+  return fetch("http://localhost:3001/random_math_challenge", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthorizationHeader(),
+    },
+  })
+    .then((response) => {
+      if (response.status === 200) {
+        return response.json();
+      } else if (response.status === 401) {
+        window.location.href = "loginPage.html";
+      } else {
+        throw new Error("Failed to load data for verification");
+      }
     })
-    .then(data => {
+    .then((data) => {
       if (!data || !data.fruit1 || !data.fruit2) {
         throw new Error("No data received from server");
       }
@@ -197,10 +229,11 @@ function generateQA() {
       challengeId = id;
       var element = document.getElementById("question");
 
-      element.innerHTML = `${fruit1.images} + ${fruit2.images}`;        
+      element.innerHTML = `${fruit1.images} + ${fruit2.images}`;
 
       const correctPosition = 1 + Math.round(3 * Math.random());
-      document.getElementById("box" + correctPosition).innerHTML = correctAnswer;
+      document.getElementById("box" + correctPosition).innerHTML =
+        correctAnswer;
 
       const answers = [correctAnswer];
       for (let i = 1; i < 5; i++) {
@@ -214,24 +247,15 @@ function generateQA() {
         }
       }
     })
-    .catch(error => console.error('Error geting question:', error));
+    .catch((error) => console.error("Error geting question:", error));
 }
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-logout = (event) => {
-  event.preventDefault();
-  const requestOptions = {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-  };
-  fetch("http://localhost:3001/logout", requestOptions)
-    .then((response) => {
-      if (response.redirected) {
-        window.location.href = response.url;
-      }
-    })
-    .catch((error) => console.error("Error:", error));
+logout = () => {
+  localStorage.removeItem("token");
+  window.location.href =
+    "http://127.0.0.1:5501/frontend/html/MainUnloggedPage.html";
 };

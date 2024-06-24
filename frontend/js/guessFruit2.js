@@ -1,5 +1,10 @@
 let challengeId;
 
+function getAuthorizationHeader() {
+  const token = localStorage.getItem("token");
+  return { Authorization: `Bearer ${token}` };
+}
+
 function fillChallenge(challenge) {
   challengeId = challenge.challengeId;
   const img = document.querySelector("#gameImg");
@@ -13,11 +18,22 @@ function submitGuess(guess) {
 
   const requestOptions = {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthorizationHeader(),
+    },
     body: JSON.stringify({ challengeId, guess }),
   };
   fetch("http://localhost:3001/guess_the_fruit", requestOptions)
-    .then((response) => response.json())
+    .then((response) => {
+      if (response.status === 200) {
+        return response.json();
+      } else if (response.status === 401) {
+        window.location.href = "loginPage.html";
+      } else {
+        throw new Error("Failed to load data for verification");
+      }
+    })
     .then((data) => displayResult(data))
     .catch((error) => console.error("Error:", error));
 }
@@ -59,8 +75,22 @@ function displayResult(data) {
 }
 
 function fetchNewChallenge() {
-  return fetch("http://localhost:3001/random_challenge?difficulty=medium")
-    .then((response) => response.json())
+  return fetch("http://localhost:3001/random_challenge?difficulty=medium", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthorizationHeader(),
+    },
+  })
+    .then((response) => {
+      if (response.status === 200) {
+        return response.json();
+      } else if (response.status === 401) {
+        window.location.href = "loginPage.html";
+      } else {
+        throw new Error("Failed to load data for verification");
+      }
+    })
     .then((challenge) => {
       fillChallenge(challenge);
       document.querySelector("#gameImg").style.display = "initial";
@@ -75,17 +105,8 @@ fetchNewChallenge();
 
 attachSubmitGuessHandler("#fruit");
 
-logout = (event) => {
-  event.preventDefault();
-  const requestOptions = {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-  };
-  fetch("http://localhost:3001/logout", requestOptions)
-    .then((response) => {
-      if (response.redirected) {
-        window.location.href = response.url;
-      }
-    })
-    .catch((error) => console.error("Error:", error));
+logout = () => {
+  localStorage.removeItem("token");
+  window.location.href =
+    "http://127.0.0.1:5501/frontend/html/MainUnloggedPage.html";
 };

@@ -9,6 +9,7 @@ const mongoDb = require("./services/mongo-db");
   const services = new Map([["mongodb", mongoDbService]]);
 
   const server = http.createServer(async (req, res) => {
+    verifyToken(req, res);
     await matchRoute(req, res, routes, services);
   });
 

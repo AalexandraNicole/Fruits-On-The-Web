@@ -28,8 +28,8 @@ login = (event, form) => {
       return response.json();
     })
     .then((data) => {
-      localStorage.setItem("token", data.token);  // store the token for later verifycation
-      window.location.href = "loggedPage.html";   // redirect to the logged-in page
+      localStorage.setItem("token", data.token); // store the token for later verifycation
+      window.location.href = "loggedPage.html"; // redirect to the logged-in page
     })
     .catch((error) => console.error("Error:", error));
 };

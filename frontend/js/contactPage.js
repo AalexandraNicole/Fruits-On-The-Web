@@ -52,22 +52,39 @@ function hideMenuButtons() {
   contact.style.visibility = "hidden";
 }
 
+function getAuthorizationHeader() {
+  const token = localStorage.getItem("token");
+  return { Authorization: `Bearer ${token}` };
+}
+
 contactSend = (event, form) => {
   event.preventDefault();
   const message = form.message.value;
   const requestOptions = {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      ...getAuthorizationHeader(),
+    },
     body: JSON.stringify({ message }),
   };
   fetch("http://localhost:3001/contact", requestOptions)
     .then((response) => {
-      if (response.redirected) {
-        window.location.href = response.url;
-        alert("Message not sent!");
+      if (response.status === 201) {
+        alert("Message sent successfully!");
+      } else if (response.status === 401) {
+        window.location.href = "loginPage.html";
+      } else {
+        alert("Server could not send the email");
       }
     })
     .catch((error) => console.error("Error:", error));
-  alert("Message sent successfully!");
+
   form.reset();
+};
+
+logout = () => {
+  localStorage.removeItem("token");
+  window.location.href =
+    "http://127.0.0.1:5501/frontend/html/MainUnloggedPage.html";
 };

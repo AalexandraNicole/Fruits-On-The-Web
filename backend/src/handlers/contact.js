@@ -1,21 +1,27 @@
 const { getBody } = require("../utils/utils");
 const nodemailer = require("nodemailer");
+const { gmailPas, gmailUser } = require("../environment");
 
 async function sendEmail(senderEmail, message) {
   try {
     const transporter = nodemailer.createTransport({
       service: "Gmail",
       auth: {
-        user: "taneagrozea2003@gmail.com",
-        pass: "oqnp lheg wptt vgxh ",
+        user: gmailUser,
+        pass: gmailPas,
       },
     });
+
+    const content = {
+      message: message.message,
+      email: senderEmail,
+    };
 
     const mailOptions = {
       from: senderEmail,
       to: "frowfrowcontact@gmail.com",
       subject: "Contact Form Submission FrOW",
-      text: typeof message === "string" ? message : JSON.stringify(message),
+      text: JSON.stringify(content),
     };
 
     const info = await transporter.sendMail(mailOptions);
@@ -27,27 +33,18 @@ async function sendEmail(senderEmail, message) {
   }
 }
 
-async function contactHandler(req, res, services, query) {
-  if (!req.session.isAuthenticated) {
-    res.writeHead(401, {
-      "Content-Type": "text/plain",
-      "Access-Control-Allow-Origin": "*",
-    });
-    res.end("Unauthorized");
-    return;
-  }
-
-  const email = req.session.user;
+async function contactHandler(req, res) {
+  const email = req.user.email;
   const message = await getBody(req);
 
   const result = await sendEmail(email, message);
 
   if (result.success) {
-    res.writeHead(200, {
+    res.writeHead(201, {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
     });
-    res.end(JSON.stringify({ success: true }));
+    res.end();
   } else {
     res.writeHead(500, {
       "Content-Type": "application/json",

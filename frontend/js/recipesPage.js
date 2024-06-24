@@ -13,6 +13,11 @@ let terms = document.querySelector(".terms");
 let privacy = document.querySelector(".privacy");
 let trigger = 1;
 
+function getAuthorizationHeader() {
+  const token = localStorage.getItem("token");
+  return { Authorization: `Bearer ${token}` };
+}
+
 function showMenu() {
   if (trigger === 1) {
     menuButton.style.backgroundImage = "url('../images/menuOpen.png')";
@@ -73,17 +78,57 @@ function hideDoctorBox() {
   doctorBox.style.visibility = "hidden";
 }
 
-logout = (event) => {
-  event.preventDefault();
-  const requestOptions = {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-  };
-  fetch("http://localhost:3001/logout", requestOptions)
+logout = () => {
+  localStorage.removeItem("token");
+  window.location.href =
+    "http://127.0.0.1:5501/frontend/html/MainUnloggedPage.html";
+};
+
+function updateRanksBox(ranks) {
+  const ranksBox = document.querySelector(".ranksBox ul");
+  ranksBox.innerHTML = "";
+
+  ranks.forEach((rank) => {
+    const li = document.createElement("li");
+    li.textContent = rank;
+    ranksBox.appendChild(li);
+  });
+}
+
+function parseRSSFeed(rssText) {
+  const parser = new DOMParser();
+  const rssDoc = parser.parseFromString(rssText, "application/xml");
+
+  const items = rssDoc.querySelectorAll("item");
+  const ranks = [];
+
+  items.forEach((item) => {
+    const title = item.querySelector("title").textContent;
+    ranks.push(title);
+  });
+
+  updateRanksBox(ranks);
+}
+
+function fetchRSSFeed() {
+  return fetch("http://localhost:3001/rss", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/rss+xml",
+      ...getAuthorizationHeader(),
+    },
+  })
     .then((response) => {
-      if (response.redirected) {
-        window.location.href = response.url;
+      if (response.status === 200) {
+        return response.text();
+      } else if (response.status === 401) {
+        window.location.href = "loginPage.html";
+      } else {
+        throw new Error("Failed to load RSS feed");
       }
     })
+    .then((rssText) => parseRSSFeed(rssText))
     .catch((error) => console.error("Error:", error));
-};
+}
+
+fetchRSSFeed();

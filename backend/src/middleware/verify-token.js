@@ -1,24 +1,23 @@
 const jwt = require("jsonwebtoken");
-const SECRET_KEY = "mySecretKey"; 
+const SECRET_KEY = "mySecretKey";
 
-async function verifyToken(req, res, next) {
+function verifyToken(req, res) {
   const authHeader = req.headers.authorization;
-
-  if (!authHeader) {
-    res.writeHead(401, { "Content-Type": "application/json" });
-    res.end(JSON.stringify({ error: "No token provided" }));
-    return;
-  }
-
-  const token = authHeader.split(" ")[1];
+  if (!authHeader) return;
 
   try {
+    const token = authHeader.split(" ")[1];
     const decoded = jwt.verify(token, SECRET_KEY);
-    req.user = decoded; // Attach the user info to the request
-    next();
+
+    const currentTime = Date.now() / 1000; // Convert to seconds
+    if (decoded.exp < currentTime) {
+      console.log("Token is expired", authHeader);
+      return;
+    }
+
+    req.user = decoded;
   } catch (error) {
-    res.writeHead(401, { "Content-Type": "application/json" });
-    res.end(JSON.stringify({ error: "Unauthorized" }));
+    console.log("Cannot verify token", authHeader);
   }
 }
 
