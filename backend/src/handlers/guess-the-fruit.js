@@ -23,7 +23,7 @@ async function guessTheFruitHandler(req, res, services, query) {
   if (guessed) {
     const userEmail = req.user.email;
     const user = await db.collection("users").findOne({ email: userEmail });
-    // const difficulty = query.difficulty;
+    const difficulty = query.difficulty;
 
     if (!user) {
       res.writeHead(404, {
@@ -34,14 +34,14 @@ async function guessTheFruitHandler(req, res, services, query) {
       return;
     }
 
-    let newScore = user.score + 1;
-    // if (difficulty === "easy") {
-    //   newScore = user.score + 1;
-    // } else if (difficulty === "medium") {
-    //   newScore = user.score + 2;
-    // } else if (difficulty === "hard") {
-    //   newScore = user.score + 3;
-    // }
+    let newScore;
+    if (difficulty === "easy") {
+      newScore = user.score + 1;
+    } else if (difficulty === "medium") {
+      newScore = user.score + 2;
+    } else if (difficulty === "hard") {
+      newScore = user.score + 3;
+    }
 
     const updated = await db
       .collection("users")

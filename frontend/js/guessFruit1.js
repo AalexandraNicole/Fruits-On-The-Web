@@ -28,7 +28,7 @@ function submitGuess(guess) {
     },
     body: JSON.stringify({ challengeId, guess }),
   };
-  fetch("http://localhost:3001/guess_the_fruit", requestOptions)
+  fetch("http://localhost:3001/guess_the_fruit?difficulty=easy", requestOptions)
     .then((response) => {
       if (response.status === 200) {
         return response.json();
