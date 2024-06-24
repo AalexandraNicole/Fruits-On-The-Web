@@ -60,11 +60,11 @@ Fruits-On-The-Web (FrOW) is an educational gaming website designed to help users
    git clone https://github.com/AalexandraNicole/Fruits-On-The-Web.git
    ```
 2. Navigate to the backend directory and install dependencies:
-  ```bash
-  cd backend
-  npm install
-  ```
+    ```bash
+    cd backend
+    npm install
+    ```
 3. Start the backend server:
-  ```bash
-  npm start
-  ```
+    ```bash
+    npm start
+    ```
