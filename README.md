@@ -28,7 +28,7 @@ Fruits-On-The-Web (FrOW) is an educational gaming website designed to help users
   - **Home Page**: Landing page for unlogged users.
   - **Login Page**: User login interface.
   - **Game Page**: Main interface for logged-in users to play games.
-  - **Leaderboard Page**: Displays user rankings. Using RSS feed.
+  - **Leaderboard Page**: Displays user rankings using RSS feed.
   - **Profile Page**: Shows user profile and settings.
 
 ### Code
@@ -45,7 +45,7 @@ Fruits-On-The-Web (FrOW) is an educational gaming website designed to help users
 - **User Authentication**: Secure login and registration system.
 - **Educational Games**: Interactive games to learn about fruits.
 - **Score Tracking**: Keeps track of user scores and progress.
-- **Leaderboard**: Displays the top players.
+- **Leaderboard**: Displays the top players using RSS feed.
 - **Profile Management**: Users can manage their profiles and change settings.
 
 ## Installation
