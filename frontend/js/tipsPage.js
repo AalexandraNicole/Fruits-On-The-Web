@@ -13,6 +13,26 @@ let terms = document.querySelector(".terms");
 let privacy = document.querySelector(".privacy");
 let trigger = 1;
 
+let quotes = [
+  "Fruits are an excellent source of essential vitamins and minerals, and they are high in fiber. ",
+  "We should all be eating fruits and vegetables as if our lives depend on it - because they do.",
+  "Adopting a new healthier lifestyle can involve changing diet to include more fresh fruit and vegetables.",
+  "Eating a rainbow of colorful fruits and vegetables is essential for good health.",
+  "I try to stick to a vegan diet heavy on fruit and vegetables.",
+  "Fruits are snacks, which are rich in vitamins, and can be eaten the whole day. ",
+  "If we can get people to focus on fruits and vegetables and more healthy foods, we'll be better in terms of our healthcare. ",
+  "The more colorful the food, the better. I try to add color to my diet, which means vegetables and fruits.",
+  "Vegetables are a must on a diet. I suggest carrot cake, zucchini bread, and pumpkin pie.",
+  "A fruit is a vegetable with looks and money. Plus, if you let fruit rot, it turns into wine.",
+  "Adopting a new healthier lifestyle can involve to include more levels of exercise. ",
+  "Blueberries, strawberries and blackberries are true super foods.",
+  "Drinking freshly made juices and eating whole foods to provide adequate fiber is an approach to a healthful diet.",
+  "Stop counting calories and start counting plants. ",
+  "Watermelon - it's a good fruit. You eat, you drink, you wash your face.",
+  "...the avocado is a food without rival among the fruits, the veritable fruit of paradise.",
+  "When you eat, it’s vegetable, when you are sick, it’s medicine. ",
+];
+
 function getAuthorizationHeader() {
   const token = localStorage.getItem("token");
   return { Authorization: `Bearer ${token}` };
@@ -71,6 +91,8 @@ function hideRanks() {
 function showDoctorBox() {
   doctorButton.style.backgroundImage = "url('../images/meds.gif')";
   doctorBox.style.visibility = "visible";
+  const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  doctorBox.innerHTML = randomQuote;
 }
 
 function hideDoctorBox() {
