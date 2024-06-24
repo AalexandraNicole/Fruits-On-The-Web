@@ -46,3 +46,42 @@ function fetchProfile() {
 }
 
 window.onload = fetchProfile();
+
+document.getElementById('editFormPassword').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  const newPass = document.getElementById('newPass').value;
+  const confirmPass = document.getElementById('confirmPass').value;
+  const token = localStorage.getItem('token');
+
+  if (newPass !== confirmPass) {
+    alert("Passwords do not match!");
+    return;
+  }
+
+  const requestOptions = {
+    method: 'POST',
+    headers: { 
+      'Content-Type': 'application/json',
+      ...getAuthorizationHeader(),
+    },
+    body: JSON.stringify({ newPass, token })
+  };
+
+  fetch('http://localhost:3001/update_password', requestOptions)
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        alert("Passwords updated!");
+        console.log("Password updated successfully: ", data.pass);
+        window.location.href = "profilePage.html";
+      } else {
+        console.error("Error updating password:", data.error);
+        alert("Error updating password");
+      }
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("Error updating password");
+    });
+});

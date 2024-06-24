@@ -11,6 +11,7 @@ const adminHandler = require("./admin");
 const usersDeleteHandler = require("./user-delete");
 const getRandomMathChallengeHandler = require("./get-random-math-challenge");
 const updateScoreHandler = require("./update_score");
+const updatePasswordHandler = require("./update-password");
 const rssHandler = require("./rss");
 
 module.exports = {
@@ -28,4 +29,5 @@ module.exports = {
   getRandomMathChallengeHandler,
   updateScoreHandler,
   rssHandler,
+  updatePasswordHandler,
 };

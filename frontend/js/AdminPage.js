@@ -64,8 +64,8 @@ function fetchUsers() {
       ${user.username}
       </span>
       <button class="deleteButton" onclick="deleteUser('${user.email}')">Delete</button>
-      <button onclick="window.location='profilePage.html';" id="btnView" class="btnView">View</button>
-      <button class="banButton">Ban</button>
+      <p>Score: ${user.score}</p>
+      <p>${user.email}</p>
       `;
 
         usersContainer.appendChild(userElement);

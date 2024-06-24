@@ -27,6 +27,12 @@ const routes = [
     handler: handlers.updateScoreHandler,
   },
   {
+    method: "POST",
+    url: "/update_password",
+    protected: true,
+    handler: handlers.updatePasswordHandler,
+  },
+  {
     method: "GET",
     url: "/profile",
     protected: true,
@@ -82,6 +88,11 @@ const routes = [
   {
     method: "OPTIONS",
     url: "/update_score",
+    handler: handlers.optionsHandler,
+  },
+  {
+    method: "OPTIONS",
+    url: "/update_password",
     handler: handlers.optionsHandler,
   },
   {
